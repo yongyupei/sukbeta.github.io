@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="mesos," />
+  <meta name="keywords" content="marathon,marathon-lb," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="mesos-dns 搭建  Mesos-DNS用来支持Mesos集群上的服务发现，使运行在Mesos上的应用和服务可以通过域名服务器来发现彼此。你只要知道一个Mesos数据中心上运行的应用的名字，就可以通过Mesos-DNS查询到该应用的IP和端口号。   安装  官方下载mesos-dns镜像没有提供mesos-dns的HTTP接口出来，所以先用二进制搭建，在自己build镜像。     mes">
-<meta name="keywords" content="mesos">
+<meta name="description" content="marathon-lb配置marathon-lb get imagesMarathon-lb既是一个服务发现工具，也是负载均衡工具，它集成了haproxy，自动获取各个app的信息，为每一组app生成haproxy配置，通过servicePort或者web虚拟主机提供服务。 要使用marathonn-lb，每组app必须设置HAPROXY_GROUP标签。 Marathon-lb运行时绑定在各组a">
+<meta name="keywords" content="marathon,marathon-lb">
 <meta property="og:type" content="article">
-<meta property="og:title" content="mesos-dns搭建">
-<meta property="og:url" content="http://yoursite.com/2018/05/25/mesos-dns搭建/index.html">
+<meta property="og:title" content="marathon-lb配置及nginx负载">
+<meta property="og:url" content="http://yoursite.com/2018/05/28/marathon-lb配置及nginx负载/index.html">
 <meta property="og:site_name" content="苏克贝塔">
-<meta property="og:description" content="mesos-dns 搭建  Mesos-DNS用来支持Mesos集群上的服务发现，使运行在Mesos上的应用和服务可以通过域名服务器来发现彼此。你只要知道一个Mesos数据中心上运行的应用的名字，就可以通过Mesos-DNS查询到该应用的IP和端口号。   安装  官方下载mesos-dns镜像没有提供mesos-dns的HTTP接口出来，所以先用二进制搭建，在自己build镜像。     mes">
+<meta property="og:description" content="marathon-lb配置marathon-lb get imagesMarathon-lb既是一个服务发现工具，也是负载均衡工具，它集成了haproxy，自动获取各个app的信息，为每一组app生成haproxy配置，通过servicePort或者web虚拟主机提供服务。 要使用marathonn-lb，每组app必须设置HAPROXY_GROUP标签。 Marathon-lb运行时绑定在各组a">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-28T07:24:35.175Z">
+<meta property="og:updated_time" content="2018-05-28T10:42:31.745Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="mesos-dns搭建">
-<meta name="twitter:description" content="mesos-dns 搭建  Mesos-DNS用来支持Mesos集群上的服务发现，使运行在Mesos上的应用和服务可以通过域名服务器来发现彼此。你只要知道一个Mesos数据中心上运行的应用的名字，就可以通过Mesos-DNS查询到该应用的IP和端口号。   安装  官方下载mesos-dns镜像没有提供mesos-dns的HTTP接口出来，所以先用二进制搭建，在自己build镜像。     mes">
+<meta name="twitter:title" content="marathon-lb配置及nginx负载">
+<meta name="twitter:description" content="marathon-lb配置marathon-lb get imagesMarathon-lb既是一个服务发现工具，也是负载均衡工具，它集成了haproxy，自动获取各个app的信息，为每一组app生成haproxy配置，通过servicePort或者web虚拟主机提供服务。 要使用marathonn-lb，每组app必须设置HAPROXY_GROUP标签。 Marathon-lb运行时绑定在各组a">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/05/25/mesos-dns搭建/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/05/28/marathon-lb配置及nginx负载/"/>
 
 
 
 
 
-  <title>mesos-dns搭建 | 苏克贝塔</title>
+  <title>marathon-lb配置及nginx负载 | 苏克贝塔</title>
   
 
 
@@ -297,7 +297,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/25/mesos-dns搭建/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/28/marathon-lb配置及nginx负载/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="北极企鹅">
@@ -314,7 +314,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">mesos-dns搭建</h1>
+          <h1 class="post-title" itemprop="name headline">marathon-lb配置及nginx负载</h1>
         
 
         <div class="post-meta">
@@ -326,8 +326,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-25T16:04:38+08:00">
-                2018-05-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-28T18:32:40+08:00">
+                2018-05-28
               </time>
             
 
@@ -349,8 +349,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/mesos/" itemprop="url" rel="index">
-                    <span itemprop="name">mesos</span>
+                  <a href="/categories/marathon/" itemprop="url" rel="index">
+                    <span itemprop="name">marathon</span>
                   </a>
                 </span>
 
@@ -367,9 +367,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/05/25/mesos-dns搭建/#comments" itemprop="discussionUrl">
+                <a href="/2018/05/28/marathon-lb配置及nginx负载/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/05/25/mesos-dns搭建/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2018/05/28/marathon-lb配置及nginx负载/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -402,75 +402,90 @@
       
 
       
-        <h2 id="mesos-dns-搭建"><a href="#mesos-dns-搭建" class="headerlink" title="mesos-dns 搭建"></a>mesos-dns 搭建</h2><p>  Mesos-DNS用来支持Mesos集群上的服务发现，使运行在Mesos上的应用和服务可以通过域名服务器来发现彼此。你只要知道一个Mesos数据中心上运行的应用的名字，就可以通过Mesos-DNS查询到该应用的IP和端口号。  </p>
-<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>  官方下载mesos-dns镜像没有提供mesos-dns的HTTP接口出来，所以先用二进制搭建，在自己build镜像。  </p>
-<p>  mesos-dns文件下载：<a href="https://github.com/mesosphere/mesos-dns/releases" target="_blank" rel="noopener">!https://github.com/mesosphere/mesos-dns/releases</a></p>
-<p>  下载 mesos-dns-v0.6.0-linux-amd64 一个二进制文件。</p>
-<p>  准备配置文件：config.json</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;zk&quot;: &quot;zk://10.0.0.52:2181,10.0.0.53:2181,10.0.0.54:2181/mesos&quot;,</span><br><span class="line">  &quot;masters&quot;: [&quot;10.0.0.52:5050&quot;, &quot;10.0.0.53:5050&quot;, &quot;10.0.0.54:5050&quot;],</span><br><span class="line">  &quot;refreshSeconds&quot;: 10,</span><br><span class="line">  &quot;ttl&quot;: 0,</span><br><span class="line">  &quot;domain&quot;: &quot;mesos&quot;,</span><br><span class="line">  &quot;port&quot;: 53,</span><br><span class="line">  &quot;resolvers&quot;: [&quot;10.10.130.5&quot;],</span><br><span class="line">  &quot;timeout&quot;: 5, </span><br><span class="line">  &quot;httpon&quot;: true,</span><br><span class="line">  &quot;dnson&quot;: true,</span><br><span class="line">  &quot;httpport&quot;: 8123,</span><br><span class="line">  &quot;externalon&quot;: true,</span><br><span class="line">  &quot;listener&quot;: &quot;0.0.0.0&quot;,</span><br><span class="line">  &quot;SOAMname&quot;: &quot;docker-test.com&quot;,</span><br><span class="line">  &quot;SOARname&quot;: &quot;root.docker-test.com&quot;,</span><br><span class="line">  &quot;SOARefresh&quot;: 10,</span><br><span class="line">  &quot;SOARetry&quot;:   3,</span><br><span class="line">  &quot;SOAExpire&quot;:  86400,</span><br><span class="line">  &quot;SOAMinttl&quot;: 10,</span><br><span class="line">  &quot;IPSources&quot;: [&quot;netinfo&quot;, &quot;mesos&quot;, &quot;host&quot;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>启动 mesos-dns</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mv mesos-dns-v0.6.0-linux-amd64 mesos-dns</span><br><span class="line">chmod +x mesos-dns</span><br><span class="line">./mesos-dns -config=config.json -v=2</span><br></pre></td></tr></table></figure>
-<p>mesos-dns 会启动 53 和 8123 两个端口， 53 为dns端口，8123 为http api端口。  </p>
-<h5 id="HTTP-API-接口"><a href="#HTTP-API-接口" class="headerlink" title="HTTP API 接口"></a>HTTP API 接口</h5><table>
+        <h1 id="marathon-lb配置"><a href="#marathon-lb配置" class="headerlink" title="marathon-lb配置"></a>marathon-lb配置</h1><h2 id="marathon-lb-get-images"><a href="#marathon-lb-get-images" class="headerlink" title="marathon-lb get images"></a>marathon-lb get images</h2><p>Marathon-lb既是一个服务发现工具，也是负载均衡工具，它集成了haproxy，自动获取各个app的信息，为每一组app生成haproxy配置，通过servicePort或者web虚拟主机提供服务。</p>
+<p>要使用marathonn-lb，每组app必须设置HAPROXY_GROUP标签。</p>
+<p>Marathon-lb运行时绑定在各组app定义的服务端口（servicePort，如果app不定义servicePort，marathon会随机分配端口号）上，可以通过marathon-lb所在节点的相关服务端口访问各组app。</p>
+<p>例如：marathon-lb部署在slave5，test-app 部署在slave1，test-app 的servicePort是10004，那么可以在slave5的 10004端口访问到test-app提供的服务。</p>
+<p>由于servicePort 非80、443端口（80、443端口已被marathon-lb中的 haproxy独占），对于web服务来说不太方便，可以使用 haproxy虚拟主机解决这个问题：</p>
+<p>在提供web服务的app配置里增加HAPROXY_{n}_VHOST（WEB虚拟主机）标签，marathon-lb会自动把这组app的WEB集群服务发布在marathon-lb所在节点的80和443端口上，用户设置DNS后通过虚拟主机名来访问。</p>
+<h3 id="官方下载镜像"><a href="#官方下载镜像" class="headerlink" title="官方下载镜像"></a>官方下载镜像</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">images url :</span><br><span class="line">https://store.docker.com/community/images/mesosphere/marathon-lb</span><br><span class="line"></span><br><span class="line">docker pull mesosphere/marathon-lb</span><br><span class="line"></span><br><span class="line">github url:</span><br><span class="line">https://github.com/mesosphere/marathon-lb</span><br></pre></td></tr></table></figure>
+<h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><p>docker</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --privileged -e PORTS=9090 --net=host docker.io/mesosphere/marathon-lb sse -m http://marathon1_ip:8080 -m http://marathon2_ip:8080 -m http://master3_ip:8080  --group external</span><br></pre></td></tr></table></figure>
+<p>marathon</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">vim marathon-lb.json</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    &quot;id&quot;: &quot;marathon-lb-testv1&quot;,</span><br><span class="line">    &quot;instances&quot;: 1,</span><br><span class="line">    &quot;constraints&quot;: [</span><br><span class="line">        [</span><br><span class="line">            &quot;hostname&quot;,</span><br><span class="line">            &quot;CLUSTER&quot;,</span><br><span class="line">            &quot;host-hostname.com&quot;</span><br><span class="line">        ]</span><br><span class="line">    ],</span><br><span class="line">    &quot;container&quot;: &#123;</span><br><span class="line">        &quot;type&quot;: &quot;DOCKER&quot;,</span><br><span class="line">        &quot;docker&quot;: &#123;</span><br><span class="line">            &quot;image&quot;: &quot;docker.io/mesosphere/marathon-lb:latest&quot;,</span><br><span class="line">            &quot;privileged&quot;: true,</span><br><span class="line">            &quot;network&quot;: &quot;HOST&quot;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &quot;args&quot;: [</span><br><span class="line">        &quot;sse&quot;,</span><br><span class="line">        &quot;-m&quot;,</span><br><span class="line">        &quot;http://10.10.131.78:8080&quot;,</span><br><span class="line">        &quot;--group&quot;,</span><br><span class="line">        &quot;external&quot;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">curl -X POST http://10.10.131.78:8080/v2/apps -d @marathon-lb.json -H &quot;Content-type: application/json&quot;</span><br></pre></td></tr></table></figure>
+<h2 id="marathon-lb-API"><a href="#marathon-lb-API" class="headerlink" title="marathon-lb API"></a>marathon-lb API</h2><table>
 <thead>
 <tr>
-<th>URL</th>
-<th>说明 </th>
+<th>Endpoint</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td> <a href="http://10.0.0.49:8123/v1/version" target="_blank" rel="noopener">http://10.0.0.49:8123/v1/version</a></td>
-<td>mesos-dns版本信息</td>
+<td>:9090/haproxy?stats</td>
+<td>HAProxy stats endpoint. This produces an HTML page which can be viewed in your browser, providing various statistics about the current HAProxy instance.</td>
 </tr>
 <tr>
-<td> <a href="http://10.0.0.49:8123/v1/config" target="_blank" rel="noopener">http://10.0.0.49:8123/v1/config</a></td>
-<td>mesos-dns配置信息</td>
+<td>:9090/haproxy?stats;csv</td>
+<td>This is a CSV version of the stats above, which can be consumed by other tools. For example, it’s used in the zdd.py script.</td>
 </tr>
 <tr>
-<td> <a href="http://10.0.0.49:8123/v1/hosts/{host}" target="_blank" rel="noopener">http://10.0.0.49:8123/v1/hosts/{host}</a></td>
-<td>该host的IP地址信息</td>
+<td>:9090/_haproxy_health_check</td>
+<td>HAProxy health check endpoint. Returns 200 OK if HAProxy is healthy.</td>
 </tr>
 <tr>
-<td> <a href="http://10.0.0.49:8123/v1/services/{service}" target="_blank" rel="noopener">http://10.0.0.49:8123/v1/services/{service}</a></td>
-<td>该service的host、IP、端口信息</td>
+<td>:9090/_haproxy_getconfig</td>
+<td>Returns the HAProxy config file as it was when HAProxy was started. Implemented in getconfig.lua.</td>
+</tr>
+<tr>
+<td>:9090/_haproxy_getvhostmap</td>
+<td>Returns the HAProxy vhost to backend map. This endpoint returns HAProxy map file only when the –haproxy-map flag is enabled, it returns an empty string otherwise. Implemented in getmaps.lua.</td>
+</tr>
+<tr>
+<td>:9090/_haproxy_getappmap</td>
+<td>Returns the HAProxy app ID to backend map. Like _haproxy_getvhostmap, this requires the –haproxy-map flag to be enabled and returns an empty string otherwise. Also implemented in getmaps.lua.</td>
+</tr>
+<tr>
+<td>:9090/_haproxy_getpids</td>
+<td>Returns the PIDs for all HAProxy instances within the current process namespace. This literally returns $(pidof haproxy). Implemented in getpids.lua. This is also used by the zdd.py script to determine if connections have finished draining during a deploy.</td>
+</tr>
+<tr>
+<td>:9090/_mlb_signal/hup*</td>
+<td>Sends a SIGHUP signal to the marathon-lb process, causing it to fetch the running apps from Marathon and reload the HAProxy config as though an event was received from Marathon.</td>
+</tr>
+<tr>
+<td>:9090/_mlb_signal/usr1*</td>
+<td>Sends a SIGUSR1 signal to the marathon-lb process, causing it to restart HAProxy with the existing config, without checking Marathon for changes.</td>
 </tr>
 </tbody>
 </table>
-<p> 例子：</p>
-<pre><code>http://10.0.0.49:8123/v1/hosts/nginxqq-nginx.marathon.slave.mesos
-</code></pre><p>  分析：marathon.slave.mesos 是固定的，mesos是condig.json中domain定义的，在往前是从节点，marathon是框架，nginx是组，nginxqq是appid </p>
-<pre><code>http://10.0.0.49:8123/v1/services/_nginxqq-nginx._tcp.marathon.slave.mesos  
-</code></pre><p>  分析： _nginxqq-nginx._tcp.marathon.slave.mesos ， nginxqq容器的ID名，nginx为组名，_tcp.marathon.slave.mesos 为固定的。</p>
-<h5 id="dig-获取mesos-dns信息"><a href="#dig-获取mesos-dns信息" class="headerlink" title="dig 获取mesos-dns信息"></a>dig 获取mesos-dns信息</h5><p>查找app所在节点的IP</p>
-<pre><code>dig nginxqq-nginx.marathon.slave.mesos +short
-</code></pre><p>查找app服务端口号</p>
-<pre><code>dig SRV _nginxqq-nginx._tcp.marathon.slave.mesos +short 
-</code></pre><ul>
-<li>其中 过得到的主机名 mesos-dns 是可以解析的，就是app所在的物理机。</li>
+<ul>
+<li>API from marathon-lb <a href="https://github.com/mesosphere/marathon-lb" target="_blank" rel="noopener">!github</a></li>
+<li>marathon-lb 文档详解 <a href="https://github.com/mesosphere/marathon-lb/blob/master/Longhelp.md#templates" target="_blank" rel="noopener">!https://github.com/mesosphere/marathon-lb/blob/master/Longhelp.md#templates</a></li>
 </ul>
-<h4 id="docker-images"><a href="#docker-images" class="headerlink" title="docker images"></a>docker images</h4><p>创建 docker file 目录，放入所用的文件</p>
-<pre><code>mkdir dockerfile-mesos-dns
-cd dockerfile-mesos-dns
-cp ~/mesos-dns .
-cp ~/config.json .
-</code></pre><p>编辑 Dockerfile 文件  </p>
-<p>vim Dockerfile</p>
-<pre><code>FROM centos:6
+<p>如常用： <a href="http://marathon-lb-ip:9090/haproxy?stats" target="_blank" rel="noopener">http://marathon-lb-ip:9090/haproxy?stats</a></p>
+<h2 id="nginx-start"><a href="#nginx-start" class="headerlink" title="nginx start"></a>nginx start</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"># vim nginx.json</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    &quot;id&quot;: &quot;nginx-test&quot;,</span><br><span class="line">    &quot;cpus&quot;: 0.2,</span><br><span class="line">    &quot;mem&quot;: 128,</span><br><span class="line">    &quot;instances&quot;: 1,</span><br><span class="line">  &quot;labels&quot;: &#123;</span><br><span class="line">     &quot;HAPROXY_GROUP&quot;:&quot;external&quot;</span><br><span class="line">     &quot;HAPROXY_0_VHOST&quot;:&quot;nginx.test.com&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">    &quot;uris&quot;: [</span><br><span class="line">        &quot;http://10.10.130.201/download/docker_img/db-harbor-admin.tar.gz&quot;</span><br><span class="line">    ],</span><br><span class="line">    &quot;healthChecks&quot;: [&#123; &quot;path&quot;: &quot;/&quot; &#125;],</span><br><span class="line">    &quot;container&quot;: &#123;</span><br><span class="line">        &quot;type&quot;: &quot;DOCKER&quot;,</span><br><span class="line">        &quot;docker&quot;: &#123;</span><br><span class="line">            &quot;image&quot;: &quot;nginx:1.13&quot;,</span><br><span class="line">            &quot;network&quot;: &quot;BRIDGE&quot;,</span><br><span class="line">            &quot;portMappings&quot;: [</span><br><span class="line">                &#123;</span><br><span class="line">                    &quot;containerPort&quot;: 80,</span><br><span class="line">                    &quot;hostPort&quot;: 0,</span><br><span class="line">                    &quot;servicePort&quot;: 10000,</span><br><span class="line">                    &quot;protocol&quot;: &quot;tcp&quot;</span><br><span class="line">                &#125;</span><br><span class="line">            ]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"># curl -X POST http://10.10.131.78:8080/v2/apps -d @nginx.json -H &quot;Content-type: application/json&quot;</span><br></pre></td></tr></table></figure>
+<h2 id="说明："><a href="#说明：" class="headerlink" title="说明："></a>说明：</h2><ol>
+<li>一定要加上HAPROXY_GROUP标签，它填写的是marathon-lb创建时定义的组名 </li>
+<li>HAPROXY_0_VHOST是标签名，对于web服务可以加上VHOST标签，让marathon-lb设置WEB虚拟主机；</li>
+<li>containerPort为80,是指容器内的端口。</li>
+<li>hostPort是当前主机映射到contenterPort的端口，如果hostPort为0的话,则说明是随机的。</li>
+<li>serverPort是marathon-lb需要配置的haproxy代理暴露的端口,这里设置为10000，说明访问marathon-lb机器的10000端口就可为访问这个应用容器的80端口。</li>
+</ol>
+<h2 id="访问marathon-lb"><a href="#访问marathon-lb" class="headerlink" title="访问marathon-lb"></a>访问marathon-lb</h2><p>ip 访问</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl http://marathon-lb_ip:10000/</span><br></pre></td></tr></table></figure>
+<ul>
+<li>访问marathon-lb部署的宿主机ip地址和serverPort的端口。</li>
+</ul>
+<p>域名访问</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">需要添加dns解析，根据 &quot;HAPROXY_0_VHOST&quot;:&quot;nginx.test.com&quot; 设置的配置。</span><br><span class="line">如：</span><br><span class="line">vim /etc/hosts  添加</span><br><span class="line">10.10.131.151		nginx.test.com</span><br><span class="line"></span><br><span class="line">这里 10.10.131.151 是 marathon-lb 的ip地址</span><br><span class="line"></span><br><span class="line">curl nginx.test.com  即可</span><br></pre></td></tr></table></figure>
+<h2 id="marathon-lb-代理80端口"><a href="#marathon-lb-代理80端口" class="headerlink" title="marathon-lb 代理80端口"></a>marathon-lb 代理80端口</h2><p>默认marathon-lb 80和443端口是被占用的，所以nginx在发布的时候“serverPort”是不能设置为80和443端口的。  </p>
+<p>为了解决这个问题，需要更改源码，重新生成镜像。  </p>
+<p>首先现在 marathon-lb源码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># git clone https://github.com/mesosphere/marathon-lb.git</span><br><span class="line"># cd marathon-lb</span><br><span class="line"></span><br><span class="line">在这个目录下找到所有80、443端口信息。改为其他端口</span><br><span class="line"></span><br><span class="line"># grep 80 . -R</span><br><span class="line">找到相应文件，80 替换为7080</span><br><span class="line">:%s/80/7080/g</span><br><span class="line"></span><br><span class="line">找到相应文件，443 替换为7443</span><br><span class="line">:%s/443/7443/g</span><br></pre></td></tr></table></figure>
+<p>重新生成镜像</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker build -t marathon-lb-7080 .</span><br><span class="line"></span><br><span class="line">成功之后 docker images 就会多出 marathon-lb-7080 镜像</span><br></pre></td></tr></table></figure>
 
-WORKDIR /root/
-
-ADD mesos-dns /root/
-ADD config.json /root/
-
-EXPOSE 53 8123
-
-CMD [&quot;/root/mesos-dns&quot;, &quot;-config=/root/config.json&quot;, &quot;-v=2&quot;]
-</code></pre><p>生成镜像</p>
-<pre><code>docker build -t stg-mesos-dns:0.6.0 .
-</code></pre><p>运行镜像</p>
-<pre><code>docker run  -d --name=stg-mesos-dns --net=host stg-mesos-dns:0.6.0
-</code></pre>
       
     </div>
     
@@ -516,7 +531,9 @@ CMD [&quot;/root/mesos-dns&quot;, &quot;-config=/root/config.json&quot;, &quot;-
       
         <div class="post-tags">
           
-            <a href="/tags/mesos/" rel="tag"># mesos</a>
+            <a href="/tags/marathon/" rel="tag"># marathon</a>
+          
+            <a href="/tags/marathon-lb/" rel="tag"># marathon-lb</a>
           
         </div>
       
@@ -529,14 +546,18 @@ CMD [&quot;/root/mesos-dns&quot;, &quot;-config=/root/config.json&quot;, &quot;-
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/05/25/mesos-dns搭建/" rel="next" title="mesos-dns搭建">
+                <i class="fa fa-chevron-left"></i> mesos-dns搭建
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/05/28/marathon-lb配置及nginx负载/" rel="prev" title="marathon-lb配置及nginx负载">
-                marathon-lb配置及nginx负载 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/05/28/mesos解决sandbox日志切分问题/" rel="prev" title="mesos解决sandbox日志切分问题">
+                mesos解决sandbox日志切分问题 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -695,7 +716,7 @@ CMD [&quot;/root/mesos-dns&quot;, &quot;-config=/root/config.json&quot;, &quot;-
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#mesos-dns-搭建"><span class="nav-number">1.</span> <span class="nav-text">mesos-dns 搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装"><span class="nav-number">1.0.1.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#HTTP-API-接口"><span class="nav-number">1.0.1.1.</span> <span class="nav-text">HTTP API 接口</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#dig-获取mesos-dns信息"><span class="nav-number">1.0.1.2.</span> <span class="nav-text">dig 获取mesos-dns信息</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#docker-images"><span class="nav-number">1.0.2.</span> <span class="nav-text">docker images</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#marathon-lb配置"><span class="nav-number">1.</span> <span class="nav-text">marathon-lb配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#marathon-lb-get-images"><span class="nav-number">1.1.</span> <span class="nav-text">marathon-lb get images</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#官方下载镜像"><span class="nav-number">1.1.1.</span> <span class="nav-text">官方下载镜像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运行"><span class="nav-number">1.1.2.</span> <span class="nav-text">运行</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#marathon-lb-API"><span class="nav-number">1.2.</span> <span class="nav-text">marathon-lb API</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nginx-start"><span class="nav-number">1.3.</span> <span class="nav-text">nginx start</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#说明："><span class="nav-number">1.4.</span> <span class="nav-text">说明：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#访问marathon-lb"><span class="nav-number">1.5.</span> <span class="nav-text">访问marathon-lb</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#marathon-lb-代理80端口"><span class="nav-number">1.6.</span> <span class="nav-text">marathon-lb 代理80端口</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -879,9 +900,9 @@ CMD [&quot;/root/mesos-dns&quot;, &quot;-config=/root/config.json&quot;, &quot;-
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2018/05/25/mesos-dns搭建/';
-          this.page.identifier = '2018/05/25/mesos-dns搭建/';
-          this.page.title = 'mesos-dns搭建';
+          this.page.url = 'http://yoursite.com/2018/05/28/marathon-lb配置及nginx负载/';
+          this.page.identifier = '2018/05/28/marathon-lb配置及nginx负载/';
+          this.page.title = 'marathon-lb配置及nginx负载';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://.disqus.com/embed.js';
