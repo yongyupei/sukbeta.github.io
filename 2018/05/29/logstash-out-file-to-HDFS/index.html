@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="logstash,hdfs," />
 
 
 
@@ -79,16 +79,18 @@
 
 
 
-<meta name="description" content="一步一步往前走！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="苏克贝塔">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="logstash out file to HDFS  logstash 直接把文件内容写入 hdfs 中， 并支持 hdfs 压缩格式。  logstash 需要安装第三方插件，webhdfs插件，通过hdfs的web接口写入。  即 http://namenode00:50070/webhdfs/v1/  接口   安装  可以在官网找到相应的版本， 我们用的是2.3.1，下载地址：   htt">
+<meta name="keywords" content="logstash,hdfs">
+<meta property="og:type" content="article">
+<meta property="og:title" content="logstash out file to HDFS">
+<meta property="og:url" content="http://yoursite.com/2018/05/29/logstash-out-file-to-HDFS/index.html">
 <meta property="og:site_name" content="苏克贝塔">
-<meta property="og:description" content="一步一步往前走！">
+<meta property="og:description" content="logstash out file to HDFS  logstash 直接把文件内容写入 hdfs 中， 并支持 hdfs 压缩格式。  logstash 需要安装第三方插件，webhdfs插件，通过hdfs的web接口写入。  即 http://namenode00:50070/webhdfs/v1/  接口   安装  可以在官网找到相应的版本， 我们用的是2.3.1，下载地址：   htt">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-05-29T05:09:39.163Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="苏克贝塔">
-<meta name="twitter:description" content="一步一步往前走！">
+<meta name="twitter:title" content="logstash out file to HDFS">
+<meta name="twitter:description" content="logstash out file to HDFS  logstash 直接把文件内容写入 hdfs 中， 并支持 hdfs 压缩格式。  logstash 需要安装第三方插件，webhdfs插件，通过hdfs的web接口写入。  即 http://namenode00:50070/webhdfs/v1/  接口   安装  可以在官网找到相应的版本， 我们用的是2.3.1，下载地址：   htt">
 
 
 
@@ -118,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/05/29/logstash-out-file-to-HDFS/"/>
 
 
 
 
 
-  <title>苏克贝塔</title>
+  <title>logstash out file to HDFS | 苏克贝塔</title>
   
 
 
@@ -143,8 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -281,9 +282,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -313,9 +314,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/29/logstash-out-file-to-HDFS/" itemprop="url">logstash out file to HDFS</a></h1>
+          <h1 class="post-title" itemprop="name headline">logstash out file to HDFS</h1>
         
 
         <div class="post-meta">
@@ -380,6 +379,11 @@
           
 
           
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
 
           
 
@@ -398,29 +402,30 @@
       
 
       
-        
-          
-          logstash out file to HDFS  logstash 直接把文件内容写入 hdfs 中， 并支持 hdfs 压缩格式。  logstash 需要安装第三方插件，webhdfs插件，通过hdfs的web接口写入。  即 http://namenode00:50070/webhdfs/v1/  接口  
-安装  可以在官网找到相应的版本， 我们用的是2.3.1，下载地址：  
-https://www.elastic.co/downloads/past-releases  
-  webhdfs插件地址  
-github地址：
+        <h2 id="logstash-out-file-to-HDFS"><a href="#logstash-out-file-to-HDFS" class="headerlink" title="logstash out file to HDFS"></a>logstash out file to HDFS</h2><p>  logstash 直接把文件内容写入 hdfs 中， 并支持 hdfs 压缩格式。<br>  logstash 需要安装第三方插件，webhdfs插件，通过hdfs的web接口写入。<br>  即 <a href="http://namenode00:50070/webhdfs/v1/" target="_blank" rel="noopener">http://namenode00:50070/webhdfs/v1/</a>  接口  </p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>  可以在官网找到相应的版本， 我们用的是2.3.1，下载地址：  </p>
+<pre><code>https://www.elastic.co/downloads/past-releases  
+</code></pre><p>  webhdfs插件地址  </p>
+<pre><code>github地址：
   git clone  https://github.com/heqin5136/logstash-output-webhdfs-discontinued.git
 
 官网地址及使用说明：
   https://www.elastic.co/guide/en/logstash/current/plugins-outputs-webhdfs.html
-插件安装方式：
-logstash 安装在 /home/mtime/logstash-2.3.1
-git c
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/05/29/logstash-out-file-to-HDFS/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+</code></pre><p>插件安装方式：</p>
+<pre><code>logstash 安装在 /home/mtime/logstash-2.3.1
+git clone  https://github.com/heqin5136/logstash-output-webhdfs-discontinued.git
+cd logstash-output-webhdfs-discontinued
+/home/mtime/logstash-2.3.1/bin/plugin install logstash-output-webhdfs-discontinued
+</code></pre><p>检查hdfs的webhds接口</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">   curl -i  &quot;http://namenode:50070/webhdfs/v1/?user.name=hadoop&amp;op=LISTSTATUS&quot;   </span><br><span class="line">   </span><br><span class="line">HTTP/1.1 200 OK</span><br><span class="line">Cache-Control: no-cache</span><br><span class="line">Expires: Thu, 13 Jul 2017 04:53:39 GMT</span><br><span class="line">Date: Thu, 13 Jul 2017 04:53:39 GMT</span><br><span class="line">Pragma: no-cache</span><br><span class="line">Expires: Thu, 13 Jul 2017 04:53:39 GMT</span><br><span class="line">Date: Thu, 13 Jul 2017 04:53:39 GMT</span><br><span class="line">Pragma: no-cache</span><br><span class="line">Content-Type: application/json</span><br><span class="line">Set-Cookie: hadoop.auth=&quot;u=hadoop&amp;p=hadoop&amp;t=simple&amp;e=1499957619679&amp;s=KSxdSAtjXAllhn73vh1MAurG9Bk=&quot;; Path=/; Expires=Thu, 13-Jul-2017 14:53:39 GMT; HttpOnly</span><br><span class="line">Transfer-Encoding: chunked</span><br><span class="line">Server: Jetty(6.1.26)</span><br></pre></td></tr></table></figure>
+<p>注释： active namenode 返回是200 ，standby namenode 返回是403.</p>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>添加 logstash 一个配置文件</p>
+<p>vim /home/mtime/logstash-2.3.1/conf/hdfs.conf</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">input &#123;</span><br><span class="line">  kafka &#123;</span><br><span class="line">    zk_connect =&gt; &quot;192.168.51.191:2181,192.168.51.192:2181,192.168.51.193:2181&quot;   ## kafka zk 地址 </span><br><span class="line">    group_id =&gt; &apos;hdfs&apos;   # 消费者组</span><br><span class="line">    topic_id =&gt; &apos;tracks&apos;  # topic 名字</span><br><span class="line">    consumer_threads =&gt; 1  </span><br><span class="line">    codec =&gt; &apos;json&apos;  </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">filter &#123;   ##  为解决 插入hdfs时间相差8小时， </span><br><span class="line">        date &#123;  </span><br><span class="line">                match =&gt; [ &quot;time&quot; , &quot;yyyy-MM-dd HH:mm:ss&quot; ]</span><br><span class="line">                locale =&gt; &quot;zh&quot;</span><br><span class="line">                timezone =&gt; &quot;-00:00:00&quot;</span><br><span class="line">                target =&gt; &quot;@timestamp&quot;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">output &#123;</span><br><span class="line">#if [app] == &quot;mx.tc.virtualcard.service&quot; &#123;</span><br><span class="line">    webhdfs &#123;</span><br><span class="line">           workers =&gt; 2</span><br><span class="line">           host =&gt; &quot;192.168.53.101&quot;</span><br><span class="line">           standby_host =&gt; &quot;192.168.53.100&quot;</span><br><span class="line">           port =&gt; 50070</span><br><span class="line">           user =&gt; &quot;loguser&quot;</span><br><span class="line">           path =&gt; &quot;/Service-Data/%&#123;+YYYY&#125;-%&#123;+MM&#125;-%&#123;+dd&#125;/%&#123;app&#125;/logstash-%&#123;+HH&#125;.log&quot;</span><br><span class="line">           flush_size =&gt; 100</span><br><span class="line">           idle_flush_time =&gt; 10</span><br><span class="line">           compression =&gt; &quot;gzip&quot;</span><br><span class="line">           retry_interval =&gt; 3</span><br><span class="line">           codec =&gt; &apos;json&apos;   # 解决 写入hdfs文件是json格式，否则内容为 %&#123;message&#125;</span><br><span class="line">       &#125;</span><br><span class="line">#   &#125;</span><br><span class="line">  stdout &#123; codec =&gt; rubydebug &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>关于hdfs部分配置，可以在 <a href="https://www.elastic.co/guide/en/logstash/current/plugins-outputs-webhdfs.html" target="_blank" rel="noopener">plugins-outputs-webhdfs</a>  官网找到。</p>
+<h3 id="启动-logstart"><a href="#启动-logstart" class="headerlink" title="启动 logstart"></a>启动 logstart</h3><pre><code>cd /home/mtime/logstash-2.3.1/bin/
+./logstash -f ../conf/hdfs.conf    # 为前台启动 
+</code></pre>
       
     </div>
     
@@ -430,353 +435,72 @@ git c
     
 
     
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>感谢您的支持！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechat.png" alt="北极企鹅 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="北极企鹅 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
 
     
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/29/mesos容器映射端口限制/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="北极企鹅">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="苏克贝塔">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/29/mesos容器映射端口限制/" itemprop="url">mesos容器映射端口限制</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-29T12:52:49+08:00">
-                2018-05-29
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/mesos/" itemprop="url" rel="index">
-                    <span itemprop="name">mesos</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/logstash/" rel="tag"># logstash</a>
           
-
+            <a href="/tags/hdfs/" rel="tag"># hdfs</a>
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/05/29/mesos容器映射端口限制/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/05/29/mesos容器映射端口限制/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          
-          mesos 容器映射端口限制介绍  mesos 在启动容器的时候，理念是容器内的端都映射到宿主的随机端口。  在容器的时代，其实这样的理念是很好，当容器多的时候，固定端口肯定是有一定的局限性的。可以通过注册中心、mesos-dns、marathon-lb等服务来找到你要的服务地址和端口。  但是有时候有一些服务需要一些固定端口。比如cadvisor、还有我们自己写的容器，可能会映射一些其他端口。  
-默认端口限制  默认mesos的端口也是可以指定的，只是范围比较小。
-131000 - 32000
-  marahotn 的json 文件中，你可以写。
-12345678&quot;portMappings&quot;: [  &#123;    &quot;containerPort&quot;: 80,    &quot;hostPort&quot;: 31000,  # 一般设置 0 为随机端口，    &quot;servicePort&quot;: 0,    &quot;protocol&quot;: &quot;tcp&quot;  &#125;]
-docker 启动时候就是
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/05/29/mesos容器映射端口限制/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/05/29/mesos容器映射端口限制/" rel="next" title="mesos容器映射端口限制">
+                <i class="fa fa-chevron-left"></i> mesos容器映射端口限制
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/28/marathon私有仓库用户名和密码方式/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="北极企鹅">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="苏克贝塔">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/28/marathon私有仓库用户名和密码方式/" itemprop="url">marathon私有仓库用户名和密码方式</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+          <div class="post-nav-prev post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-28T19:01:45+08:00">
-                2018-05-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/marathon/" itemprop="url" rel="index">
-                    <span itemprop="name">marathon</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/05/28/marathon私有仓库用户名和密码方式/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/05/28/marathon私有仓库用户名和密码方式/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-          marathon 使用仓库用户名和密码方式首先需要本地手动登入镜像仓库。123# docker login registry.inc-test.com   Username: admin    Password: Default@123
-登入成功之后会在当前用户的家目录创建一个隐藏目录 ~/.docker ，打包这么目录，放在一个目录下， 并让marathon启动容器的时候引用这个文件即可。
-1234# cd ~# tar czf docker.tar.gz .docker# cp docker.tar.gz /etc/
-marathon json 启动容器引用验证文件123&quot;uris&quot;: [   &quot;file:///etc/docker.tar.gz&quot;]
-注释：  
-
-这样需要每台mesos slave机器都需要放置这个文件，实际操作很不灵活，
-而且用户切换也不好做，每台机器需要放不不用户的验证文件。
-如果用户密码修改，还需要批量修改每台slave机器上的验证文件。
-
-结论：
-把这个文件放在http页面上，只要网络通就可以访问，不需要每台机器都配
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/05/28/marathon私有仓库用户名和密码方式/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -786,509 +510,32 @@ marathon json 启动容器引用验证文件123&quot;uris&quot;: [   &quot;file:
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/28/mesos解决sandbox日志切分问题/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="北极企鹅">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="苏克贝塔">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/28/mesos解决sandbox日志切分问题/" itemprop="url">mesos解决sandbox日志切分问题</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-28T18:47:03+08:00">
-                2018-05-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/mesos/" itemprop="url" rel="index">
-                    <span itemprop="name">mesos</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/05/28/mesos解决sandbox日志切分问题/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/05/28/mesos解决sandbox日志切分问题/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          mesos 解决sandbox日志切分问题mesos运行的docker容器，容器打印到前台console的日志会记录到mesos的work目录中容器沙箱中stdout和stderr文件中，容器不重启，日志会一直变大，这样会到只宿主空间变大。  
-另外这份日志还会日志到系统的/var/log/messages 文件中。  
-首先关于 mesos-slave 的 work-dir 中设置的目录，里面存放的docker容器的沙箱目录，会有 stderr\stdout等文件，其中这两个文件是记录容器console的日志，会一直保留，直到容器销毁，这样日志文件会持续增大。
-为解决这个问题问题。mesos 没有明确的配置。 http://mesos.apache.org/documentation/latest/logging/ 文章中有提到沙箱大小的设置，但是没有测试成功。
-我的解决办法：利用系统的 logrotate 模块做日志的切分和删除。
-如：添加配置文件
-12345678910111213cat &gt; /etc/logrotate.d/mesos  &lt;&lt; EOF/home
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/05/28/mesos解决sandbox日志切分问题/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+    <div class="post-spread">
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
 
 
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/28/marathon-lb配置及nginx负载/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="北极企鹅">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="苏克贝塔">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/28/marathon-lb配置及nginx负载/" itemprop="url">marathon-lb配置及nginx负载</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-28T18:32:40+08:00">
-                2018-05-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/marathon/" itemprop="url" rel="index">
-                    <span itemprop="name">marathon</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/05/28/marathon-lb配置及nginx负载/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/05/28/marathon-lb配置及nginx负载/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          marathon-lb配置marathon-lb get imagesMarathon-lb既是一个服务发现工具，也是负载均衡工具，它集成了haproxy，自动获取各个app的信息，为每一组app生成haproxy配置，通过servicePort或者web虚拟主机提供服务。
-要使用marathonn-lb，每组app必须设置HAPROXY_GROUP标签。
-Marathon-lb运行时绑定在各组app定义的服务端口（servicePort，如果app不定义servicePort，marathon会随机分配端口号）上，可以通过marathon-lb所在节点的相关服务端口访问各组app。
-例如：marathon-lb部署在slave5，test-app 部署在slave1，test-app 的servicePort是10004，那么可以在slave5的 10004端口访问到test-app提供的服务。
-由于servicePort 非80、443端口（80、443端口已被marathon-lb中的 haproxy独占），对于web服务来说不太方便，可以使用 haproxy虚拟主机解决这个问题
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/05/28/marathon-lb配置及nginx负载/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
           </div>
-          <!--/noindex-->
-        
-      
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/25/mesos-dns搭建/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="北极企鹅">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="苏克贝塔">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/25/mesos-dns搭建/" itemprop="url">mesos-dns搭建</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-25T16:04:38+08:00">
-                2018-05-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/mesos/" itemprop="url" rel="index">
-                    <span itemprop="name">mesos</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/05/25/mesos-dns搭建/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/05/25/mesos-dns搭建/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          mesos-dns 搭建  Mesos-DNS用来支持Mesos集群上的服务发现，使运行在Mesos上的应用和服务可以通过域名服务器来发现彼此。你只要知道一个Mesos数据中心上运行的应用的名字，就可以通过Mesos-DNS查询到该应用的IP和端口号。  
-安装  官方下载mesos-dns镜像没有提供mesos-dns的HTTP接口出来，所以先用二进制搭建，在自己build镜像。  
-  mesos-dns文件下载：!https://github.com/mesosphere/mesos-dns/releases
-  下载 mesos-dns-v0.6.0-linux-amd64 一个二进制文件。
-  准备配置文件：config.json
-12345678910111213141516171819202122&#123;  &quot;zk&quot;: &quot;zk://10.0.0.52:2181,10.0.0.53:2181,10.0.0.54:2181/mesos&quot;,  &quot;masters&quot;: [&quot;10.0.0.52:5050&quo
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/05/25/mesos-dns搭建/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
 
   
 
 
-          </div>
-          
-
-
-          
 
         </div>
         
@@ -1309,8 +556,17 @@ Marathon-lb运行时绑定在各组app定义的服务端口（servicePort，如�
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1386,6 +642,22 @@ Marathon-lb运行时绑定在各组app定义的服务端口（servicePort，如�
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#logstash-out-file-to-HDFS"><span class="nav-number">1.</span> <span class="nav-text">logstash out file to HDFS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">1.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置"><span class="nav-number">1.2.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动-logstart"><span class="nav-number">1.3.</span> <span class="nav-text">启动 logstart</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1540,6 +812,10 @@ Marathon-lb运行时绑定在各组app定义的服务端口（servicePort，如�
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -1557,6 +833,18 @@ Marathon-lb运行时绑定在各组app定义的服务端口（servicePort，如�
       <script id="dsq-count-scr" src="https://.disqus.com/count.js" async></script>
     
 
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://yoursite.com/2018/05/29/logstash-out-file-to-HDFS/';
+          this.page.identifier = '2018/05/29/logstash-out-file-to-HDFS/';
+          this.page.title = 'logstash out file to HDFS';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
     
 
   
@@ -1595,6 +883,30 @@ Marathon-lb运行时绑定在各组app定义的服务端口（servicePort，如�
     
 
     
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname, 
+            owner: 'sukbeta',
+            repo: 'gitment-comments',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: '128aa2ae44f139e456d673ee6cefce8e98f8c8aa',
+            
+                client_id: '503ac6ca90fc540c37a4'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
+    
 
 
 
@@ -1613,6 +925,30 @@ Marathon-lb运行时绑定在各组app定义的服务端口（servicePort，如�
 
     
 
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname, 
+            owner: 'sukbeta',
+            repo: 'gitment-comments',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: '128aa2ae44f139e456d673ee6cefce8e98f8c8aa',
+            
+                client_id: '503ac6ca90fc540c37a4'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
     
 
 
