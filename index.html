@@ -401,9 +401,9 @@
         
           
           ##kafka修改分区和副本数 
-topic 分区扩容./kafka-topics.sh –zookeeper 127.0.0.1:2181 -alter –partitions 3 –topic test1
-修改备份数量查看现在副本分配情况
-123456../bin/kafka-topics.sh --zookeeper 127.0.0.1:2181 --describe  --topic test1Topic:test1       PartitionCount:3        ReplicationFactor:2     Configs:        Topic: test1      Partition: 0    Leader: 2       Replicas: 2,4   Isr: 2,4        Topic: test1      Partition: 1    Leader: 3       Replicas: 3,5   Isr: 3,5        Topic: test1      Partition: 2    Leader: 4       R
+查看现在副本分配情况
+123456../bin/kafka-topics.sh --zookeeper 127.0.0.1:2181 --describe  --topic test1Topic:test1       PartitionCount:3        ReplicationFactor:2     Configs:        Topic: test1      Partition: 0    Leader: 2       Replicas: 2,4   Isr: 2,4        Topic: test1      Partition: 1    Leader: 3       Replicas: 3,5   Isr: 3,5        Topic: test1      Partition: 2    Leader: 4       Replicas: 4,1   Isr: 4,1
+topic 分区扩容./kafka-topics.sh –zookeeper 127.0.0.1:2181 -alter –partitio
           ...
           <!--noindex-->
           <div class="post-button text-center">
