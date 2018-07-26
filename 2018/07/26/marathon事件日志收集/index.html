@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="ssh," />
+  <meta name="keywords" content="marathon," />
 
 
 
@@ -79,18 +79,20 @@
 
 
 
-<meta name="description" content="Unix / Linux ssh-add Command Examples to Add SSH Key to Agentssh-add is a helper program for ssh-agent.ssh-add adds RSA or DSA identity files to the ssh agent. For ssh-add to work properly, the agent">
-<meta name="keywords" content="ssh">
+<meta name="description" content="marathon 事件日志收到到ES中  marathon 有配置可以主动把 marathon 的事件日志发送到 http 接口上。这里的事件包括，发布容器的json内容，docker容器死掉、启动，运行、kill，健康检查等日志。也可以说 marathon 所有的动作日志这上都会有。所有我要把这个日志收集起来，并可以做监控，历史查询等等。  先说一下我的方案：  启动一个logstash实例，并">
+<meta name="keywords" content="marathon">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Unix &#x2F; Linux ssh-add Command Examples to Add SSH Key to Agent (转)">
-<meta property="og:url" content="http://yoursite.com/2018/07/11/Unix-Linux-ssh-add-Command-Examples-to-Add-SSH-Key-to-Agent-转/index.html">
+<meta property="og:title" content="marathon事件日志收集">
+<meta property="og:url" content="http://yoursite.com/2018/07/26/marathon事件日志收集/index.html">
 <meta property="og:site_name" content="舒克贝塔">
-<meta property="og:description" content="Unix / Linux ssh-add Command Examples to Add SSH Key to Agentssh-add is a helper program for ssh-agent.ssh-add adds RSA or DSA identity files to the ssh agent. For ssh-add to work properly, the agent">
+<meta property="og:description" content="marathon 事件日志收到到ES中  marathon 有配置可以主动把 marathon 的事件日志发送到 http 接口上。这里的事件包括，发布容器的json内容，docker容器死掉、启动，运行、kill，健康检查等日志。也可以说 marathon 所有的动作日志这上都会有。所有我要把这个日志收集起来，并可以做监控，历史查询等等。  先说一下我的方案：  启动一个logstash实例，并">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-11T07:01:54.686Z">
+<meta property="og:image" content="http://yoursite.com/images/marathon-es-data.png">
+<meta property="og:updated_time" content="2018-07-26T08:02:11.969Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Unix &#x2F; Linux ssh-add Command Examples to Add SSH Key to Agent (转)">
-<meta name="twitter:description" content="Unix / Linux ssh-add Command Examples to Add SSH Key to Agentssh-add is a helper program for ssh-agent.ssh-add adds RSA or DSA identity files to the ssh agent. For ssh-add to work properly, the agent">
+<meta name="twitter:title" content="marathon事件日志收集">
+<meta name="twitter:description" content="marathon 事件日志收到到ES中  marathon 有配置可以主动把 marathon 的事件日志发送到 http 接口上。这里的事件包括，发布容器的json内容，docker容器死掉、启动，运行、kill，健康检查等日志。也可以说 marathon 所有的动作日志这上都会有。所有我要把这个日志收集起来，并可以做监控，历史查询等等。  先说一下我的方案：  启动一个logstash实例，并">
+<meta name="twitter:image" content="http://yoursite.com/images/marathon-es-data.png">
 
 
 
@@ -120,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/07/11/Unix-Linux-ssh-add-Command-Examples-to-Add-SSH-Key-to-Agent-转/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/07/26/marathon事件日志收集/"/>
 
 
 
 
 
-  <title>Unix / Linux ssh-add Command Examples to Add SSH Key to Agent (转) | 舒克贝塔</title>
+  <title>marathon事件日志收集 | 舒克贝塔</title>
   
 
 
@@ -297,7 +299,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/11/Unix-Linux-ssh-add-Command-Examples-to-Add-SSH-Key-to-Agent-转/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/26/marathon事件日志收集/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="北极企鹅">
@@ -314,7 +316,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Unix / Linux ssh-add Command Examples to Add SSH Key to Agent (转)</h1>
+          <h1 class="post-title" itemprop="name headline">marathon事件日志收集</h1>
         
 
         <div class="post-meta">
@@ -326,8 +328,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-11T14:42:38+08:00">
-                2018-07-11
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-26T15:19:40+08:00">
+                2018-07-26
               </time>
             
 
@@ -349,8 +351,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/linux/" itemprop="url" rel="index">
-                    <span itemprop="name">linux</span>
+                  <a href="/categories/marathon/" itemprop="url" rel="index">
+                    <span itemprop="name">marathon</span>
                   </a>
                 </span>
 
@@ -367,9 +369,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/07/11/Unix-Linux-ssh-add-Command-Examples-to-Add-SSH-Key-to-Agent-转/#comments" itemprop="discussionUrl">
+                <a href="/2018/07/26/marathon事件日志收集/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/07/11/Unix-Linux-ssh-add-Command-Examples-to-Add-SSH-Key-to-Agent-转/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2018/07/26/marathon事件日志收集/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -402,30 +404,20 @@
       
 
       
-        <h3 id="Unix-Linux-ssh-add-Command-Examples-to-Add-SSH-Key-to-Agent"><a href="#Unix-Linux-ssh-add-Command-Examples-to-Add-SSH-Key-to-Agent" class="headerlink" title="Unix / Linux ssh-add Command Examples to Add SSH Key to Agent"></a>Unix / Linux ssh-add Command Examples to Add SSH Key to Agent</h3><p>ssh-add is a helper program for ssh-agent.<br>ssh-add adds RSA or DSA identity files to the ssh agent. For ssh-add to work properly, the agent should be running, and have the SSH_AUTH_SOCK environment variable set.  </p>
-<ol>
-<li>Fix “Could not Open” Error (and Add Default RSA/DSA identities)<br>By default, when you try to execute the ssh-add command, you might get “Could not open a connection to your authentication agent.” error message as shown below.  </li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-add</span><br><span class="line">Could not open a connection to your authentication agent.</span><br><span class="line">The reason is ssh-agent is not running.  </span><br><span class="line">But, if you start the ssh-agent as shown below, you’ll still get the same error.  </span><br><span class="line"></span><br><span class="line">$ ssh-agent</span><br><span class="line">SSH_AUTH_SOCK=/tmp/ssh-cYYsc14689/agent.14689; export SSH_AUTH_SOCK;</span><br><span class="line">SSH_AGENT_PID=14690; export SSH_AGENT_PID;</span><br><span class="line">echo Agent pid 14690;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-add</span><br><span class="line">Could not open a connection to your authentication agent.</span><br><span class="line">In order to fix the issue, you should start the ssh-agent as shown below.  </span><br><span class="line"></span><br><span class="line">$ exec ssh-agent bash</span><br><span class="line">Now, when you execute the ssh-add, it will add the ~/.ssh/id_rsa, ~/.ssh/id_dsa and ~/.ssh/identity files to ssh-agent, and will not throw any error message.</span><br><span class="line"></span><br><span class="line">$ ssh-add</span><br><span class="line">Identity added: /home/ramesh/.ssh/id_rsa (/home/ramesh/.ssh/id_rsa)</span><br><span class="line">Identity added: /home/ramesh/.ssh/id_dsa (/home/ramesh/.ssh/id_dsa)</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>Display the entries loaded in ssh-agent<br>Use either -l or -L as shown below to display all the RSA and DSA entries that are currently loaded into the ssh-agent.<br>The following examples shows that there are two entries currently loaded to the ssh-agent.  </li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-add -l</span><br><span class="line">2048 34:36:63:c2:7d:a5:13:e4 /home/ramesh/.ssh/id_rsa (RSA)</span><br><span class="line">1024 ee:60:11:bf:1b:31:3b:fb /home/ramesh/.ssh/id_dsa (DSA)</span><br><span class="line"></span><br><span class="line">$ ssh-add -L</span><br><span class="line">ssh-rsa A2EAAAABIwAAAQEAtVRcaEnxOef0n5WLr9DV1JsLpx4E+P2Zf/N9JBLBbVKDD1BZf</span><br><span class="line">eRmLK8hZZKf0iva8+q1VNyxQB5oTfKGr79ll7KDRwfIgErw== /home/ramesh/.ssh/id_rsa</span><br><span class="line"></span><br><span class="line">ssh-dsa 8WDTpyJiLUNlIXSfCRe7nOjeMlgyn8vM3cWsosO0x4eMDYEMvefzhev0RAtbhyBvs</span><br><span class="line">WLLCwkaVzCZdZvsDa2cl7zKRd+3zLSfBQRa1wpMjJaeJbCg== /home/ramesh/.ssh/id_dsa</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>Delete all entries from ssh-agent<br>Use option -D as shown below to remove all the ssh entries from the ssh-agent.  </li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-add -D</span><br><span class="line">All identities removed.</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-add -l</span><br><span class="line">The agent has no identities.</span><br></pre></td></tr></table></figure>
-<ol start="4">
-<li>Delete specific entries from ssh-agent<br>Using -d option, you can specify exactly what entries you like to delete.<br>The following example will remove only the default RSA entry from the ssh-agent.  </li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-add -l</span><br><span class="line">2048 34:36:63:c2:7d:a5:13:e4 /home/ramesh/.ssh/id_rsa (RSA)</span><br><span class="line">1024 ee:60:11:bf:1b:31:3b:fb /home/ramesh/.ssh/id_dsa (DSA)</span><br><span class="line"></span><br><span class="line">$ ssh-add -d /home/ramesh/.ssh/id_rsa</span><br><span class="line">Identity removed: /home/ramesh/.ssh/id_rsa (/home/ramesh/.ssh/id_rsa.pub)</span><br><span class="line"></span><br><span class="line">$ ssh-add -l</span><br><span class="line">1024 ee:60:11:bf:1b:31:3b:fb /home/ramesh/.ssh/id_dsa (DSA)</span><br></pre></td></tr></table></figure>
-<ol start="5">
-<li>Lock (or) Unlock the SSH Agent<br>You can lock the ssh agent as shown below using -x option. Once you lock the agent, you cannot add, delete, or list entries in the ssh agent without a password.  </li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-add -x</span><br><span class="line">Enter lock password:</span><br><span class="line">Again:</span><br><span class="line">Agent locked.</span><br><span class="line">After locking, if you try to add, you’ll se SSH_AGENT_FAILURE message as shown below.</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-add</span><br><span class="line">SSH_AGENT_FAILURE</span><br><span class="line">SSH_AGENT_FAILURE</span><br><span class="line">Could not add identity: /home/ramesh/.ssh/id_rsa</span><br><span class="line">To unlock an agent, use -X option as shown below. Make sure you enter the same password that you gave while locking the agent. If you give a wrong password, you’ll set “Failed to unlock agent.” message.</span><br><span class="line"></span><br><span class="line">$ ssh-add -X</span><br><span class="line">Enter lock password:</span><br><span class="line">Agent unlocked.</span><br></pre></td></tr></table></figure>
+        <h2 id="marathon-事件日志收到到ES中"><a href="#marathon-事件日志收到到ES中" class="headerlink" title="marathon 事件日志收到到ES中"></a>marathon 事件日志收到到ES中</h2><p>  marathon 有配置可以主动把 marathon 的事件日志发送到 http 接口上。这里的事件包括，发布容器的json内容，docker容器死掉、启动，运行、kill，健康检查等日志。也可以说 marathon 所有的动作日志这上都会有。所有我要把这个日志收集起来，并可以做监控，历史查询等等。<br>  先说一下我的方案：<br>  启动一个logstash实例，并配置http接口，把收集到的日志存到ES索引中。<br>  marathon 配置 logstash 的 http 接口地址，把日志发送到这里即可。<br>  后期可以在ES中查询你想要的事件日志，并报警，或用kibana出图等。  </p>
+<h3 id="logstash-配置"><a href="#logstash-配置" class="headerlink" title="logstash 配置"></a>logstash 配置</h3><p>#####logstash 配置文件<br>vim /etc/logstash.conf  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">input &#123;</span><br><span class="line">    http &#123;</span><br><span class="line">         host =&gt; &quot;0.0.0.0&quot;</span><br><span class="line">         port =&gt; 7882</span><br><span class="line">         codec =&gt; json</span><br><span class="line">          add_field =&gt; &#123;</span><br><span class="line">            &quot;marathon&quot; =&gt; &quot;base-marathon&quot;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">output &#123;</span><br><span class="line">     elasticsearch &#123;</span><br><span class="line">          hosts =&gt; [&quot;10.214.193.27:9250&quot;,&quot;10.214.193.28:9250&quot;,&quot;10.214.193.29:9250&quot;]</span><br><span class="line">          index =&gt; &quot;logstash-marathon-%&#123;+YYYY.MM.dd&#125;&quot;</span><br><span class="line">          flush_size =&gt; 10000</span><br><span class="line">          idle_flush_time =&gt; 60</span><br><span class="line">          template_overwrite =&gt; true</span><br><span class="line">      &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>其中 add_field 添加一个字段  “marathon”:”base-marathon”<br>这样 ES的一个索引所可以放多个marathon的日志，但是需要启动多个logstash，每个配置不同，因为marathon的日志是一样的，区别不出来是哪个集群的日志。  </p>
+<h5 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h5><p>可以用supervisor或docker方式启动。就不在这里说了。</p>
+<h3 id="marathon-配置"><a href="#marathon-配置" class="headerlink" title="marathon 配置"></a>marathon 配置</h3><p>我用的是 yum 安装的marathon，版本是 1.4.9 , 配置是:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /etc/marathon/conf/</span><br><span class="line"></span><br><span class="line">echo &quot;http_callback&quot; &gt; /etc/marathon/conf/event_subscriber</span><br><span class="line">echo &quot;http://logstashIP:7882&quot; &gt; /etc/marathon/conf/http_endpoints</span><br></pre></td></tr></table></figure>
+<p>二进制配置的参数是一样的。  </p>
+<p>重启服务加载配置  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart marathon</span><br></pre></td></tr></table></figure>
+<h4 id="ES-上查询日志"><a href="#ES-上查询日志" class="headerlink" title="ES 上查询日志"></a>ES 上查询日志</h4><p>这样配置完成之后，等marathon有动作的话，ES上就会有数据了，   </p>
+<p>如：<br><img src="/images/marathon-es-data.png" alt="marathon-es-data"></p>
+<p>这只是一个事件，还还有好多时间呢！</p>
+
       
     </div>
     
@@ -471,7 +463,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/ssh/" rel="tag"># ssh</a>
+            <a href="/tags/marathon/" rel="tag"># marathon</a>
           
         </div>
       
@@ -484,8 +476,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/05/cgroup-服务限制进程资源/" rel="next" title="cgroup 服务限制进程资源">
-                <i class="fa fa-chevron-left"></i> cgroup 服务限制进程资源
+              <a href="/2018/07/11/Unix-Linux-ssh-add-Command-Examples-to-Add-SSH-Key-to-Agent-转/" rel="next" title="Unix / Linux ssh-add Command Examples to Add SSH Key to Agent (转)">
+                <i class="fa fa-chevron-left"></i> Unix / Linux ssh-add Command Examples to Add SSH Key to Agent (转)
               </a>
             
           </div>
@@ -493,10 +485,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/07/26/marathon事件日志收集/" rel="prev" title="marathon事件日志收集">
-                marathon事件日志收集 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -660,7 +648,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Unix-Linux-ssh-add-Command-Examples-to-Add-SSH-Key-to-Agent"><span class="nav-number">1.</span> <span class="nav-text">Unix / Linux ssh-add Command Examples to Add SSH Key to Agent</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#marathon-事件日志收到到ES中"><span class="nav-number">1.</span> <span class="nav-text">marathon 事件日志收到到ES中</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#logstash-配置"><span class="nav-number">1.1.</span> <span class="nav-text">logstash 配置</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#启动"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">启动</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#marathon-配置"><span class="nav-number">1.2.</span> <span class="nav-text">marathon 配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ES-上查询日志"><span class="nav-number">1.2.1.</span> <span class="nav-text">ES 上查询日志</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -844,9 +832,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2018/07/11/Unix-Linux-ssh-add-Command-Examples-to-Add-SSH-Key-to-Agent-转/';
-          this.page.identifier = '2018/07/11/Unix-Linux-ssh-add-Command-Examples-to-Add-SSH-Key-to-Agent-转/';
-          this.page.title = 'Unix / Linux ssh-add Command Examples to Add SSH Key to Agent (转)';
+          this.page.url = 'http://yoursite.com/2018/07/26/marathon事件日志收集/';
+          this.page.identifier = '2018/07/26/marathon事件日志收集/';
+          this.page.title = 'marathon事件日志收集';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://.disqus.com/embed.js';
