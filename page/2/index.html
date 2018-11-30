@@ -2305,20 +2305,29 @@ Marathon-lb运行时绑定在各组app定义的服务端口（servicePort，如�
 
 
 
-script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-<script type="text/javascript">
-  new Valine({
-      av: AV,
-      el: '#comments' ,
-      app_id: '',
-      app_key: '',
-      placeholder: 'Just go go', // 默认 null
-      notify: false, // 默认 false
-      verify: false, // 默认 false
-      path: , // 默认 window.location.pathname
-      avatar: 'mm' // 默认 ''
-  });
-</script>
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'O6nPM59vDnUQjwGEOR9xUDb0-gzGzoHsz',
+        appKey: 'DMJAa2u9ryrsvtE16mLGHOdQ',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
 
 
 
