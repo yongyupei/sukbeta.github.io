@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="marathon,mesos," />
+  <meta name="keywords" content="mesos,marathon," />
 
 
 
@@ -80,7 +80,7 @@
 
 
 <meta name="description" content="marathon 约束 Constraints 限制Constraints控制在何处运行的应用程序，可以根据constraints属性，控制容器可以在哪个Agent节点上运行。 （往上看来好多文档写的都很类似，我就写一些不一样的吧。） mesos agent 自定义 constraints 属性rpm 安装的 mesos 可以在 /etc/mesos-slave/attributes 下定义这台a">
-<meta name="keywords" content="marathon,mesos">
+<meta name="keywords" content="mesos,marathon">
 <meta property="og:type" content="article">
 <meta property="og:title" content="marathon 约束 constraints 限制">
 <meta property="og:url" content="http://yoursite.com/2018/11/28/marathon-约束-constraints-限制/index.html">
@@ -494,9 +494,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/marathon/" rel="tag"># marathon</a>
-          
             <a href="/tags/mesos/" rel="tag"># mesos</a>
+          
+            <a href="/tags/marathon/" rel="tag"># marathon</a>
           
         </div>
       
@@ -956,29 +956,20 @@
 
 
 
-
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-  
-  <script type="text/javascript">
-    var GUEST = ['nick','mail','link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item=>{
-      return GUEST.indexOf(item)>-1;
-    });
-    new Valine({
-        el: '#comments' ,
-        verify: false,
-        notify: false,
-        appId: 'O6nPM59vDnUQjwGEOR9xUDb0-gzGzoHsz',
-        appKey: 'DMJAa2u9ryrsvtE16mLGHOdQ',
-        placeholder: 'Just go go',
-        avatar:'mm',
-        guest_info:guest,
-        pageSize:'10' || 10,
-    });
-  </script>
-
+script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script type="text/javascript">
+  new Valine({
+      av: AV,
+      el: '#comments' ,
+      app_id: '',
+      app_key: '',
+      placeholder: 'Just go go', // 默认 null
+      notify: false, // 默认 false
+      verify: false, // 默认 false
+      path: , // 默认 window.location.pathname
+      avatar: 'mm' // 默认 ''
+  });
+</script>
 
 
 
