@@ -429,9 +429,9 @@ awk ‘{print “ ‘ \ ‘ ‘ “ $2 “ ‘ \ ‘ ‘ “}’
 awk ‘{print “ \ “ “ $2 “ \ “ “}’  
 
 
-希望对大家有帮助！
-
-          
+希望对大家有帮助！  
+感觉
+          ...
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/11/29/awk输出单引号或双引号/#more" rel="contents">
@@ -1092,12 +1092,12 @@ systemctl daemon-reloadsystemctl restart docker
       
         
           
-          ES 解决 memory_lock 问题我是docker运行的es，数据目录存放到本地磁盘上。最近做优化，想加上 memory_lock 参数，发现有问题。发现很多人有类似的问题。但都没说在docker上怎么解决。我整理一下解决办法，现在看来挺简单的。
+          Elasricsearch 解决 memory_lock 问题我是docker运行的es，数据目录存放到本地磁盘上。最近做优化，想加上 memory_lock 参数，发现有问题。发现很多人有类似的问题。但都没说在docker上怎么解决。我整理一下解决办法，现在看来挺简单的。
 报错docker 运行 es 6.5
 run docker container
 1docker run --rm -p 9200:9200 -p 9300:9300 -e &quot;discovery.type=single-node&quot; -e &quot;bootstrap.memory_lock=true&quot; docker.elastic.co/elasticsearch/elasticsearch:6.5.0
 Error Message: Unable to lock JVM Memory: error=12, reason=Cannot allocate memory
-12345678[2018-11-21T07:03:05,384][WARN ][o.e.b.JNANatives         ] [unk
+12345678[2018-11-21T07:03:05,384][WARN ][o.e.b.JNANatives    
           ...
           <!--noindex-->
           <div class="post-button text-center">

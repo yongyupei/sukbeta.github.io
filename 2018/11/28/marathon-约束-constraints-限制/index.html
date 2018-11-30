@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="舒克贝塔">
 <meta property="og:description" content="marathon 约束 Constraints 限制Constraints控制在何处运行的应用程序，可以根据constraints属性，控制容器可以在哪个Agent节点上运行。 （往上看来好多文档写的都很类似，我就写一些不一样的吧。） mesos agent 自定义 constraints 属性rpm 安装的 mesos 可以在 /etc/mesos-slave/attributes 下定义这台a">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-28T11:19:50.387Z">
+<meta property="og:updated_time" content="2018-11-30T11:08:12.071Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="marathon 约束 constraints 限制">
 <meta name="twitter:description" content="marathon 约束 Constraints 限制Constraints控制在何处运行的应用程序，可以根据constraints属性，控制容器可以在哪个Agent节点上运行。 （往上看来好多文档写的都很类似，我就写一些不一样的吧。） mesos agent 自定义 constraints 属性rpm 安装的 mesos 可以在 /etc/mesos-slave/attributes 下定义这台a">
@@ -448,6 +448,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&quot;constraints&quot;: [</span><br><span class="line">    [</span><br><span class="line">        &quot;project&quot;,</span><br><span class="line">        &quot;LIKE&quot;,</span><br><span class="line">        &quot;ppp[1-3]&quot;</span><br><span class="line">    ]</span><br><span class="line">],</span><br></pre></td></tr></table></figure>
 <p>mesos 可以自定义 constraints 这个就很灵活了，我们在初始化 Agent 节点的时候，就可以定义很多属性来。容器发布的时候我们就很容易约束了。</p>
 <p>官方文档：<a href="https://mesosphere.github.io/marathon/docs/constraints.html" target="_blank" rel="noopener">https://mesosphere.github.io/marathon/docs/constraints.html</a></p>
+<p>感觉文章嗨可以的话，帮忙点点下面的广告哦！ 谢谢支持！</p>
 
       
     </div>

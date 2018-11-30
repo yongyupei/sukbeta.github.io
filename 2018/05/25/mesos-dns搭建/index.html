@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="舒克贝塔">
 <meta property="og:description" content="mesos-dns 搭建  Mesos-DNS用来支持Mesos集群上的服务发现，使运行在Mesos上的应用和服务可以通过域名服务器来发现彼此。你只要知道一个Mesos数据中心上运行的应用的名字，就可以通过Mesos-DNS查询到该应用的IP和端口号。   安装  官方下载mesos-dns镜像没有提供mesos-dns的HTTP接口出来，所以先用二进制搭建，在自己build镜像。     mes">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-28T07:24:35.175Z">
+<meta property="og:updated_time" content="2018-11-30T11:10:11.292Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mesos-dns搭建">
 <meta name="twitter:description" content="mesos-dns 搭建  Mesos-DNS用来支持Mesos集群上的服务发现，使运行在Mesos上的应用和服务可以通过域名服务器来发现彼此。你只要知道一个Mesos数据中心上运行的应用的名字，就可以通过Mesos-DNS查询到该应用的IP和端口号。   安装  官方下载mesos-dns镜像没有提供mesos-dns的HTTP接口出来，所以先用二进制搭建，在自己build镜像。     mes">
@@ -486,7 +486,8 @@ CMD [&quot;/root/mesos-dns&quot;, &quot;-config=/root/config.json&quot;, &quot;-
 <pre><code>docker build -t stg-mesos-dns:0.6.0 .
 </code></pre><p>运行镜像</p>
 <pre><code>docker run  -d --name=stg-mesos-dns --net=host stg-mesos-dns:0.6.0
-</code></pre>
+</code></pre><p>感觉文章嗨可以的话，帮忙点点下面的广告哦！ 谢谢支持！</p>
+
       
     </div>
     

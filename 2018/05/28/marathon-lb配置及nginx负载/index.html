@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="舒克贝塔">
 <meta property="og:description" content="marathon-lb配置marathon-lb get imagesMarathon-lb既是一个服务发现工具，也是负载均衡工具，它集成了haproxy，自动获取各个app的信息，为每一组app生成haproxy配置，通过servicePort或者web虚拟主机提供服务。 要使用marathonn-lb，每组app必须设置HAPROXY_GROUP标签。 Marathon-lb运行时绑定在各组a">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-28T10:42:31.745Z">
+<meta property="og:updated_time" content="2018-11-30T11:07:27.238Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="marathon-lb配置及nginx负载">
 <meta name="twitter:description" content="marathon-lb配置marathon-lb get imagesMarathon-lb既是一个服务发现工具，也是负载均衡工具，它集成了haproxy，自动获取各个app的信息，为每一组app生成haproxy配置，通过servicePort或者web虚拟主机提供服务。 要使用marathonn-lb，每组app必须设置HAPROXY_GROUP标签。 Marathon-lb运行时绑定在各组a">
@@ -501,6 +501,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># git clone https://github.com/mesosphere/marathon-lb.git</span><br><span class="line"># cd marathon-lb</span><br><span class="line"></span><br><span class="line">在这个目录下找到所有80、443端口信息。改为其他端口</span><br><span class="line"></span><br><span class="line"># grep 80 . -R</span><br><span class="line">找到相应文件，80 替换为7080</span><br><span class="line">:%s/80/7080/g</span><br><span class="line"></span><br><span class="line">找到相应文件，443 替换为7443</span><br><span class="line">:%s/443/7443/g</span><br></pre></td></tr></table></figure>
 <p>重新生成镜像</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker build -t marathon-lb-7080 .</span><br><span class="line"></span><br><span class="line">成功之后 docker images 就会多出 marathon-lb-7080 镜像</span><br></pre></td></tr></table></figure>
+<p>感觉文章嗨可以的话，帮忙点点下面的广告哦！ 谢谢支持！</p>
 
       
     </div>
