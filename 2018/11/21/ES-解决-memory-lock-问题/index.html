@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="舒克贝塔">
 <meta property="og:description" content="Elasricsearch 解决 memory_lock 问题我是docker运行的es，数据目录存放到本地磁盘上。最近做优化，想加上 memory_lock 参数，发现有问题。发现很多人有类似的问题。但都没说在docker上怎么解决。我整理一下解决办法，现在看来挺简单的。 报错docker 运行 es 6.5 run docker container 1docker run --rm -p 92">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-30T11:05:57.856Z">
+<meta property="og:updated_time" content="2018-11-30T14:30:42.178Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Elasticsearch 解决 memory_lock 问题">
 <meta name="twitter:description" content="Elasricsearch 解决 memory_lock 问题我是docker运行的es，数据目录存放到本地磁盘上。最近做优化，想加上 memory_lock 参数，发现有问题。发现很多人有类似的问题。但都没说在docker上怎么解决。我整理一下解决办法，现在看来挺简单的。 报错docker 运行 es 6.5 run docker container 1docker run --rm -p 92">
@@ -443,7 +443,7 @@
 <p>二进制安装：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">systemd:  </span><br><span class="line">/usr/lib/systemd/system/elasticsearch.service set: LimitMEMLOCK=infinity  </span><br><span class="line">SysV:  </span><br><span class="line">/etc/sysconfig/elasticsearch set: MAX_LOCKED_MEMORY=unlimited  </span><br><span class="line">Upstart:  </span><br><span class="line">/etc/default/elasticsearch set: MAX_LOCKED_MEMORY=unlimited  </span><br><span class="line">Then restart Elasticsearch.</span><br></pre></td></tr></table></figure>
 <p>二进制和源码安装方式我没有验证过。来源于网络。</p>
-<p>感觉文章嗨可以的话，帮忙点点下面的广告哦！ 谢谢支持！</p>
+<p>感觉文章还可以的话，帮忙点点下面的广告哦！ 谢谢支持！</p>
 
       
     </div>

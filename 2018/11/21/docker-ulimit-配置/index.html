@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="舒克贝塔">
 <meta property="og:description" content="docker ulimit 配置docker  设置 ulimit 方法 一：通过docker run –ulimit 参数设置这个容器的 ulimit 值如1docker run --ulimit nofile=1024:1024 --rm debian sh -c &amp;quot;ulimit -n&amp;quot; 官网说明：https://docs.docker.com/engine/referen">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-30T11:07:43.327Z">
+<meta property="og:updated_time" content="2018-11-30T14:32:16.248Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="docker ulimit 配置">
 <meta name="twitter:description" content="docker ulimit 配置docker  设置 ulimit 方法 一：通过docker run –ulimit 参数设置这个容器的 ulimit 值如1docker run --ulimit nofile=1024:1024 --rm debian sh -c &amp;quot;ulimit -n&amp;quot; 官网说明：https://docs.docker.com/engine/referen">
@@ -439,7 +439,7 @@
 <li>一个es memlock 的例子</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --rm -p 9200:9200 -p 9300:9300 -e &quot;discovery.type=single-node&quot; -e &quot;bootstrap.memory_lock=true&quot; --ulimit memlock=-1:-1 docker.elastic.co/elasticsearch/elasticsearch:6.5.0</span><br></pre></td></tr></table></figure>
-<p>感觉文章嗨可以的话，帮忙点点下面的广告哦！ 谢谢支持！</p>
+<p>感觉文章还可以的话，帮忙点点下面的广告哦！ 谢谢支持！</p>
 
       
     </div>

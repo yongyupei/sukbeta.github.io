@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="舒克贝塔">
 <meta property="og:description" content="docker 搭建macvlan 网络  简单说，macvlan就是在宿主的网卡设置多个vlan信息，根据走的网卡不同，并带有不行的vlan标记。   交换机需要支持macvlan需要交换机上有几个设置：    连接宿主的交换机接口需要改为 Trunk 模式。（这样才能多vlan通过这个口通讯） 交换机上添加macvlan设置的相应vlan信息。 三层交换机上设置各个vlan的网关地址。并实现vl">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-30T11:09:42.738Z">
+<meta property="og:updated_time" content="2018-11-30T14:33:24.288Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="docker搭建macvlan网络">
 <meta name="twitter:description" content="docker 搭建macvlan 网络  简单说，macvlan就是在宿主的网卡设置多个vlan信息，根据走的网卡不同，并带有不行的vlan标记。   交换机需要支持macvlan需要交换机上有几个设置：    连接宿主的交换机接口需要改为 Trunk 模式。（这样才能多vlan通过这个口通讯） 交换机上添加macvlan设置的相应vlan信息。 三层交换机上设置各个vlan的网关地址。并实现vl">
@@ -477,7 +477,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name test1 --ip=172.55.55.10 --network mac_net1 nginx-nettools:1.13  </span><br><span class="line">或动态分配</span><br><span class="line">docker run -d --name test2  --network mac_net1 nginx-nettools:1.13</span><br></pre></td></tr></table></figure>
 <p>限制分配ip地址池</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker network create -d macvlan --subnet=172.20.30.0/24 --gateway=172.20.30.1 --ip-range=172.20.30.48/30 -o parent=em1.20 mac_net30</span><br><span class="line">这样只能分配4个ip地址</span><br><span class="line">172.20.30.128/25 也就是 128-255 可得 128个ip地址</span><br></pre></td></tr></table></figure>
-<p>感觉文章嗨可以的话，帮忙点点下面的广告哦！ 谢谢支持！</p>
+<p>感觉文章还可以的话，帮忙点点下面的广告哦！ 谢谢支持！</p>
 
       
     </div>
