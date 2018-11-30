@@ -1905,7 +1905,7 @@ GPT分区表：（GPT含义：GUID分区表）
       
         
           
-          marathon 事件日志收到到ES中  marathon 有配置可以主动把 marathon 的事件日志发送到 http 接口上。这里的事件包括，发布容器的json内容，docker容器死掉、启动，运行、kill，健康检查等日志。也可以说 marathon 所有的动作日志这上都会有。所有我要把这个日志收集起来，并可以做监控，历史查询等等。  先说一下我的方案：  启动一个logstash实例，并配置http接口，把收集到的日志存到ES索引中。  marathon 配置 logstash 的 http 接口地址，把日志发送到这里即可。  后期可以在ES中查询你想要的事件日志，并报警，或用kibana出图等。  
+          marathon 事件日志收集到ES中  marathon 有配置可以主动把 marathon 的事件日志发送到 http 接口上。这里的事件包括，发布容器的json内容，docker容器死掉、启动，运行、kill，健康检查等日志。也可以说 marathon 所有的动作日志这上都会有。所有我要把这个日志收集起来，并可以做监控，历史查询等等。  先说一下我的方案：  启动一个logstash实例，并配置http接口，把收集到的日志存到ES索引中。  marathon 配置 logstash 的 http 接口地址，把日志发送到这里即可。  后期可以在ES中查询你想要的事件日志，并报警，或用kibana出图等。  
 logstash 配置#####logstash 配置文件vim /etc/logstash.conf  
 1234567891011121314151617181920input &#123;    http &#123;         host =&gt; &quot;0.0.0.0&quot;         port =&gt; 7882         codec 
           ...
