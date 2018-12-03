@@ -79,16 +79,17 @@
 
 
 
-<meta name="description" content="一步一步往前走！">
-<meta property="og:type" content="website">
+<meta name="description" content="A7rQGsj3dl">
+<meta property="og:type" content="article">
 <meta property="og:title" content="舒克贝塔">
-<meta property="og:url" content="http://yoursite.com/page/3/index.html">
+<meta property="og:url" content="http://yoursite.com/2018/12/03/baidu_verify_A7rQGsj3dl/index.html">
 <meta property="og:site_name" content="舒克贝塔">
-<meta property="og:description" content="一步一步往前走！">
+<meta property="og:description" content="A7rQGsj3dl">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-12-03T09:54:57.094Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="舒克贝塔">
-<meta name="twitter:description" content="一步一步往前走！">
+<meta name="twitter:description" content="A7rQGsj3dl">
 
 
 
@@ -118,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/page/3/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/12/03/baidu_verify_A7rQGsj3dl/"/>
 
 
 
 
 
-  <title>舒克贝塔</title>
+  <title> | 舒克贝塔</title>
   
 
 
@@ -153,8 +154,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -297,9 +297,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -312,7 +312,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/28/mesos解决sandbox日志切分问题/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/03/baidu_verify_A7rQGsj3dl/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="北极企鹅">
@@ -329,9 +329,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/28/mesos解决sandbox日志切分问题/" itemprop="url">mesos解决sandbox日志切分问题</a></h1>
+          <h1 class="post-title" itemprop="name headline"></h1>
         
 
         <div class="post-meta">
@@ -343,8 +341,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-28T18:47:03+08:00">
-                2018-05-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-03T17:54:57+08:00">
+                2018-12-03
               </time>
             
 
@@ -354,28 +352,6 @@
           </span>
 
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/mesos/" itemprop="url" rel="index">
-                    <span itemprop="name">mesos</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
 
           
             
@@ -384,9 +360,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/05/28/mesos解决sandbox日志切分问题/#comments" itemprop="discussionUrl">
+                <a href="/2018/12/03/baidu_verify_A7rQGsj3dl/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/05/28/mesos解决sandbox日志切分问题/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2018/12/03/baidu_verify_A7rQGsj3dl/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -395,6 +371,11 @@
           
           
 
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i> 游览
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
           
 
           
@@ -414,24 +395,7 @@
       
 
       
-        
-          
-          mesos 解决sandbox日志切分问题mesos运行的docker容器，容器打印到前台console的日志会记录到mesos的work目录中容器沙箱中stdout和stderr文件中，容器不重启，日志会一直变大，这样会到只宿主空间变大。  
-另外这份日志还会日志到系统的/var/log/messages 文件中。  
-首先关于 mesos-slave 的 work-dir 中设置的目录，里面存放的docker容器的沙箱目录，会有 stderr\stdout等文件，其中这两个文件是记录容器console的日志，会一直保留，直到容器销毁，这样日志文件会持续增大。
-为解决这个问题问题。mesos 没有明确的配置。 http://mesos.apache.org/documentation/latest/logging/ 文章中有提到沙箱大小的设置，但是没有测试成功。
-我的解决办法：利用系统的 logrotate 模块做日志的切分和删除。
-如：添加配置文件
-12345678910111213cat &gt; /etc/logrotate.d/mesos  &lt;&lt; EOF/home
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/05/28/mesos解决sandbox日志切分问题/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+        A7rQGsj3dl
       
     </div>
     
@@ -441,6 +405,35 @@
     
 
     
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>感谢您的支持！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechat.png" alt="北极企鹅 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="北极企鹅 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
 
     
 
@@ -448,175 +441,28 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/28/marathon-lb配置及nginx负载/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="北极企鹅">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="舒克贝塔">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/28/marathon-lb配置及nginx负载/" itemprop="url">marathon-lb配置及nginx负载</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-28T18:32:40+08:00">
-                2018-05-28
-              </time>
+              <a href="/2018/12/03/install-apache-hadoop/" rel="next" title="源码编译安装 apache hadoop">
+                <i class="fa fa-chevron-left"></i> 源码编译安装 apache hadoop
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/marathon/" itemprop="url" rel="index">
-                    <span itemprop="name">marathon</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/05/28/marathon-lb配置及nginx负载/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/05/28/marathon-lb配置及nginx负载/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-          marathon-lb配置marathon-lb get imagesMarathon-lb既是一个服务发现工具，也是负载均衡工具，它集成了haproxy，自动获取各个app的信息，为每一组app生成haproxy配置，通过servicePort或者web虚拟主机提供服务。
-要使用marathonn-lb，每组app必须设置HAPROXY_GROUP标签。
-Marathon-lb运行时绑定在各组app定义的服务端口（servicePort，如果app不定义servicePort，marathon会随机分配端口号）上，可以通过marathon-lb所在节点的相关服务端口访问各组app。
-例如：marathon-lb部署在slave5，test-app 部署在slave1，test-app 的servicePort是10004，那么可以在slave5的 10004端口访问到test-app提供的服务。
-由于servicePort 非80、443端口（80、443端口已被marathon-lb中的 haproxy独占），对于web服务来说不太方便，可以使用 haproxy虚拟主机解决这个问题
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/05/28/marathon-lb配置及nginx负载/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -626,178 +472,43 @@ Marathon-lb运行时绑定在各组app定义的服务端口（servicePort，如�
   </article>
 
 
-    
-      
+	<!-- google adsense -->
+	<!-- google adsense auto -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-7874588734245173",
+    enable_page_level_ads: true
+  });
+</script>
 
-  
+	<div align="center">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- sukbeta-1 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:570px;height:250px"
+     data-ad-client="ca-pub-7874588734245173"
+     data-ad-slot="5382403634"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
 
-  
-  
-  
+	<!-- google adsense -->
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/25/mesos-dns搭建/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="北极企鹅">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="舒克贝塔">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/25/mesos-dns搭建/" itemprop="url">mesos-dns搭建</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-25T16:04:38+08:00">
-                2018-05-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/mesos/" itemprop="url" rel="index">
-                    <span itemprop="name">mesos</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/05/25/mesos-dns搭建/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/05/25/mesos-dns搭建/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          mesos-dns 搭建  Mesos-DNS用来支持Mesos集群上的服务发现，使运行在Mesos上的应用和服务可以通过域名服务器来发现彼此。你只要知道一个Mesos数据中心上运行的应用的名字，就可以通过Mesos-DNS查询到该应用的IP和端口号。  
-安装  官方下载mesos-dns镜像没有提供mesos-dns的HTTP接口出来，所以先用二进制搭建，在自己build镜像。  
-  mesos-dns文件下载：!https://github.com/mesosphere/mesos-dns/releases
-  下载 mesos-dns-v0.6.0-linux-amd64 一个二进制文件。
-  准备配置文件：config.json
-12345678910111213141516171819202122&#123;  &quot;zk&quot;: &quot;zk://10.0.0.52:2181,10.0.0.53:2181,10.0.0.54:2181/mesos&quot;,  &quot;masters&quot;: [&quot;10.0.0.52:5050&quo
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/05/25/mesos-dns搭建/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+    <div class="post-spread">
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
 
-
-    
-  </section>
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
-  </nav>
-
+<!-- google adsense auto -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-7874588734245173",
+    enable_page_level_ads: true
+  });
+</script>
 
 
           </div>
@@ -805,6 +516,34 @@ Marathon-lb运行时绑定在各组app定义的服务端口（servicePort，如�
 
 
           
+
+<!-- google adsenen -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- head -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8243248314488866"
+     data-ad-slot="1571553111"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- google adsenen -->
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -1066,6 +805,10 @@ Marathon-lb运行时绑定在各组app定义的服务端口（servicePort，如�
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -1083,6 +826,18 @@ Marathon-lb运行时绑定在各组app定义的服务端口（servicePort，如�
       <script id="dsq-count-scr" src="https://.disqus.com/count.js" async></script>
     
 
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://yoursite.com/2018/12/03/baidu_verify_A7rQGsj3dl/';
+          this.page.identifier = '2018/12/03/baidu_verify_A7rQGsj3dl/';
+          this.page.title = '';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
     
 
   
@@ -1120,6 +875,30 @@ Marathon-lb运行时绑定在各组app定义的服务端口（servicePort，如�
 
     
 
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname, 
+            owner: 'sukbeta',
+            repo: 'gitment-comments',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: '128aa2ae44f139e456d673ee6cefce8e98f8c8aa',
+            
+                client_id: '503ac6ca90fc540c37a4'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
     
 
 
@@ -1161,6 +940,30 @@ Marathon-lb运行时绑定在各组app定义的服务端口（servicePort，如�
 
     
 
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname, 
+            owner: 'sukbeta',
+            repo: 'gitment-comments',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: '128aa2ae44f139e456d673ee6cefce8e98f8c8aa',
+            
+                client_id: '503ac6ca90fc540c37a4'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
     
 
 
