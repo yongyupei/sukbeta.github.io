@@ -312,7 +312,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/11/Unix-Linux-ssh-add-Command-Examples-to-Add-SSH-Key-to-Agent-转/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/id.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="北极企鹅">
@@ -331,7 +331,168 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/07/11/Unix-Linux-ssh-add-Command-Examples-to-Add-SSH-Key-to-Agent-转/" itemprop="url">Unix / Linux ssh-add Command Examples to Add SSH Key to Agent (转)</a></h1>
+                <a class="post-title-link" href="/id.html" itemprop="url">marathon事件日志收集</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-26T15:19:40+08:00">
+                2018-07-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/marathon/" itemprop="url" rel="index">
+                    <span itemprop="name">marathon</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/id.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="id.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          marathon 事件日志收集到ES中  marathon 有配置可以主动把 marathon 的事件日志发送到 http 接口上。这里的事件包括，发布容器的json内容，docker容器死掉、启动，运行、kill，健康检查等日志。也可以说 marathon 所有的动作日志这上都会有。所有我要把这个日志收集起来，并可以做监控，历史查询等等。  先说一下我的方案：  启动一个logstash实例，并配置http接口，把收集到的日志存到ES索引中。  marathon 配置 logstash 的 http 接口地址，把日志发送到这里即可。  后期可以在ES中查询你想要的事件日志，并报警，或用kibana出图等。  
+logstash 配置#####logstash 配置文件vim /etc/logstash.conf  
+1234567891011121314151617181920input &#123;    http &#123;         host =&gt; &quot;0.0.0.0&quot;         port =&gt; 7882         codec 
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/id.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/id.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="北极企鹅">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="舒克贝塔">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/id.html" itemprop="url">Unix / Linux ssh-add Command Examples to Add SSH Key to Agent (转)</a></h1>
         
 
         <div class="post-meta">
@@ -384,9 +545,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/07/11/Unix-Linux-ssh-add-Command-Examples-to-Add-SSH-Key-to-Agent-转/#comments" itemprop="discussionUrl">
+                <a href="/id.html#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/07/11/Unix-Linux-ssh-add-Command-Examples-to-Add-SSH-Key-to-Agent-转/" itemprop="commentCount"></span>
+                        data-disqus-identifier="id.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -422,7 +583,7 @@ Fix “Could not Open” Error (and Add Default RSA/DSA identities)By default, w
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/07/11/Unix-Linux-ssh-add-Command-Examples-to-Add-SSH-Key-to-Agent-转/#more" rel="contents">
+            <a class="btn" href="/id.html#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -473,7 +634,7 @@ Fix “Could not Open” Error (and Add Default RSA/DSA identities)By default, w
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/05/cgroup-服务限制进程资源/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/id.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="北极企鹅">
@@ -492,7 +653,7 @@ Fix “Could not Open” Error (and Add Default RSA/DSA identities)By default, w
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/07/05/cgroup-服务限制进程资源/" itemprop="url">cgroup 服务限制进程资源</a></h1>
+                <a class="post-title-link" href="/id.html" itemprop="url">cgroup 服务限制进程资源</a></h1>
         
 
         <div class="post-meta">
@@ -545,9 +706,9 @@ Fix “Could not Open” Error (and Add Default RSA/DSA identities)By default, w
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/07/05/cgroup-服务限制进程资源/#comments" itemprop="discussionUrl">
+                <a href="/id.html#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/07/05/cgroup-服务限制进程资源/" itemprop="commentCount"></span>
+                        data-disqus-identifier="id.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -585,7 +746,7 @@ vim
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/07/05/cgroup-服务限制进程资源/#more" rel="contents">
+            <a class="btn" href="/id.html#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -636,7 +797,7 @@ vim
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/19/kafka修改分区和副本数/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/id.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="北极企鹅">
@@ -655,7 +816,7 @@ vim
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/06/19/kafka修改分区和副本数/" itemprop="url">kafka修改分区和副本数</a></h1>
+                <a class="post-title-link" href="/id.html" itemprop="url">kafka修改分区和副本数</a></h1>
         
 
         <div class="post-meta">
@@ -708,9 +869,9 @@ vim
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/06/19/kafka修改分区和副本数/#comments" itemprop="discussionUrl">
+                <a href="/id.html#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/06/19/kafka修改分区和副本数/" itemprop="commentCount"></span>
+                        data-disqus-identifier="id.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -747,7 +908,7 @@ topic 分区扩容1./kafka-topics.sh --zookeeper 127.0.0.1:2181 -alter --parti
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/06/19/kafka修改分区和副本数/#more" rel="contents">
+            <a class="btn" href="/id.html#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -798,7 +959,7 @@ topic 分区扩容1./kafka-topics.sh --zookeeper 127.0.0.1:2181 -alter --parti
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/14/docker搭建macvlan网络/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/id.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="北极企鹅">
@@ -817,7 +978,7 @@ topic 分区扩容1./kafka-topics.sh --zookeeper 127.0.0.1:2181 -alter --parti
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/06/14/docker搭建macvlan网络/" itemprop="url">docker搭建macvlan网络</a></h1>
+                <a class="post-title-link" href="/id.html" itemprop="url">docker搭建macvlan网络</a></h1>
         
 
         <div class="post-meta">
@@ -870,9 +1031,9 @@ topic 分区扩容1./kafka-topics.sh --zookeeper 127.0.0.1:2181 -alter --parti
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/06/14/docker搭建macvlan网络/#comments" itemprop="discussionUrl">
+                <a href="/id.html#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/06/14/docker搭建macvlan网络/" itemprop="commentCount"></span>
+                        data-disqus-identifier="id.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -938,7 +1099,7 @@ vlan 号
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/06/14/docker搭建macvlan网络/#more" rel="contents">
+            <a class="btn" href="/id.html#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -989,7 +1150,7 @@ vlan 号
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/04/linux-删除乱码文件/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/id.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="北极企鹅">
@@ -1008,7 +1169,7 @@ vlan 号
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/06/04/linux-删除乱码文件/" itemprop="url">linux 删除乱码文件</a></h1>
+                <a class="post-title-link" href="/id.html" itemprop="url">linux 删除乱码文件</a></h1>
         
 
         <div class="post-meta">
@@ -1061,9 +1222,9 @@ vlan 号
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/06/04/linux-删除乱码文件/#comments" itemprop="discussionUrl">
+                <a href="/id.html#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/06/04/linux-删除乱码文件/" itemprop="commentCount"></span>
+                        data-disqus-identifier="id.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1101,7 +1262,7 @@ vlan 号
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/06/04/linux-删除乱码文件/#more" rel="contents">
+            <a class="btn" href="/id.html#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1152,7 +1313,7 @@ vlan 号
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/29/logstash-out-file-to-HDFS/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/id.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="北极企鹅">
@@ -1171,7 +1332,7 @@ vlan 号
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/05/29/logstash-out-file-to-HDFS/" itemprop="url">logstash out file to HDFS</a></h1>
+                <a class="post-title-link" href="/id.html" itemprop="url">logstash out file to HDFS</a></h1>
         
 
         <div class="post-meta">
@@ -1224,9 +1385,9 @@ vlan 号
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/05/29/logstash-out-file-to-HDFS/#comments" itemprop="discussionUrl">
+                <a href="/id.html#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/05/29/logstash-out-file-to-HDFS/" itemprop="commentCount"></span>
+                        data-disqus-identifier="id.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1271,7 +1432,7 @@ git c
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/05/29/logstash-out-file-to-HDFS/#more" rel="contents">
+            <a class="btn" href="/id.html#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1322,7 +1483,7 @@ git c
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/29/mesos容器映射端口限制/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/id.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="北极企鹅">
@@ -1341,7 +1502,7 @@ git c
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/05/29/mesos容器映射端口限制/" itemprop="url">mesos容器映射端口限制</a></h1>
+                <a class="post-title-link" href="/id.html" itemprop="url">mesos容器映射端口限制</a></h1>
         
 
         <div class="post-meta">
@@ -1394,9 +1555,9 @@ git c
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/05/29/mesos容器映射端口限制/#comments" itemprop="discussionUrl">
+                <a href="/id.html#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/05/29/mesos容器映射端口限制/" itemprop="commentCount"></span>
+                        data-disqus-identifier="id.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1435,7 +1596,7 @@ docker 启动时候就是
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/05/29/mesos容器映射端口限制/#more" rel="contents">
+            <a class="btn" href="/id.html#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1486,7 +1647,7 @@ docker 启动时候就是
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/28/marathon私有仓库用户名和密码方式/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/id.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="北极企鹅">
@@ -1505,7 +1666,7 @@ docker 启动时候就是
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/05/28/marathon私有仓库用户名和密码方式/" itemprop="url">marathon私有仓库用户名和密码方式</a></h1>
+                <a class="post-title-link" href="/id.html" itemprop="url">marathon私有仓库用户名和密码方式</a></h1>
         
 
         <div class="post-meta">
@@ -1558,9 +1719,9 @@ docker 启动时候就是
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/05/28/marathon私有仓库用户名和密码方式/#comments" itemprop="discussionUrl">
+                <a href="/id.html#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/05/28/marathon私有仓库用户名和密码方式/" itemprop="commentCount"></span>
+                        data-disqus-identifier="id.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1605,7 +1766,7 @@ marathon json 启动容器引用验证文件123&quot;uris&quot;: [   &quot;file:
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/05/28/marathon私有仓库用户名和密码方式/#more" rel="contents">
+            <a class="btn" href="/id.html#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1656,7 +1817,7 @@ marathon json 启动容器引用验证文件123&quot;uris&quot;: [   &quot;file:
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/28/mesos解决sandbox日志切分问题/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/id.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="北极企鹅">
@@ -1675,7 +1836,7 @@ marathon json 启动容器引用验证文件123&quot;uris&quot;: [   &quot;file:
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/05/28/mesos解决sandbox日志切分问题/" itemprop="url">mesos解决sandbox日志切分问题</a></h1>
+                <a class="post-title-link" href="/id.html" itemprop="url">mesos解决sandbox日志切分问题</a></h1>
         
 
         <div class="post-meta">
@@ -1728,9 +1889,9 @@ marathon json 启动容器引用验证文件123&quot;uris&quot;: [   &quot;file:
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/05/28/mesos解决sandbox日志切分问题/#comments" itemprop="discussionUrl">
+                <a href="/id.html#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/05/28/mesos解决sandbox日志切分问题/" itemprop="commentCount"></span>
+                        data-disqus-identifier="id.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1770,170 +1931,7 @@ marathon json 启动容器引用验证文件123&quot;uris&quot;: [   &quot;file:
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/05/28/mesos解决sandbox日志切分问题/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/28/marathon-lb配置及nginx负载/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="北极企鹅">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="舒克贝塔">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/28/marathon-lb配置及nginx负载/" itemprop="url">marathon-lb配置及nginx负载</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-28T18:32:40+08:00">
-                2018-05-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/marathon/" itemprop="url" rel="index">
-                    <span itemprop="name">marathon</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/05/28/marathon-lb配置及nginx负载/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/05/28/marathon-lb配置及nginx负载/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          marathon-lb配置marathon-lb get imagesMarathon-lb既是一个服务发现工具，也是负载均衡工具，它集成了haproxy，自动获取各个app的信息，为每一组app生成haproxy配置，通过servicePort或者web虚拟主机提供服务。
-要使用marathonn-lb，每组app必须设置HAPROXY_GROUP标签。
-Marathon-lb运行时绑定在各组app定义的服务端口（servicePort，如果app不定义servicePort，marathon会随机分配端口号）上，可以通过marathon-lb所在节点的相关服务端口访问各组app。
-例如：marathon-lb部署在slave5，test-app 部署在slave1，test-app 的servicePort是10004，那么可以在slave5的 10004端口访问到test-app提供的服务。
-由于servicePort 非80、443端口（80、443端口已被marathon-lb中的 haproxy独占），对于web服务来说不太方便，可以使用 haproxy虚拟主机解决这个问题
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/05/28/marathon-lb配置及nginx负载/#more" rel="contents">
+            <a class="btn" href="/id.html#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -2021,7 +2019,7 @@ Marathon-lb运行时绑定在各组app定义的服务端口（servicePort，如�
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2032,7 +2030,7 @@ Marathon-lb运行时绑定在各组app定义的服务端口（servicePort，如�
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -2043,7 +2041,7 @@ Marathon-lb运行时绑定在各组app定义的服务端口（servicePort，如�
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
