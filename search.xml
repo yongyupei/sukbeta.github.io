@@ -3,6 +3,27 @@
   
     
     <entry>
+      <title>zookeeper清理日志</title>
+      <link href="/2018/12/17/zk-delete-log/"/>
+      <url>/2018/12/17/zk-delete-log/</url>
+      <content type="html"><![CDATA[<h1 id="zookeeper-清理日志"><a href="#zookeeper-清理日志" class="headerlink" title="zookeeper 清理日志"></a>zookeeper 清理日志</h1><p>在使用zookeeper过程中，会有dataDir和dataLogDir两个目录，分别用于snapshot和事务日志的输出（默认情况下只有dataDir目录，snapshot和事务日志都保存在这个目录中，正常运行过程中，ZK会不断地把快照数据和事务日志输出到这两个目录，并且如果没有人为操作的话，ZK自己是不会清理这些文件的，需要管理员来清理。</p><h3 id="配置方法"><a href="#配置方法" class="headerlink" title="配置方法"></a>配置方法</h3><p>从3.4.0开始，zookeeper提供了自动清理snapshot和事务日志的功能，通过配置 autopurge.snapRetainCount 和 autopurge.purgeInterval 这两个参数能够实现定时清理了。这两个参数都是在zoo.cfg中配置的：</p><p>For Example： 一个zoo.cfg配置的例子</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">tickTime=2000</span><br><span class="line">initLimit=10</span><br><span class="line">syncLimit=5</span><br><span class="line">dataDir=/home/hadoop/apache-hadoop/zookeeper/var/data</span><br><span class="line">clientPort=2181</span><br><span class="line">dataLogDir=/home/hadoop/apache-hadoop/zookeeper/var/datalog</span><br><span class="line">maxClientCnxns=300</span><br><span class="line">server.1=namenode001-host.mjq-sukbeta.com:2888:3888</span><br><span class="line">server.2=namenode002-host.mjq-sukbeta.com:2888:3888</span><br><span class="line">server.3=datanode001-host.mjq-sukbeta.com:2888:3888</span><br><span class="line">server.4=datanode002-host.mjq-sukbeta.com:2888:3888</span><br><span class="line">server.5=datanode003-host.mjq-sukbeta.com:2888:3888</span><br><span class="line">autopurge.snapRetainCount=20</span><br><span class="line">autopurge.purgeInterval=48</span><br></pre></td></tr></table></figure><p>autopurge.purgeInterval  这个参数指定了清理频率，单位是小时，需要填写一个1或更大的整数，默认是0，表示不开启自己清理功能。  </p><p>autopurge.snapRetainCount 这个参数和上面的参数搭配使用，这个参数指定了需要保留的文件数目。默认是保留3个。</p><h3 id="脚本方法"><a href="#脚本方法" class="headerlink" title="脚本方法"></a>脚本方法</h3><p>写了一个脚本， 可以每天定时执行清理。</p><p>脚本内容如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">           </span><br><span class="line">#snapshot file dir</span><br><span class="line">dataDir=/home/hadoop/apache-hadoop/zookeeper/var/data/version-2</span><br><span class="line">#tran log dir</span><br><span class="line">dataLogDir=/home/hadoop/apache-hadoop/zookeeper/var/datalog/version-2</span><br><span class="line">#zk log dir</span><br><span class="line">#Leave 30 files</span><br><span class="line">count=30</span><br><span class="line">count=$[$count+1]</span><br><span class="line">ls -t $dataLogDir/log.* | tail -n +$count | xargs rm -f</span><br><span class="line">ls -t $dataDir/snapshot.* | tail -n +$count | xargs rm -f</span><br></pre></td></tr></table></figure><ul><li>需要根据自己的情况修改脚本中的dataDir、dataLogDir路径。</li></ul><p>如果感觉文章嗨可以的话，棒棒点点下面的广告哦！非常感谢！</p>]]></content>
+      
+      <categories>
+          
+          <category> hadoop </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> zookeeper </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>Hue编译安装及Hadoop相关组建的配置</title>
       <link href="/2018/12/06/hue-installed/"/>
       <url>/2018/12/06/hue-installed/</url>
