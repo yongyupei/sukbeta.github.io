@@ -420,10 +420,10 @@
           
           hive metastore 配置多台，可以避免单节点故障导致整个集群的hive client不可用。同时hive client配置多个merastore地址，会自动选择可用节点。
 metastore单独配置metastore 的配置单独拿出来，这样不容易让别人看到连接数据库的信息。
-12345[root@cd-client00 conf]# echo $HIVE_HOME/home/hadoop/apache-hadoop/hivemkdir -p /home/hadoop/apache-hadoop/hive/hive-metestore/confchmod 700 home/hadoop/apache-hadoop/hive/hive-metestore/conf
+12345[root@cd-client00 conf]# echo $HIVE_HOME/home/hadoop/apache-hadoop/hivemkdir -p /home/hadoop/apache-hadoop/hive/hive-metestore/confchmod 700 /home/hadoop/apache-hadoop/hive/hive-metestore/conf
 这个目录的权限你可以设置为 700 ，只有自己的帐号可以看到。 其他的hive client也不需要这个目录的配置。
-vim hive-site.xml
-123456789101112131415161718192021222324&lt;configuration&gt;          &lt;property&
+vim /home/hadoop/apache-hadoop/hive/hive-metestore/conf/hive-site.xml
+123456789101112131415161718192
           ...
           <!--noindex-->
           <div class="post-button text-center">
