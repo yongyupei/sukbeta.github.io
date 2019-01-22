@@ -3,6 +3,27 @@
   
     
     <entry>
+      <title>kafka对topic leader 进行自动负载均衡</title>
+      <link href="/kafka-auto-loadblance-leader/"/>
+      <url>/kafka-auto-loadblance-leader/</url>
+      <content type="html"><![CDATA[<p>在创建一个topic时，kafka尽量将partition均分在所有的brokers上，并且将replicas也j均分在不同的broker上。</p><p>每个partitiion的所有replicas叫做”assigned replicas”，”assigned replicas”中的第一个replicas叫”preferred replica”，刚创建的topic一般”preferred replica”是leader。leader replica负责所有的读写。</p><p>但随着时间推移，broker可能会停机，会导致leader迁移，导致机群的负载不均衡。我们期望对topic的leader进行重新负载均衡，让partition选择”preferred replica”做为leader。</p><p>查看topic详情</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">./kafka-topics.sh --zookeeper 127.0.0.1:2181 --describe  --topic logdata-es</span><br><span class="line"></span><br><span class="line">Topic:logdata-es        PartitionCount:6        ReplicationFactor:2     Configs:</span><br><span class="line">        Topic: logdata-es       Partition: 0    Leader: 2       Replicas: 3,2   Isr: 2,3</span><br><span class="line">        Topic: logdata-es       Partition: 1    Leader: 2       Replicas: 5,2   Isr: 2,5</span><br><span class="line">        Topic: logdata-es       Partition: 2    Leader: 1       Replicas: 4,1   Isr: 1,4</span><br><span class="line">        Topic: logdata-es       Partition: 3    Leader: 2       Replicas: 5,2   Isr: 2,5</span><br><span class="line">        Topic: logdata-es       Partition: 4    Leader: 1       Replicas: 1,3   Isr: 1,3</span><br><span class="line">        Topic: logdata-es       Partition: 5    Leader: 2       Replicas: 2,5   Isr: 2,5</span><br></pre></td></tr></table></figure><p>编辑相应topic的json文件  </p><p>vim logdata-es-autu.json </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"> &quot;partitions&quot;:</span><br><span class="line">  [</span><br><span class="line">    &#123;&quot;topic&quot;: &quot;logdata-es&quot;, &quot;partition&quot;: 0&#125;,</span><br><span class="line">    &#123;&quot;topic&quot;: &quot;logdata-es&quot;, &quot;partition&quot;: 1&#125;,</span><br><span class="line">    &#123;&quot;topic&quot;: &quot;logdata-es&quot;, &quot;partition&quot;: 2&#125;,</span><br><span class="line">    &#123;&quot;topic&quot;: &quot;logdata-es&quot;, &quot;partition&quot;: 3&#125;,</span><br><span class="line">    &#123;&quot;topic&quot;: &quot;logdata-es&quot;, &quot;partition&quot;: 4&#125;,</span><br><span class="line">    &#123;&quot;topic&quot;: &quot;logdata-es&quot;, &quot;partition&quot;: 5&#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>执行</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">./kafka-preferred-replica-election.sh --zookeeper 127.0.0.1:2181 --path-to-json-file logdata-es-autu.json </span><br><span class="line"></span><br><span class="line">Successfully started preferred replica election for partitions Set([logdata-es,3], [logdata-es,2], [logdata-es,1], [logdata-es,5], [logdata-es,0], [logdata-es,4])</span><br></pre></td></tr></table></figure><p>之后在查看</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Topic:logdata-es        PartitionCount:6        ReplicationFactor:2     Configs:</span><br><span class="line">        Topic: logdata-es       Partition: 0    Leader: 3       Replicas: 3,2   Isr: 2,3</span><br><span class="line">        Topic: logdata-es       Partition: 1    Leader: 5       Replicas: 5,2   Isr: 2,5</span><br><span class="line">        Topic: logdata-es       Partition: 2    Leader: 4       Replicas: 4,1   Isr: 1,4</span><br><span class="line">        Topic: logdata-es       Partition: 3    Leader: 5       Replicas: 5,2   Isr: 2,5</span><br><span class="line">        Topic: logdata-es       Partition: 4    Leader: 1       Replicas: 1,3   Isr: 1,3</span><br><span class="line">        Topic: logdata-es       Partition: 5    Leader: 2       Replicas: 2,5   Isr: 2,5</span><br></pre></td></tr></table></figure><p>官方说明</p><p><a href="https://cwiki.apache.org/confluence/display/KAFKA/Replication%20tools" target="_blank" rel="noopener">https://cwiki.apache.org/confluence/display/KAFKA/Replication%20tools</a></p><p>如果你感觉文章还可以的话，请帮点点下面的广告。谢谢！</p>]]></content>
+      
+      <categories>
+          
+          <category> kafka </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> kafka </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>hive中文乱码解决办法</title>
       <link href="/hive-chinese-garbled/"/>
       <url>/hive-chinese-garbled/</url>
@@ -168,9 +189,9 @@
       
         <tags>
             
-            <tag> shell </tag>
-            
             <tag> ssh </tag>
+            
+            <tag> shell </tag>
             
         </tags>
       
