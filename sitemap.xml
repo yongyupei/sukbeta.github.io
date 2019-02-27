@@ -4,7 +4,7 @@
   <url>
     <loc>https://sukbeta.github.io/hadoop-command/</loc>
     
-    <lastmod>2019-02-18T03:33:25.876Z</lastmod>
+    <lastmod>2019-02-18T03:33:38.168Z</lastmod>
     
   </url>
   
@@ -149,13 +149,6 @@
   </url>
   
   <url>
-    <loc>https://sukbeta.github.io/cgroup-limit-process-resources/</loc>
-    
-    <lastmod>2018-12-03T07:30:14.467Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://sukbeta.github.io/nginx-installed-sticky/</loc>
     
     <lastmod>2018-12-03T07:30:14.467Z</lastmod>
@@ -163,14 +156,21 @@
   </url>
   
   <url>
-    <loc>https://sukbeta.github.io/source-install-mesos/</loc>
+    <loc>https://sukbeta.github.io/cgroup-limit-process-resources/</loc>
+    
+    <lastmod>2018-12-03T07:30:14.467Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sukbeta.github.io/parted-partition/</loc>
     
     <lastmod>2018-12-03T07:30:14.466Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://sukbeta.github.io/parted-partition/</loc>
+    <loc>https://sukbeta.github.io/source-install-mesos/</loc>
     
     <lastmod>2018-12-03T07:30:14.466Z</lastmod>
     
@@ -212,14 +212,14 @@
   </url>
   
   <url>
-    <loc>https://sukbeta.github.io/marathon-lb-configure-nginx/</loc>
+    <loc>https://sukbeta.github.io/linux-Restrict-user-command-method/</loc>
     
     <lastmod>2018-12-03T07:30:14.461Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://sukbeta.github.io/linux-Restrict-user-command-method/</loc>
+    <loc>https://sukbeta.github.io/marathon-lb-configure-nginx/</loc>
     
     <lastmod>2018-12-03T07:30:14.461Z</lastmod>
     
