@@ -294,9 +294,9 @@
       
         <tags>
             
-            <tag> shell </tag>
-            
             <tag> ssh </tag>
+            
+            <tag> shell </tag>
             
         </tags>
       
