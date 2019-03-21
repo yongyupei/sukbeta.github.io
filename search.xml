@@ -3,6 +3,27 @@
   
     
     <entry>
+      <title>hive自定义参数</title>
+      <link href="/hive-custom-variables/"/>
+      <url>/hive-custom-variables/</url>
+      <content type="html"><![CDATA[<h2 id="hive-自定义参数"><a href="#hive-自定义参数" class="headerlink" title="hive 自定义参数"></a>hive 自定义参数</h2><p>有的时候我们需要执行hive的时候带一些参数，以便我们后期任务分析、排查等问题。所以这里我们说一下自定义参数的作用。</p><h3 id="hive-命令指定参数"><a href="#hive-命令指定参数" class="headerlink" title="hive 命令指定参数"></a>hive 命令指定参数</h3><p>执行hive命令的时候指定参数</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hive --hiveconf hive.job.submit.username=shining -e &quot;select count(*) from temp.test_hive where pt=&apos;2019-03-21&apos;;&quot;</span><br></pre></td></tr></table></figure><p>也可以指定多个参数</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hive --hiveconf hive.job.submit.username=shining  --hiveconf hive.job.submit.web=sukbeta.github.io  -e &quot;select count(*) from temp.test_hive where pt=&apos;2019-03-31&apos;;&quot;</span><br></pre></td></tr></table></figure><p>这时你可以在yarn中找到job的页面，在job的 Configuration 页面中可以查找到你得传的参数。</p><p>如：<br><img src="/images/hive-custom-variables-1.png" alt="hive-custom-variables-images"></p><h3 id="全局配置"><a href="#全局配置" class="headerlink" title="全局配置"></a>全局配置</h3><p>可以修改 hive 命令中的 HIVE_OPTS， 这样执行所有hive的命令都添加这个参数了。</p><p>例如：<br>编辑 hive 命令</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vim $HIVE_HOME/bin/hive</span><br><span class="line"></span><br><span class="line">添加：</span><br><span class="line"></span><br><span class="line">HIVE_OPTS=&quot;$HIVE_OPTS --hiveconf scheduler.job.submit.username=$&#123;BUILD_USER_ID&#125; --hiveconf scheduler.job.submit.jobname=$&#123;JOB_NAME&#125;&quot;</span><br></pre></td></tr></table></figure><ul><li>BUILD_USER_ID 和 JOB_NAME 是两个参数，需要有这两个参数。否则是查不到的。</li></ul><p>我是用jenkins调用的hive，jenkins会自动传入 JOB_NAME 参数的，所有就能取到。</p><p>在jenkins上安装 Build User Vars Plugin 插件可以获取一些执行用户信息。</p><p>可以参考插件说明 ： <a href="https://wiki.jenkins.io/display/JENKINS/Build+User+Vars+Plugin" target="_blank" rel="noopener">https://wiki.jenkins.io/display/JENKINS/Build+User+Vars+Plugin</a></p><p>hive自定义参数这个更能用好了很强大的。</p>]]></content>
+      
+      <categories>
+          
+          <category> hive </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hive </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>elasticsearch导出、导入工具-elasticdump</title>
       <link href="/elasticsearch-elasticdump/"/>
       <url>/elasticsearch-elasticdump/</url>
