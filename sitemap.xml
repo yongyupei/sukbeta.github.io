@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://sukbeta.github.io/hadoop-lzo-gz-bz2/</loc>
+    
+    <lastmod>2019-03-25T07:21:51.050Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sukbeta.github.io/hadoop%E4%B8%8A%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%9F%A5%E7%9C%8Blzo%E3%80%81gz%E3%80%81bz%E6%96%87%E4%BB%B6/</loc>
+    
+    <lastmod>2019-03-25T07:19:59.595Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://sukbeta.github.io/web/</loc>
     
     <lastmod>2019-03-25T03:22:47.142Z</lastmod>
@@ -177,13 +191,6 @@
   </url>
   
   <url>
-    <loc>https://sukbeta.github.io/nginx-installed-sticky/</loc>
-    
-    <lastmod>2018-12-03T07:30:14.467Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://sukbeta.github.io/cgroup-limit-process-resources/</loc>
     
     <lastmod>2018-12-03T07:30:14.467Z</lastmod>
@@ -191,14 +198,21 @@
   </url>
   
   <url>
-    <loc>https://sukbeta.github.io/source-install-mesos/</loc>
+    <loc>https://sukbeta.github.io/nginx-installed-sticky/</loc>
+    
+    <lastmod>2018-12-03T07:30:14.467Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sukbeta.github.io/parted-partition/</loc>
     
     <lastmod>2018-12-03T07:30:14.466Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://sukbeta.github.io/parted-partition/</loc>
+    <loc>https://sukbeta.github.io/source-install-mesos/</loc>
     
     <lastmod>2018-12-03T07:30:14.466Z</lastmod>
     
@@ -268,14 +282,14 @@
   </url>
   
   <url>
-    <loc>https://sukbeta.github.io/docker-build-MacVlanNetwork/</loc>
+    <loc>https://sukbeta.github.io/docker-ulimit-configure/</loc>
     
     <lastmod>2018-12-03T07:30:14.458Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://sukbeta.github.io/docker-ulimit-configure/</loc>
+    <loc>https://sukbeta.github.io/docker-build-MacVlanNetwork/</loc>
     
     <lastmod>2018-12-03T07:30:14.458Z</lastmod>
     
