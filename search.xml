@@ -3,6 +3,27 @@
   
     
     <entry>
+      <title>查看docker容器日志</title>
+      <link href="/docker-logs-explantion/"/>
+      <url>/docker-logs-explantion/</url>
+      <content type="html"><![CDATA[<h2 id="查看docker容器日志"><a href="#查看docker容器日志" class="headerlink" title="查看docker容器日志"></a>查看docker容器日志</h2><p>通过docker logs命令可以查看容器的日志。</p><h4 id="docker-logs-日志说明"><a href="#docker-logs-日志说明" class="headerlink" title="docker logs 日志说明"></a>docker logs 日志说明</h4><p>当我们输入docker logs的时候会转化为Docker Client向Docker Daemon发起请求,Docker Daemon 在运行容器时会去创建一个协程(goroutine)，绑定了整个容器内所有进程的标准输出文件描述符。因此容器内应用的所有只要是标准输出日志，都会被 goroutine 接收，Docker Daemon会根据容器id和日志类型读取日志内容，最终会输出到用户终端上并且通过json格式存放在/var/lib/docker/containers目录下。</p><p>docker logs是跟随容器而产生的，如果删除了某个容器，相应的日志文件也会随着被删除</p><h4 id="命令说明"><a href="#命令说明" class="headerlink" title="命令说明"></a>命令说明</h4><p>命令格式</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ docker logs [OPTIONS] CONTAINER</span><br><span class="line">  Options:</span><br><span class="line">        --details        显示更多的信息</span><br><span class="line">    -f, --follow         跟踪实时日志</span><br><span class="line">        --since string   显示自某个timestamp之后的日志，或相对时间，如42m（即42分钟）</span><br><span class="line">        --tail string    从日志末尾显示多少行日志， 默认是all</span><br><span class="line">    -t, --timestamps     显示时间戳</span><br><span class="line">        --until string   显示自某个timestamp之前的日志，或相对时间，如42m（即42分钟）</span><br></pre></td></tr></table></figure><p>For Example :</p><ul><li>查看实时日志，不看历史：</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker -f --tail 1 container_id</span><br></pre></td></tr></table></figure><ul><li>查看后100行的日志：</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker logs --tail 100 container_id</span><br></pre></td></tr></table></figure><ul><li>查看30分钟之内日志</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker logs  --since 30m container_id</span><br></pre></td></tr></table></figure><ul><li>查看指定日期之后的日志 (2019-03-25T13:00:00 到现在的日志)</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker logs -t --since=&quot;2019-03-25T13:00:00&quot;  container_id</span><br></pre></td></tr></table></figure><ul><li>查看指定时间后的日志，只显示最后100行：</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker logs -f -t --since=&quot;2019-03-25&quot; --tail=100 container_id</span><br></pre></td></tr></table></figure><ul><li>查看指定时间段之内的日志， (–until 需要docker API 1.35 之上才支持)</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker logs -t --since=&quot;2019-03-25T13:00:00&quot; --until=&quot;2019-03-25T14:00:00&quot; container_id</span><br></pre></td></tr></table></figure><ul><li>docker 官网说明:<br><a href="https://docs.docker.com/engine/reference/commandline/logs/" target="_blank" rel="noopener">https://docs.docker.com/engine/reference/commandline/logs/</a></li></ul>]]></content>
+      
+      <categories>
+          
+          <category> docker </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> docker </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>hadoop上命令行查看lzo、gz、bz文件</title>
       <link href="/hadoop-lzo-gz-bz2/"/>
       <url>/hadoop-lzo-gz-bz2/</url>
