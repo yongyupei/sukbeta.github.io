@@ -3,6 +3,27 @@
   
     
     <entry>
+      <title>hadoop设置目录配额-setSpaceQuota</title>
+      <link href="/hadoop-set-quota/"/>
+      <url>/hadoop-set-quota/</url>
+      <content type="html"><![CDATA[<h2 id="hadoop设置目录配额-setSpaceQuota"><a href="#hadoop设置目录配额-setSpaceQuota" class="headerlink" title="hadoop设置目录配额-setSpaceQuota"></a>hadoop设置目录配额-setSpaceQuota</h2><p>在多人共用HDFS的环境下，配置设置非常重要。特别是在Hadoop处理大量资料的环境，如果没有配额管理，很容易把所有的空间用完造成别人无法存取。Hdfs的配额设定是针对目标而不是针对账号，所有在管理上最好让每个账号仅操作某一个目录，然后对目录设置配置。</p><p>设定方法有两种：</p><ul><li>Name Quotas：设置某一个目录下文件总数</li><li>Space Quotas：设置某一个目录下可使用空间大小</li></ul><p>Hadoop可以通过该命令可以来限定某个hdfs目录的大小：</p><h5 id="设置配额"><a href="#设置配额" class="headerlink" title="设置配额"></a>设置配额</h5><p>设置100G的目录配额，</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hadoop dfsadmin -setSpaceQuota 100g /user/shining</span><br></pre></td></tr></table></figure><p>设置为3m的目录配额，默认单位是字节</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hadoop dfsadmin -setSpaceQuota 3000000 /temp/shining</span><br></pre></td></tr></table></figure><blockquote><p> 这里统计空间的时候会将备份数也考虑在里面，因为集群设置了备份数为3，所以hadoop dfsadmin -setSpaceQuota也要讲备份数考虑进去，</p></blockquote><blockquote><p> 在core-site.xml里面设置 dfs.block.size=64MB，dfs.replication=3 ，如果一个小文件（例如，1k大小的文件）被上传到hdfs，该文件并不能占满一整个blok，但是按照hdfs配置规则也需要按照一个blok计算，即存储空间为：1 x 64MB x 3 = 192MB</p></blockquote><h5 id="查看目录配额"><a href="#查看目录配额" class="headerlink" title="查看目录配额"></a>查看目录配额</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[hadoop@shining-host~]$ hadoop fs -count -q /user/shining</span><br><span class="line">        none             inf    107374182400     66658430073           97         3512         5193489830 /user/shining</span><br><span class="line">        </span><br><span class="line">依次表示为：文件数限额  可用文件数  空间限额 可用空间 目录数  文件数  总大小 文件/目录名</span><br><span class="line"></span><br><span class="line">hadoop fs -count -q -h /user/shining  显示带单位</span><br></pre></td></tr></table></figure><h5 id="清楚配额"><a href="#清楚配额" class="headerlink" title="清楚配额"></a>清楚配额</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hadoop dfsadmin -clrSpaceQuota /user/shining</span><br></pre></td></tr></table></figure><h5 id="设置文件数"><a href="#设置文件数" class="headerlink" title="设置文件数"></a>设置文件数</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">计算公式：QUOTA – (DIR_COUNT + FILE_COUNT) = REMAINING_QUOTA</span><br><span class="line">这里的 10000 是指 DIR_COUNT + FILE_COUNT = 10000，最大值為 Long.Max_Value       </span><br><span class="line">启用设定：hadoop dfsadmin -setQuota 10000 /user/seamon</span><br><span class="line">清除設定： hadoop dfsadmin -clrQuota /user/seamon</span><br></pre></td></tr></table></figure><h5 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h5><ul><li>hdfs的配额管理是跟着目录走，如果目录被重命名，配额依然有效。</li><li>在设置完配额以后，如果超过限制，虽然文件不会写入到hdfs，但是文件名依然会存在，只是文件size为0。当加大配额设置后，还需要将之前的空文件删除才能进一步写入。</li><li>如果新设置的quota值，小于该目录现有的Name Quotas 及 Space Quotas，系统并不会给出错误提示，但是该目录的配置会变成最新设置的quota</li></ul>]]></content>
+      
+      <categories>
+          
+          <category> hadoop </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hadoop </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>查看docker容器日志</title>
       <link href="/docker-logs-explantion/"/>
       <url>/docker-logs-explantion/</url>
