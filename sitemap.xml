@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://sukbeta.github.io/hadoop-set-replication/</loc>
+    
+    <lastmod>2019-03-28T03:28:43.607Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://sukbeta.github.io/hadoop-set-quota/</loc>
     
-    <lastmod>2019-03-27T05:16:32.251Z</lastmod>
+    <lastmod>2019-03-27T05:16:41.145Z</lastmod>
     
   </url>
   
@@ -198,13 +205,6 @@
   </url>
   
   <url>
-    <loc>https://sukbeta.github.io/nginx-installed-sticky/</loc>
-    
-    <lastmod>2018-12-03T07:30:14.467Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://sukbeta.github.io/cgroup-limit-process-resources/</loc>
     
     <lastmod>2018-12-03T07:30:14.467Z</lastmod>
@@ -212,14 +212,21 @@
   </url>
   
   <url>
-    <loc>https://sukbeta.github.io/parted-partition/</loc>
+    <loc>https://sukbeta.github.io/nginx-installed-sticky/</loc>
+    
+    <lastmod>2018-12-03T07:30:14.467Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sukbeta.github.io/source-install-mesos/</loc>
     
     <lastmod>2018-12-03T07:30:14.466Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://sukbeta.github.io/source-install-mesos/</loc>
+    <loc>https://sukbeta.github.io/parted-partition/</loc>
     
     <lastmod>2018-12-03T07:30:14.466Z</lastmod>
     
@@ -240,14 +247,14 @@
   </url>
   
   <url>
-    <loc>https://sukbeta.github.io/mesos-container-port-limit/</loc>
+    <loc>https://sukbeta.github.io/mesos-dns-installed/</loc>
     
     <lastmod>2018-12-03T07:30:14.463Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://sukbeta.github.io/mesos-dns-installed/</loc>
+    <loc>https://sukbeta.github.io/mesos-container-port-limit/</loc>
     
     <lastmod>2018-12-03T07:30:14.463Z</lastmod>
     
@@ -289,14 +296,14 @@
   </url>
   
   <url>
-    <loc>https://sukbeta.github.io/docker-ulimit-configure/</loc>
+    <loc>https://sukbeta.github.io/docker-build-MacVlanNetwork/</loc>
     
     <lastmod>2018-12-03T07:30:14.458Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://sukbeta.github.io/docker-build-MacVlanNetwork/</loc>
+    <loc>https://sukbeta.github.io/docker-ulimit-configure/</loc>
     
     <lastmod>2018-12-03T07:30:14.458Z</lastmod>
     

@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="hadoop," />
 
 
 
@@ -81,16 +81,18 @@
 
 
 
-<meta name="description" content="一步一步往前走！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="舒克贝塔">
-<meta property="og:url" content="https://sukbeta.github.io/tags/logstash/index.html">
+<meta name="description" content="hadoop修改文件副本数Hadoop上默认一个人间的副本数是3，这个也是可以再配置文件中&amp;lt;dfs.replication&amp;gt;参数修改的。 这里我们说一下，上传一个文件的时候更改文件的副本数。让他不用默认的副本数。 上传文件命令上传文件，副本数为1 1hadoop dfs -D dfs.replication=1 -put 123.lzo /temp/123.lzo 查看文件的副本数查看">
+<meta name="keywords" content="hadoop">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hadoop修改文件副本数">
+<meta property="og:url" content="https://sukbeta.github.io/hadoop-set-replication/index.html">
 <meta property="og:site_name" content="舒克贝塔">
-<meta property="og:description" content="一步一步往前走！">
+<meta property="og:description" content="hadoop修改文件副本数Hadoop上默认一个人间的副本数是3，这个也是可以再配置文件中&amp;lt;dfs.replication&amp;gt;参数修改的。 这里我们说一下，上传一个文件的时候更改文件的副本数。让他不用默认的副本数。 上传文件命令上传文件，副本数为1 1hadoop dfs -D dfs.replication=1 -put 123.lzo /temp/123.lzo 查看文件的副本数查看">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-03-28T03:28:43.607Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="舒克贝塔">
-<meta name="twitter:description" content="一步一步往前走！">
+<meta name="twitter:title" content="hadoop修改文件副本数">
+<meta name="twitter:description" content="hadoop修改文件副本数Hadoop上默认一个人间的副本数是3，这个也是可以再配置文件中&amp;lt;dfs.replication&amp;gt;参数修改的。 这里我们说一下，上传一个文件的时候更改文件的副本数。让他不用默认的副本数。 上传文件命令上传文件，副本数为1 1hadoop dfs -D dfs.replication=1 -put 123.lzo /temp/123.lzo 查看文件的副本数查看">
 
 
 
@@ -120,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="https://sukbeta.github.io/tags/logstash/"/>
+  <link rel="canonical" href="https://sukbeta.github.io/hadoop-set-replication/"/>
 
 
 
 
 
-  <title>标签: logstash | 舒克贝塔</title>
+  <title>hadoop修改文件副本数 | 舒克贝塔</title>
   
 
 
@@ -155,7 +157,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -313,82 +315,264 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>logstash<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://sukbeta.github.io/hadoop-set-replication/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="北极企鹅">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="舒克贝塔">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/logstash-configure-file/" itemprop="url">
-              
-                <span itemprop="name">logstash 配置文件写法</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">hadoop修改文件副本数</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-06T15:08:23+08:00"
-              content="2018-08-06" >
-          08-06
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-28T11:28:14+08:00">
+                2019-03-28
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/hadoop/" itemprop="url" rel="index">
+                    <span itemprop="name">hadoop</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/hadoop-set-replication/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="hadoop-set-replication/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i> 游览
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
+      
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/logstash-out-file-to-HDFS/" itemprop="url">
-              
-                <span itemprop="name">logstash out file to HDFS</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-29T13:08:24+08:00"
-              content="2018-05-29" >
-          05-29
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <h2 id="hadoop修改文件副本数"><a href="#hadoop修改文件副本数" class="headerlink" title="hadoop修改文件副本数"></a>hadoop修改文件副本数</h2><p>Hadoop上默认一个人间的副本数是3，这个也是可以再配置文件中&lt;dfs.replication&gt;参数修改的。</p>
+<p>这里我们说一下，上传一个文件的时候更改文件的副本数。让他不用默认的副本数。</p>
+<h4 id="上传文件"><a href="#上传文件" class="headerlink" title="上传文件"></a>上传文件</h4><p>命令上传文件，副本数为1</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hadoop dfs -D dfs.replication=1 -put 123.lzo /temp/123.lzo</span><br></pre></td></tr></table></figure>
+<h4 id="查看文件的副本数"><a href="#查看文件的副本数" class="headerlink" title="查看文件的副本数"></a>查看文件的副本数</h4><p>查看整的dfs上的文件副本数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">$ hadoop fsck -locations</span><br><span class="line">....Status: HEALTHY</span><br><span class="line"> Total size:    86463643890 B (Total open files size: 415 B)</span><br><span class="line"> Total dirs:    93533</span><br><span class="line"> Total files:   200704</span><br><span class="line"> Total symlinks:                0 (Files currently being written: 6)</span><br><span class="line"> Total blocks (validated):      199798 (avg. block size 432755 B) (Total open file blocks (not validated): 5)</span><br><span class="line"> Minimally replicated blocks:   199798 (100.0 %)</span><br><span class="line"> Over-replicated blocks:        0 (0.0 %)</span><br><span class="line"> Under-replicated blocks:       2512 (1.2572699 %)</span><br><span class="line"> Mis-replicated blocks:         0 (0.0 %)</span><br><span class="line"> Default replication factor:    3</span><br><span class="line"> Average block replication:     2.9998398</span><br><span class="line"> Corrupt blocks:                0</span><br><span class="line"> Missing replicas:              17584 (2.8501685 %)</span><br><span class="line"> Number of data-nodes:          3</span><br><span class="line"> Number of racks:               1</span><br><span class="line">FSCK ended at Thu Mar 28 10:27:24 CST 2019 in 6372 milliseconds</span><br></pre></td></tr></table></figure>
+<p>检查单个文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$  hadoop fsck -locations  /temp/123.lzo</span><br><span class="line"> .......</span><br><span class="line"> Default replication factor:    3</span><br><span class="line"> Average block replication:     1.0</span><br><span class="line"> ......</span><br></pre></td></tr></table></figure>
+<h4 id="修改已经存在的文件副本数"><a href="#修改已经存在的文件副本数" class="headerlink" title="修改已经存在的文件副本数"></a>修改已经存在的文件副本数</h4><ul>
+<li>修改已保存文件的副本数量，为2副本</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hadoop dfs -setrep 2 /shining/test.txt</span><br></pre></td></tr></table></figure>
+<ul>
+<li>对文件夹中的所有文件都修改副本</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hadoop dfs -setrep 2 -R /shining/</span><br></pre></td></tr></table></figure>
+<ul>
+<li>选项是-w，表示等待副本操作结束才退出命令</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hadoop dfs -setrep -R -w 1 /shining</span><br></pre></td></tr></table></figure>
       
     </div>
+    
+    
+    
 
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>感谢您的支持！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechat.png" alt="北极企鹅 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="北极企鹅 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/hadoop/" rel="tag"># hadoop</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/hadoop-set-quota/" rel="next" title="hadoop设置目录配额-setSpaceQuota">
+                <i class="fa fa-chevron-left"></i> hadoop设置目录配额-setSpaceQuota
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+	<!-- google adsense -->
+	<!-- google adsense auto -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-7874588734245173",
+    enable_page_level_ads: true
+  });
+</script>
+
+	<div align="center">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- sukbeta-1 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:570px;height:250px"
+     data-ad-client="ca-pub-7874588734245173"
+     data-ad-slot="5382403634"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+	<!-- google adsense -->
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+<!-- google adsense auto -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-7874588734245173",
+    enable_page_level_ads: true
+  });
+</script>
 
 
           </div>
@@ -396,6 +580,34 @@
 
 
           
+
+<!-- google adsenen -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- head -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8243248314488866"
+     data-ad-slot="1571553111"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- google adsenen -->
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -416,8 +628,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -531,6 +752,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#hadoop修改文件副本数"><span class="nav-number">1.</span> <span class="nav-text">hadoop修改文件副本数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#上传文件"><span class="nav-number">1.0.1.</span> <span class="nav-text">上传文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查看文件的副本数"><span class="nav-number">1.0.2.</span> <span class="nav-text">查看文件的副本数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改已经存在的文件副本数"><span class="nav-number">1.0.3.</span> <span class="nav-text">修改已经存在的文件副本数</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -689,6 +926,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -706,6 +947,18 @@
       <script id="dsq-count-scr" src="https://.disqus.com/count.js" async></script>
     
 
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://sukbeta.github.io/hadoop-set-replication/';
+          this.page.identifier = 'hadoop-set-replication/';
+          this.page.title = 'hadoop修改文件副本数';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
     
 
   
@@ -743,6 +996,30 @@
 
     
 
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname, 
+            owner: 'sukbeta',
+            repo: 'gitment-comments',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: '128aa2ae44f139e456d673ee6cefce8e98f8c8aa',
+            
+                client_id: '503ac6ca90fc540c37a4'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
     
 
 
@@ -784,6 +1061,30 @@
 
     
 
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname, 
+            owner: 'sukbeta',
+            repo: 'gitment-comments',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: '128aa2ae44f139e456d673ee6cefce8e98f8c8aa',
+            
+                client_id: '503ac6ca90fc540c37a4'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
     
 
 
