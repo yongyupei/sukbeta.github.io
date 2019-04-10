@@ -3,6 +3,27 @@
   
     
     <entry>
+      <title>curl方式执行shell脚本时传参数</title>
+      <link href="/curl-shell-args/"/>
+      <url>/curl-shell-args/</url>
+      <content type="html"><![CDATA[<h2 id="curl方式执行shell脚本时传参数"><a href="#curl方式执行shell脚本时传参数" class="headerlink" title="curl方式执行shell脚本时传参数"></a>curl方式执行shell脚本时传参数</h2><p>有时候shell脚本可以放在http页面上，不用download，可以直接执行。</p><p>通常我们可以用curl的方式执行http页面上的shell脚本。 一般方式是：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl http://sukbeta.github.io/web/shell.sh | bash</span><br></pre></td></tr></table></figure><p>这样脚本就可以再本地机器上执行了。 </p><p>但是需要传入参数的脚本。我们可以用下面的方式传入shell参数</p><ul><li>-s方式</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -s http://sukbeta.github.io/web/shell.sh | bash -s arg1 arg2</span><br></pre></td></tr></table></figure><ul><li>&lt; 方式</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(curl -s http://sukbeta.github.io/web/shell.sh) arg1 arg2</span><br></pre></td></tr></table></figure><blockquote><p>注意 &lt;( 之间不要有空格！！！</p></blockquote><ul><li>若参数中带有”-“，则可使用长选项”–”解决</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -s http://sukbeta.github.io/web/shell.sh | bash -s -- arg1 arg2</span><br></pre></td></tr></table></figure><ul><li>若参数为”-p arg -d arg”,则可使用以下命令执行</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -s http://sukbeta.github.io/web/shell.sh | bash -s -- -p arg1 -d arg2</span><br></pre></td></tr></table></figure><ul><li>不止是curl的输入，其他方式的输入也满足。可以通过以下例子深入理解下</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &apos;i=1; for a in $@; do echo &quot;$i = $a&quot;; i=$((i+1)); done&apos; | bash -s -- -a1 -a2 -a3 --long some_text</span><br></pre></td></tr></table></figure>]]></content>
+      
+      <categories>
+          
+          <category> shell </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> shell </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>hadoop修改文件副本数</title>
       <link href="/hadoop-set-replication/"/>
       <url>/hadoop-set-replication/</url>
