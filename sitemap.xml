@@ -2,16 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://sukbeta.github.io/hadoop-log-segmentation/</loc>
+    <loc>https://sukbeta.github.io/web/</loc>
     
-    <lastmod>2019-04-19T10:43:12.677Z</lastmod>
+    <lastmod>2019-04-22T04:24:29.814Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://sukbeta.github.io/web/</loc>
+    <loc>https://sukbeta.github.io/hadoop-log-segmentation/</loc>
     
-    <lastmod>2019-04-18T06:33:47.442Z</lastmod>
+    <lastmod>2019-04-19T10:45:38.576Z</lastmod>
     
   </url>
   
@@ -240,14 +240,14 @@
   </url>
   
   <url>
-    <loc>https://sukbeta.github.io/parted-partition/</loc>
+    <loc>https://sukbeta.github.io/source-install-mesos/</loc>
     
     <lastmod>2018-12-03T07:30:14.466Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://sukbeta.github.io/source-install-mesos/</loc>
+    <loc>https://sukbeta.github.io/parted-partition/</loc>
     
     <lastmod>2018-12-03T07:30:14.466Z</lastmod>
     
@@ -268,14 +268,14 @@
   </url>
   
   <url>
-    <loc>https://sukbeta.github.io/mesos-container-port-limit/</loc>
+    <loc>https://sukbeta.github.io/mesos-dns-installed/</loc>
     
     <lastmod>2018-12-03T07:30:14.463Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://sukbeta.github.io/mesos-dns-installed/</loc>
+    <loc>https://sukbeta.github.io/mesos-container-port-limit/</loc>
     
     <lastmod>2018-12-03T07:30:14.463Z</lastmod>
     
