@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://sukbeta.github.io/hadoop-command/</loc>
+    
+    <lastmod>2019-04-23T11:00:53.666Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://sukbeta.github.io/web/</loc>
     
     <lastmod>2019-04-23T07:31:00.025Z</lastmod>
@@ -75,13 +82,6 @@
     <loc>https://sukbeta.github.io/kafka-console-groups/</loc>
     
     <lastmod>2019-03-01T11:10:12.255Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://sukbeta.github.io/hadoop-command/</loc>
-    
-    <lastmod>2019-02-18T03:33:38.168Z</lastmod>
     
   </url>
   
@@ -226,13 +226,6 @@
   </url>
   
   <url>
-    <loc>https://sukbeta.github.io/nginx-installed-sticky/</loc>
-    
-    <lastmod>2018-12-03T07:30:14.467Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://sukbeta.github.io/cgroup-limit-process-resources/</loc>
     
     <lastmod>2018-12-03T07:30:14.467Z</lastmod>
@@ -240,14 +233,21 @@
   </url>
   
   <url>
-    <loc>https://sukbeta.github.io/parted-partition/</loc>
+    <loc>https://sukbeta.github.io/nginx-installed-sticky/</loc>
+    
+    <lastmod>2018-12-03T07:30:14.467Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sukbeta.github.io/source-install-mesos/</loc>
     
     <lastmod>2018-12-03T07:30:14.466Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://sukbeta.github.io/source-install-mesos/</loc>
+    <loc>https://sukbeta.github.io/parted-partition/</loc>
     
     <lastmod>2018-12-03T07:30:14.466Z</lastmod>
     
@@ -268,14 +268,14 @@
   </url>
   
   <url>
-    <loc>https://sukbeta.github.io/mesos-container-port-limit/</loc>
+    <loc>https://sukbeta.github.io/mesos-dns-installed/</loc>
     
     <lastmod>2018-12-03T07:30:14.463Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://sukbeta.github.io/mesos-dns-installed/</loc>
+    <loc>https://sukbeta.github.io/mesos-container-port-limit/</loc>
     
     <lastmod>2018-12-03T07:30:14.463Z</lastmod>
     
