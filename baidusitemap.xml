@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://sukbeta.github.io/web/</loc>
-    <lastmod>2019-04-23T05:50:25.311Z</lastmod>
+    <lastmod>2019-04-23T05:52:37.078Z</lastmod>
   </url>  <url>
     <loc>https://sukbeta.github.io/hadoop-log-segmentation/</loc>
     <lastmod>2019-04-19T10:45:38.576Z</lastmod>
@@ -91,10 +91,10 @@
     <loc>https://sukbeta.github.io/logstash-configure-file/</loc>
     <lastmod>2018-12-03T07:30:14.468Z</lastmod>
   </url>  <url>
-    <loc>https://sukbeta.github.io/nginx-installed-sticky/</loc>
+    <loc>https://sukbeta.github.io/cgroup-limit-process-resources/</loc>
     <lastmod>2018-12-03T07:30:14.467Z</lastmod>
   </url>  <url>
-    <loc>https://sukbeta.github.io/cgroup-limit-process-resources/</loc>
+    <loc>https://sukbeta.github.io/nginx-installed-sticky/</loc>
     <lastmod>2018-12-03T07:30:14.467Z</lastmod>
   </url>  <url>
     <loc>https://sukbeta.github.io/parted-partition/</loc>
