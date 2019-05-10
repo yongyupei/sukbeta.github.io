@@ -3,6 +3,29 @@
   
     
     <entry>
+      <title>rsync、wget本地拉取yum源</title>
+      <link href="/rsync-wget-yum-rpm/"/>
+      <url>/rsync-wget-yum-rpm/</url>
+      <content type="html"><![CDATA[<h1 id="rsync、wget本地拉取yum源"><a href="#rsync、wget本地拉取yum源" class="headerlink" title="rsync、wget本地拉取yum源"></a>rsync、wget本地拉取yum源</h1><center><br><img style="width:1400px;height:200px" src="https://s2.ax1x.com/2019/05/10/E2fvJ1.md.jpg" align="center"><br></center><p>我们本地搭建yum源的时候，需要从官网拉取所有rrpm包到本地。再创建repo。这时候我们需要批量下载的方法。 有的镜像源提供了rsync接口，我们可以用rsync同步。没有的话我们可以用wget下载。</p><p>centos 官网提供了所有的镜像地址 list，<a href="https://www.centos.org/download/mirrors/" target="_blank" rel="noopener">https://www.centos.org/download/mirrors/</a><br>可以上着上选择可以用的镜像地址</p><p>后面有rsync的地址的镜像源，我们就可以使用rsync</p><h4 id="rsync-方法"><a href="#rsync-方法" class="headerlink" title="rsync 方法"></a>rsync 方法</h4><p>现在说一下rsync。 rsync同步还是比较简单的。 找到提供rsync接口的镜像源。之后再找到你要的系统相应的版本。</p><p><img src="/images/rsync-yum-list.jpeg" alt="rsync-list"></p><p>同步到本地命令：</p><p>只同步os下的rpm包</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rsync -zvaP  rsync://repos-jnb.psychz.net/Centos/7.5.1804/os/x86_64/Packages/  /home/7.5/os/packages</span><br></pre></td></tr></table></figure><p>同步所有的rpm（包括os、update、extras,isos等）</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rsync -zvaP rsync://repos-jnb.psychz.net/Centos/7.5.1804/ /home/centos-7.5.1804/</span><br></pre></td></tr></table></figure><h4 id="wget-方法"><a href="#wget-方法" class="headerlink" title="wget 方法"></a>wget 方法</h4><p>wget 可以用户http的镜像源地址。</p><p>wget 下载命令：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># wget -r -p -np -k http://repos-jnb.psychz.net/centos/7.5.1804/paas/x86_64/openshift-origin13/</span><br></pre></td></tr></table></figure><h5 id="wget-参数说明"><a href="#wget-参数说明" class="headerlink" title="wget 参数说明"></a>wget 参数说明</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">-c, --continue resume getting a partially-downloaded file. 断点续传</span><br><span class="line">-nd, --no-directories don&apos;t create directories. 不创建层级目录，所有文件下载到当前目录</span><br><span class="line">-r, --recursive specify recursive download. 递归下载</span><br><span class="line">-p, --page-requisites get all images, etc. needed to display HTML page.</span><br><span class="line">下载页面所有文件，使页面能在本地打开</span><br><span class="line">-k, --convert-links make links in downloaded HTML or CSS point to local files.</span><br><span class="line">转换链接指向本地文件</span><br><span class="line">-np, --no-parent don&apos;t ascend to the parent directory. 不下载父级目录的文件</span><br><span class="line">-o, --output-file=FILE log messages to FILE. 指定日志输出文件</span><br><span class="line">-O, --output-document=FILE write documents to FILE. 指定文件下载位置</span><br><span class="line">-L, --relative follow relative links only. 只下载相对链接，如果页面嵌入其他站点不会被下载</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">wget -r -p -np -k -P . linux.csie.nctu.edu.tw</span><br><span class="line">-P 表示下载到哪个目录</span><br><span class="line">-r 表示递归下载 </span><br><span class="line">-np 表示不下载旁站连接. </span><br><span class="line">-k 表示将下载的网页里的链接修改为本地链接.</span><br><span class="line">-p 获得所有显示网页所需的元素</span><br></pre></td></tr></table></figure>]]></content>
+      
+      <categories>
+          
+          <category> linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> shell </tag>
+            
+            <tag> linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>Hadoop日志按天分割和开启审计日志</title>
       <link href="/hadoop-log-segmentation/"/>
       <url>/hadoop-log-segmentation/</url>
@@ -506,9 +529,9 @@
       
         <tags>
             
-            <tag> ssh </tag>
-            
             <tag> shell </tag>
+            
+            <tag> ssh </tag>
             
         </tags>
       
