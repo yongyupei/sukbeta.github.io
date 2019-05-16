@@ -432,12 +432,14 @@
       
         
           
-          marathon 强制删除任务Marathon上的任务可能会因为其他原因，卡在那，不能被删除掉， 一直在deployment。这时候我们需要强制删除掉。
+          marathon 强制删除任务
+
+Marathon上的任务可能会因为其他原因，卡在那，不能被删除掉， 一直在deployment。这时候我们需要强制删除掉。
 强制杀掉 deployment删除deployment上的任务，需要知道deployment上的id
 1234marathonAddr=&quot;http://192.168.0.11:8080&quot;;deployment_id=&quot;14eed224-6f75-41fs-8339-ce6a758sdfr32&quot;;apiPath=&quot;/v2/deployments/$&#123;deployment_id&#125;&quot;curl -X DELETE $&#123;marathonAddr&#125;$&#123;apiPath&#125;?force=true
 这样就可以再命令行上删除deployment上的任务了， 
 强制杀掉 app task需要知道task的id
-12345marathonAddr=&quot;http://192.168.0.11:8080&quot;&quot;;app_
+12345marathonAddr=&quot;http://192.168.0.11:8080&quot;&quot;;ap
           ...
           <!--noindex-->
           <div class="post-button text-center">

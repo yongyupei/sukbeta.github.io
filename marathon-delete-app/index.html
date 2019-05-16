@@ -81,24 +81,25 @@
 
 
 
-<meta name="description" content="marathon 强制删除任务Marathon上的任务可能会因为其他原因，卡在那，不能被删除掉， 一直在deployment。这时候我们需要强制删除掉。 强制杀掉 deployment删除deployment上的任务，需要知道deployment上的id 1234marathonAddr=&amp;quot;http://192.168.0.11:8080&amp;quot;;deployment_id=&amp;quo">
+<meta name="description" content="marathon 强制删除任务  Marathon上的任务可能会因为其他原因，卡在那，不能被删除掉， 一直在deployment。这时候我们需要强制删除掉。 强制杀掉 deployment删除deployment上的任务，需要知道deployment上的id 1234marathonAddr=&amp;quot;http://192.168.0.11:8080&amp;quot;;deployment_id=&amp;q">
 <meta name="keywords" content="marathon">
 <meta property="og:type" content="article">
 <meta property="og:title" content="marathon强制删除任务，app、deployment、task">
 <meta property="og:url" content="https://sukbeta.github.io/marathon-delete-app/index.html">
 <meta property="og:site_name" content="舒克贝塔">
-<meta property="og:description" content="marathon 强制删除任务Marathon上的任务可能会因为其他原因，卡在那，不能被删除掉， 一直在deployment。这时候我们需要强制删除掉。 强制杀掉 deployment删除deployment上的任务，需要知道deployment上的id 1234marathonAddr=&amp;quot;http://192.168.0.11:8080&amp;quot;;deployment_id=&amp;quo">
+<meta property="og:description" content="marathon 强制删除任务  Marathon上的任务可能会因为其他原因，卡在那，不能被删除掉， 一直在deployment。这时候我们需要强制删除掉。 强制杀掉 deployment删除deployment上的任务，需要知道deployment上的id 1234marathonAddr=&amp;quot;http://192.168.0.11:8080&amp;quot;;deployment_id=&amp;q">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://s2.ax1x.com/2019/05/16/EHaYcV.md.png">
 <meta property="og:image" content="https://sukbeta.github.io/images/marathon-api-1.jpeg">
 <meta property="og:image" content="https://sukbeta.github.io/images/marathon-api-2.jpeg">
 <meta property="og:image" content="https://sukbeta.github.io/images/marathon-api-3.jpeg">
 <meta property="og:image" content="https://sukbeta.github.io/images/marathon-api-4.jpeg">
 <meta property="og:image" content="https://sukbeta.github.io/images/marathon-api-5.jpeg">
-<meta property="og:updated_time" content="2019-05-16T03:00:10.354Z">
+<meta property="og:updated_time" content="2019-05-16T04:37:32.685Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="marathon强制删除任务，app、deployment、task">
-<meta name="twitter:description" content="marathon 强制删除任务Marathon上的任务可能会因为其他原因，卡在那，不能被删除掉， 一直在deployment。这时候我们需要强制删除掉。 强制杀掉 deployment删除deployment上的任务，需要知道deployment上的id 1234marathonAddr=&amp;quot;http://192.168.0.11:8080&amp;quot;;deployment_id=&amp;quo">
-<meta name="twitter:image" content="https://sukbeta.github.io/images/marathon-api-1.jpeg">
+<meta name="twitter:description" content="marathon 强制删除任务  Marathon上的任务可能会因为其他原因，卡在那，不能被删除掉， 一直在deployment。这时候我们需要强制删除掉。 强制杀掉 deployment删除deployment上的任务，需要知道deployment上的id 1234marathonAddr=&amp;quot;http://192.168.0.11:8080&amp;quot;;deployment_id=&amp;q">
+<meta name="twitter:image" content="https://s2.ax1x.com/2019/05/16/EHaYcV.md.png">
 
 
 
@@ -440,7 +441,9 @@
       
 
       
-        <h1 id="marathon-强制删除任务"><a href="#marathon-强制删除任务" class="headerlink" title="marathon 强制删除任务"></a>marathon 强制删除任务</h1><p>Marathon上的任务可能会因为其他原因，卡在那，不能被删除掉， 一直在deployment。这时候我们需要强制删除掉。</p>
+        <h1 id="marathon-强制删除任务"><a href="#marathon-强制删除任务" class="headerlink" title="marathon 强制删除任务"></a>marathon 强制删除任务</h1><center><br><img style="width:1400px;height:200px" src="https://s2.ax1x.com/2019/05/16/EHaYcV.md.png" align="center"><br></center>
+
+<p>Marathon上的任务可能会因为其他原因，卡在那，不能被删除掉， 一直在deployment。这时候我们需要强制删除掉。</p>
 <h4 id="强制杀掉-deployment"><a href="#强制杀掉-deployment" class="headerlink" title="强制杀掉 deployment"></a>强制杀掉 deployment</h4><p>删除deployment上的任务，需要知道deployment上的id</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">marathonAddr=&quot;http://192.168.0.11:8080&quot;;</span><br><span class="line">deployment_id=&quot;14eed224-6f75-41fs-8339-ce6a758sdfr32&quot;;</span><br><span class="line">apiPath=&quot;/v2/deployments/$&#123;deployment_id&#125;&quot;</span><br><span class="line">curl -X DELETE $&#123;marathonAddr&#125;$&#123;apiPath&#125;?force=true</span><br></pre></td></tr></table></figure>
 <p>这样就可以再命令行上删除deployment上的任务了， </p>
