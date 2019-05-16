@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="zookeeper," />
+  <meta name="keywords" content="marathon," />
 
 
 
@@ -81,18 +81,24 @@
 
 
 
-<meta name="description" content="zookeeper 清理日志在使用zookeeper过程中，会有dataDir和dataLogDir两个目录，分别用于snapshot和事务日志的输出（默认情况下只有dataDir目录，snapshot和事务日志都保存在这个目录中，正常运行过程中，ZK会不断地把快照数据和事务日志输出到这两个目录，并且如果没有人为操作的话，ZK自己是不会清理这些文件的，需要管理员来清理。 配置方法从3.4.0开始，">
-<meta name="keywords" content="zookeeper">
+<meta name="description" content="marathon 强制删除任务Marathon上的任务可能会因为其他原因，卡在那，不能被删除掉， 一直在deployment。这时候我们需要强制删除掉。 强制杀掉 deployment删除deployment上的任务，需要知道deployment上的id 1234marathonAddr=&amp;quot;http://192.168.0.11:8080&amp;quot;;deployment_id=&amp;quo">
+<meta name="keywords" content="marathon">
 <meta property="og:type" content="article">
-<meta property="og:title" content="zookeeper清理日志">
-<meta property="og:url" content="https://sukbeta.github.io/zk-delete-log/index.html">
+<meta property="og:title" content="marathon强制删除任务，app、deployment、task">
+<meta property="og:url" content="https://sukbeta.github.io/marathon-delete-app/index.html">
 <meta property="og:site_name" content="舒克贝塔">
-<meta property="og:description" content="zookeeper 清理日志在使用zookeeper过程中，会有dataDir和dataLogDir两个目录，分别用于snapshot和事务日志的输出（默认情况下只有dataDir目录，snapshot和事务日志都保存在这个目录中，正常运行过程中，ZK会不断地把快照数据和事务日志输出到这两个目录，并且如果没有人为操作的话，ZK自己是不会清理这些文件的，需要管理员来清理。 配置方法从3.4.0开始，">
+<meta property="og:description" content="marathon 强制删除任务Marathon上的任务可能会因为其他原因，卡在那，不能被删除掉， 一直在deployment。这时候我们需要强制删除掉。 强制杀掉 deployment删除deployment上的任务，需要知道deployment上的id 1234marathonAddr=&amp;quot;http://192.168.0.11:8080&amp;quot;;deployment_id=&amp;quo">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-17T07:16:52.088Z">
+<meta property="og:image" content="https://sukbeta.github.io/images/marathon-api-1.jpeg">
+<meta property="og:image" content="https://sukbeta.github.io/images/marathon-api-2.jpeg">
+<meta property="og:image" content="https://sukbeta.github.io/images/marathon-api-3.jpeg">
+<meta property="og:image" content="https://sukbeta.github.io/images/marathon-api-4.jpeg">
+<meta property="og:image" content="https://sukbeta.github.io/images/marathon-api-5.jpeg">
+<meta property="og:updated_time" content="2019-05-16T03:00:10.354Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="zookeeper清理日志">
-<meta name="twitter:description" content="zookeeper 清理日志在使用zookeeper过程中，会有dataDir和dataLogDir两个目录，分别用于snapshot和事务日志的输出（默认情况下只有dataDir目录，snapshot和事务日志都保存在这个目录中，正常运行过程中，ZK会不断地把快照数据和事务日志输出到这两个目录，并且如果没有人为操作的话，ZK自己是不会清理这些文件的，需要管理员来清理。 配置方法从3.4.0开始，">
+<meta name="twitter:title" content="marathon强制删除任务，app、deployment、task">
+<meta name="twitter:description" content="marathon 强制删除任务Marathon上的任务可能会因为其他原因，卡在那，不能被删除掉， 一直在deployment。这时候我们需要强制删除掉。 强制杀掉 deployment删除deployment上的任务，需要知道deployment上的id 1234marathonAddr=&amp;quot;http://192.168.0.11:8080&amp;quot;;deployment_id=&amp;quo">
+<meta name="twitter:image" content="https://sukbeta.github.io/images/marathon-api-1.jpeg">
 
 
 
@@ -122,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="https://sukbeta.github.io/zk-delete-log/"/>
+  <link rel="canonical" href="https://sukbeta.github.io/marathon-delete-app/"/>
 
 
 
 
 
-  <title>zookeeper清理日志 | 舒克贝塔</title>
+  <title>marathon强制删除任务，app、deployment、task | 舒克贝塔</title>
   
 
 
@@ -329,7 +335,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://sukbeta.github.io/zk-delete-log/">
+    <link itemprop="mainEntityOfPage" href="https://sukbeta.github.io/marathon-delete-app/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="北极企鹅">
@@ -346,7 +352,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">zookeeper清理日志</h1>
+          <h1 class="post-title" itemprop="name headline">marathon强制删除任务，app、deployment、task</h1>
         
 
         <div class="post-meta">
@@ -358,8 +364,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-17T15:13:02+08:00">
-                2018-12-17
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-16T10:58:55+08:00">
+                2019-05-16
               </time>
             
 
@@ -381,8 +387,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/hadoop/" itemprop="url" rel="index">
-                    <span itemprop="name">hadoop</span>
+                  <a href="/categories/marathon/" itemprop="url" rel="index">
+                    <span itemprop="name">marathon</span>
                   </a>
                 </span>
 
@@ -399,9 +405,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/zk-delete-log/#comments" itemprop="discussionUrl">
+                <a href="/marathon-delete-app/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="zk-delete-log/" itemprop="commentCount"></span>
+                        data-disqus-identifier="marathon-delete-app/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -434,19 +440,22 @@
       
 
       
-        <h1 id="zookeeper-清理日志"><a href="#zookeeper-清理日志" class="headerlink" title="zookeeper 清理日志"></a>zookeeper 清理日志</h1><p>在使用zookeeper过程中，会有dataDir和dataLogDir两个目录，分别用于snapshot和事务日志的输出（默认情况下只有dataDir目录，snapshot和事务日志都保存在这个目录中，正常运行过程中，ZK会不断地把快照数据和事务日志输出到这两个目录，并且如果没有人为操作的话，ZK自己是不会清理这些文件的，需要管理员来清理。</p>
-<h3 id="配置方法"><a href="#配置方法" class="headerlink" title="配置方法"></a>配置方法</h3><p>从3.4.0开始，zookeeper提供了自动清理snapshot和事务日志的功能，通过配置 autopurge.snapRetainCount 和 autopurge.purgeInterval 这两个参数能够实现定时清理了。这两个参数都是在zoo.cfg中配置的：</p>
-<p>For Example： 一个zoo.cfg配置的例子</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">tickTime=2000</span><br><span class="line">initLimit=10</span><br><span class="line">syncLimit=5</span><br><span class="line">dataDir=/home/hadoop/apache-hadoop/zookeeper/var/data</span><br><span class="line">clientPort=2181</span><br><span class="line">dataLogDir=/home/hadoop/apache-hadoop/zookeeper/var/datalog</span><br><span class="line">maxClientCnxns=300</span><br><span class="line">server.1=namenode001-host.mjq-sukbeta.com:2888:3888</span><br><span class="line">server.2=namenode002-host.mjq-sukbeta.com:2888:3888</span><br><span class="line">server.3=datanode001-host.mjq-sukbeta.com:2888:3888</span><br><span class="line">server.4=datanode002-host.mjq-sukbeta.com:2888:3888</span><br><span class="line">server.5=datanode003-host.mjq-sukbeta.com:2888:3888</span><br><span class="line">autopurge.snapRetainCount=20</span><br><span class="line">autopurge.purgeInterval=48</span><br></pre></td></tr></table></figure>
-<p>autopurge.purgeInterval  这个参数指定了清理频率，单位是小时，需要填写一个1或更大的整数，默认是0，表示不开启自己清理功能。  </p>
-<p>autopurge.snapRetainCount 这个参数和上面的参数搭配使用，这个参数指定了需要保留的文件数目。默认是保留3个。</p>
-<h3 id="脚本方法"><a href="#脚本方法" class="headerlink" title="脚本方法"></a>脚本方法</h3><p>写了一个脚本， 可以每天定时执行清理。</p>
-<p>脚本内容如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">           </span><br><span class="line">#snapshot file dir</span><br><span class="line">dataDir=/home/hadoop/apache-hadoop/zookeeper/var/data/version-2</span><br><span class="line">#tran log dir</span><br><span class="line">dataLogDir=/home/hadoop/apache-hadoop/zookeeper/var/datalog/version-2</span><br><span class="line">#zk log dir</span><br><span class="line">#Leave 30 files</span><br><span class="line">count=30</span><br><span class="line">count=$[$count+1]</span><br><span class="line">ls -t $dataLogDir/log.* | tail -n +$count | xargs rm -f</span><br><span class="line">ls -t $dataDir/snapshot.* | tail -n +$count | xargs rm -f</span><br></pre></td></tr></table></figure>
-<ul>
-<li>需要根据自己的情况修改脚本中的dataDir、dataLogDir路径。</li>
-</ul>
-<p>如果感觉文章还可以的话，帮点点下面的广告哦！非常感谢！</p>
+        <h1 id="marathon-强制删除任务"><a href="#marathon-强制删除任务" class="headerlink" title="marathon 强制删除任务"></a>marathon 强制删除任务</h1><p>Marathon上的任务可能会因为其他原因，卡在那，不能被删除掉， 一直在deployment。这时候我们需要强制删除掉。</p>
+<h4 id="强制杀掉-deployment"><a href="#强制杀掉-deployment" class="headerlink" title="强制杀掉 deployment"></a>强制杀掉 deployment</h4><p>删除deployment上的任务，需要知道deployment上的id</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">marathonAddr=&quot;http://192.168.0.11:8080&quot;;</span><br><span class="line">deployment_id=&quot;14eed224-6f75-41fs-8339-ce6a758sdfr32&quot;;</span><br><span class="line">apiPath=&quot;/v2/deployments/$&#123;deployment_id&#125;&quot;</span><br><span class="line">curl -X DELETE $&#123;marathonAddr&#125;$&#123;apiPath&#125;?force=true</span><br></pre></td></tr></table></figure>
+<p>这样就可以再命令行上删除deployment上的任务了， </p>
+<h4 id="强制杀掉-app-task"><a href="#强制杀掉-app-task" class="headerlink" title="强制杀掉 app task"></a>强制杀掉 app task</h4><p>需要知道task的id</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">marathonAddr=&quot;http://192.168.0.11:8080&quot;&quot;;</span><br><span class="line">app_id=&quot;shining-test&quot;</span><br><span class="line">task_id=&quot;shining-test.8c873ce2-ad63-11e7-a70d-36d30528411f&quot;</span><br><span class="line">apiPath=&quot;/v2/apps/$&#123;app_id&#125;/tasks/$&#123;task_id&#125;&quot;</span><br><span class="line">curl -X DELETE $&#123;marathonAddr&#125;$&#123;apiPath&#125;?force=true</span><br></pre></td></tr></table></figure>
+<p>例如 删除 job</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">curl -X DELETE http://192.168.0.11:8080/v2/apps/mysql-io-test -H &quot;Content-type: application/json&quot;</span><br><span class="line"></span><br><span class="line">强制删除</span><br><span class="line">curl -X DELETE http://192.168.0.11:8080/v2/apps/mysql-io-test?force=true  -H &quot;Content-type: application/json&quot;</span><br></pre></td></tr></table></figure>
+<h4 id="页面执行删除"><a href="#页面执行删除" class="headerlink" title="页面执行删除"></a>页面执行删除</h4><p>进入marathon API 接口</p>
+<p><img src="/images/marathon-api-1.jpeg" alt="api"></p>
+<p>deployment delete</p>
+<p><img src="/images/marathon-api-2.jpeg" alt="api"></p>
+<p><img src="/images/marathon-api-3.jpeg" alt="api"></p>
+<p>app task delete</p>
+<p><img src="/images/marathon-api-4.jpeg" alt="api"></p>
+<p><img src="/images/marathon-api-5.jpeg" alt="api"></p>
 
       
     </div>
@@ -493,7 +502,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/zookeeper/" rel="tag"># zookeeper</a>
+            <a href="/tags/marathon/" rel="tag"># marathon</a>
           
         </div>
       
@@ -506,8 +515,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/hue-installed/" rel="next" title="Hue编译安装及Hadoop相关组建的配置">
-                <i class="fa fa-chevron-left"></i> Hue编译安装及Hadoop相关组建的配置
+              <a href="/rsync-wget-yum-rpm/" rel="next" title="rsync、wget本地拉取yum源">
+                <i class="fa fa-chevron-left"></i> rsync、wget本地拉取yum源
               </a>
             
           </div>
@@ -515,10 +524,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/ssh-remote-exec-command/" rel="prev" title="一个简单好用的ssh远程执行命令的脚本">
-                一个简单好用的ssh远程执行命令的脚本 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -760,7 +765,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#zookeeper-清理日志"><span class="nav-number">1.</span> <span class="nav-text">zookeeper 清理日志</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#配置方法"><span class="nav-number">1.0.1.</span> <span class="nav-text">配置方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#脚本方法"><span class="nav-number">1.0.2.</span> <span class="nav-text">脚本方法</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#marathon-强制删除任务"><span class="nav-number">1.</span> <span class="nav-text">marathon 强制删除任务</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#强制杀掉-deployment"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">强制杀掉 deployment</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#强制杀掉-app-task"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">强制杀掉 app task</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#页面执行删除"><span class="nav-number">1.0.0.3.</span> <span class="nav-text">页面执行删除</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -948,9 +953,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'https://sukbeta.github.io/zk-delete-log/';
-          this.page.identifier = 'zk-delete-log/';
-          this.page.title = 'zookeeper清理日志';
+          this.page.url = 'https://sukbeta.github.io/marathon-delete-app/';
+          this.page.identifier = 'marathon-delete-app/';
+          this.page.title = 'marathon强制删除任务，app、deployment、task';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://.disqus.com/embed.js';

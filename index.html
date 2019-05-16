@@ -328,6 +328,170 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://sukbeta.github.io/marathon-delete-app/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="北极企鹅">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="舒克贝塔">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/marathon-delete-app/" itemprop="url">marathon强制删除任务，app、deployment、task</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-16T10:58:55+08:00">
+                2019-05-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/marathon/" itemprop="url" rel="index">
+                    <span itemprop="name">marathon</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/marathon-delete-app/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="marathon-delete-app/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          marathon 强制删除任务Marathon上的任务可能会因为其他原因，卡在那，不能被删除掉， 一直在deployment。这时候我们需要强制删除掉。
+强制杀掉 deployment删除deployment上的任务，需要知道deployment上的id
+1234marathonAddr=&quot;http://192.168.0.11:8080&quot;;deployment_id=&quot;14eed224-6f75-41fs-8339-ce6a758sdfr32&quot;;apiPath=&quot;/v2/deployments/$&#123;deployment_id&#125;&quot;curl -X DELETE $&#123;marathonAddr&#125;$&#123;apiPath&#125;?force=true
+这样就可以再命令行上删除deployment上的任务了， 
+强制杀掉 app task需要知道task的id
+12345marathonAddr=&quot;http://192.168.0.11:8080&quot;&quot;;app_
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/marathon-delete-app/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://sukbeta.github.io/rsync-wget-yum-rpm/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1913,172 +2077,6 @@ web url
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://sukbeta.github.io/hive-custom-variables/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="北极企鹅">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="舒克贝塔">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/hive-custom-variables/" itemprop="url">hive自定义参数</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-21T17:48:28+08:00">
-                2019-03-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/hive/" itemprop="url" rel="index">
-                    <span itemprop="name">hive</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/hive-custom-variables/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="hive-custom-variables/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          hive 自定义参数有的时候我们需要执行hive的时候带一些参数，以便我们后期任务分析、排查等问题。所以这里我们说一下自定义参数的作用。
-hive 命令指定参数执行hive命令的时候指定参数
-1hive --hiveconf hive.job.submit.username=shining -e &quot;select count(*) from temp.test_hive where pt=&apos;2019-03-21&apos;;&quot;
-也可以指定多个参数
-1hive --hiveconf hive.job.submit.username=shining  --hiveconf hive.job.submit.web=sukbeta.github.io  -e &quot;select count(*) from temp.test_hive where pt=&apos;2019-03-31&apos;;&quot;
-这时你可以在yarn中找到job的页面，在job的 Configuration 页面中可以查找到你得传的参数。
-如：
-全局配置可以修改 hive 命令
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/hive-custom-variables/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2129,7 +2127,7 @@ hive 命令指定参数执行hive命令的时候指定参数
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">49</span>
+                  <span class="site-state-item-count">50</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
