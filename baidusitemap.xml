@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://sukbeta.github.io/marathon-lb-configure-nginx/</loc>
+    <lastmod>2019-05-16T10:12:51.523Z</lastmod>
+  </url>  <url>
     <loc>https://sukbeta.github.io/marathon-delete-app/</loc>
     <lastmod>2019-05-16T04:37:32.685Z</lastmod>
   </url>  <url>
@@ -103,10 +106,10 @@
     <loc>https://sukbeta.github.io/nginx-installed-sticky/</loc>
     <lastmod>2018-12-03T07:30:14.467Z</lastmod>
   </url>  <url>
-    <loc>https://sukbeta.github.io/source-install-mesos/</loc>
+    <loc>https://sukbeta.github.io/parted-partition/</loc>
     <lastmod>2018-12-03T07:30:14.466Z</lastmod>
   </url>  <url>
-    <loc>https://sukbeta.github.io/parted-partition/</loc>
+    <loc>https://sukbeta.github.io/source-install-mesos/</loc>
     <lastmod>2018-12-03T07:30:14.466Z</lastmod>
   </url>  <url>
     <loc>https://sukbeta.github.io/marathon-DockerRegistry-user/</loc>
@@ -123,9 +126,6 @@
   </url>  <url>
     <loc>https://sukbeta.github.io/marathon-constraints-configure/</loc>
     <lastmod>2018-12-03T07:30:14.462Z</lastmod>
-  </url>  <url>
-    <loc>https://sukbeta.github.io/marathon-lb-configure-nginx/</loc>
-    <lastmod>2018-12-03T07:30:14.461Z</lastmod>
   </url>  <url>
     <loc>https://sukbeta.github.io/linux-Restrict-user-command-method/</loc>
     <lastmod>2018-12-03T07:30:14.461Z</lastmod>
