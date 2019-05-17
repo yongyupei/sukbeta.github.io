@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://sukbeta.github.io/pycharm-activation/</loc>
+    <lastmod>2019-05-17T04:51:40.369Z</lastmod>
+  </url>  <url>
     <loc>https://sukbeta.github.io/marathon-lb-configure-nginx/</loc>
     <lastmod>2019-05-16T10:12:51.523Z</lastmod>
   </url>  <url>
@@ -106,10 +109,10 @@
     <loc>https://sukbeta.github.io/nginx-installed-sticky/</loc>
     <lastmod>2018-12-03T07:30:14.467Z</lastmod>
   </url>  <url>
-    <loc>https://sukbeta.github.io/parted-partition/</loc>
+    <loc>https://sukbeta.github.io/source-install-mesos/</loc>
     <lastmod>2018-12-03T07:30:14.466Z</lastmod>
   </url>  <url>
-    <loc>https://sukbeta.github.io/source-install-mesos/</loc>
+    <loc>https://sukbeta.github.io/parted-partition/</loc>
     <lastmod>2018-12-03T07:30:14.466Z</lastmod>
   </url>  <url>
     <loc>https://sukbeta.github.io/marathon-DockerRegistry-user/</loc>
