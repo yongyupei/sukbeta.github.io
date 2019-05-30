@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://sukbeta.github.io/hadoop-command/</loc>
+    
+    <lastmod>2019-05-30T08:55:04.113Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://sukbeta.github.io/web/</loc>
     
     <lastmod>2019-05-30T08:43:41.197Z</lastmod>
@@ -117,13 +124,6 @@
     <loc>https://sukbeta.github.io/nginx-access-json/</loc>
     
     <lastmod>2019-05-30T08:12:32.275Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://sukbeta.github.io/hadoop-command/</loc>
-    
-    <lastmod>2019-04-23T11:00:53.666Z</lastmod>
     
   </url>
   
