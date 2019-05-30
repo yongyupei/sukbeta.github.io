@@ -431,14 +431,11 @@
 
       
         
-          
-          
+          <center><br><img style="width:1400px;height:300px" src="https://s2.ax1x.com/2019/05/30/VM9IhV.md.jpg" align="center"><br></center>
 
-nginx 默认输出acces日志格式是message格式。现在都做日志统一分析ELK了，message格式就不是很适用了。 所以输出json格式对于后期分析就很友好了。
-其他就不说了，直接上配置了
-修改 nginx.conf 配置文件， 注释掉之前 log_format 重新写一个 json格式的log_format
-1234567891011121314151617181920212223242526272829#log_format  main  &apos;$hostname $server_name $remote_addr - $remote_user [$time_local] &quot;$request&quot; &apos; #                 &apos;$status $body_bytes_sent &quot;$http_referer&quot; &apos; #                 &apos;&quot;$http_user_agent&quot; &quot;$http_x_forwarded_for&quot; &
-          ...
+<p>nginx 默认输出acces日志格式是message格式。现在都做日志统一分析ELK了，message格式就不是很适用了。 所以输出json格式对于后期分析就很友好了。</p>
+<p>其他就不说了，直接上配置了</p>
+<p>修改 nginx.conf 配置文件， 注释掉之前 log_format 重新写一个 json格式的log_format</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/nginx-access-json/#more" rel="contents">
@@ -597,7 +594,7 @@ nginx 默认输出acces日志格式是message格式。现在都做日志统一�
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://static-ali.ihansen.org/app/upload/2019-04-14/17587f43-0b52-4f09-a9cc-9733f6980ba3.jpg!o" rel="gallery_cjwad7wj20031wxpz1hp30pzn"
+                 href="https://static-ali.ihansen.org/app/upload/2019-04-14/17587f43-0b52-4f09-a9cc-9733f6980ba3.jpg!o" rel="gallery_cjwadsmne003730pz694kgur1"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://static-ali.ihansen.org/app/upload/2019-04-14/17587f43-0b52-4f09-a9cc-9733f6980ba3.jpg!o" itemprop="contentUrl"/>
               </a>
@@ -611,17 +608,13 @@ nginx 默认输出acces日志格式是message格式。现在都做日志统一�
 
       
         
-          
-          最近我们nginx上来容器，日志实时传走，但是本地还需要留一份另作他用，这样用原来logrotate或cronolog方式切分日志就很麻烦了， 我就开始再nginx配置文件中想办法。
-发现可以利用 $time_iso8601 变量来切分日志， 它就是每条日志的时间戳，取它的年、月、日、小时做变量，生成带时间戳得日志文件。就可以每小时、每天输出到不同文件里了。
-
-请注意，不可能在error_log指令中嵌入变量，因为如果无法写入文件，则无法记录任何潜在错误。  这种方法只适用于access得日志
-
-time_iso8601 时间格式这是一个显示 $time_iso8601格式的示例：
-12019-05-04T18:12:02+02:00
-配置方法所有要做的就是使用“if”块来使用正则表达式分割所需的数据并设置时间变量。要按日拆分日志，可以在服务器块中使用以下代码段：
-1234567if ($time_iso8601 ~ &quot;^(\d&#123;4&#125;)-(\d&#123;2&#125;)-(\d&#123;2&#125;)&quot;) &#123;	set $year 
-          ...
+          <p>最近我们nginx上来容器，日志实时传走，但是本地还需要留一份另作他用，这样用原来logrotate或cronolog方式切分日志就很麻烦了， 我就开始再nginx配置文件中想办法。</p>
+<p>发现可以利用 $time_iso8601 变量来切分日志， 它就是每条日志的时间戳，取它的年、月、日、小时做变量，生成带时间戳得日志文件。就可以每小时、每天输出到不同文件里了。</p>
+<ul>
+<li>请注意，不可能在error_log指令中嵌入变量，因为如果无法写入文件，则无法记录任何潜在错误。  这种方法只适用于access得日志</li>
+</ul>
+<h4 id="time-iso8601-时间格式"><a href="#time-iso8601-时间格式" class="headerlink" title="time_iso8601 时间格式"></a>time_iso8601 时间格式</h4><p>这是一个显示 $time_iso8601格式的示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2019-05-04T18:12:02+02:00</span><br></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/nginx-access-split/#more" rel="contents">
@@ -778,21 +771,16 @@ time_iso8601 时间格式这是一个显示 $time_iso8601格式的示例：
 
       
         
-          
-          
+          <center><br><img style="width:900px;height:200px" src="https://s2.ax1x.com/2019/05/16/EHaJ10.md.jpg" align="center"><br></center>
 
-pyCharm2019最新激活码，win, linux, mac 都可使用，亲测可用。激活步骤如下：
-添加 hosts 解析添加下面一行到hosts文件，目的是屏蔽掉Pycharm对激活码的验证
-
-windwos系统hosts文件路径为：C:\Windows\System32\drivers\etc如果遇到权限问题，可将hosts文件先复制出来修改后再覆盖原来的即可。
-Linux和mac的hosts文件路径为：/etc/hosts , 如有权限问题。可以用 sudo vim /etc/hosts
-
-添加一条解析记录：
-10.0.0.0	account.jetbrains.com
-pycharm 激活打开PyCharm，选择 Activate code（用激活码激活）
-输入激活码：
-1AWAC5NN6E4-eyJsaWNlbnNlSWQiOiJBV0FDNU5ONkU0IiwibGljZW5zZWVOYW1lIjoibGIgb2QiLCJhc3NpZ25lZU5hbWUiOiIiLCJhc3NpZ25lZUVtYWlsIjoiIiwibGljZW5zZVJlc3RyaWN0aW9uI
-          ...
+<p>pyCharm2019最新激活码，win, linux, mac 都可使用，亲测可用。激活步骤如下：</p>
+<h4 id="添加-hosts-解析"><a href="#添加-hosts-解析" class="headerlink" title="添加 hosts 解析"></a>添加 hosts 解析</h4><p>添加下面一行到hosts文件，目的是屏蔽掉Pycharm对激活码的验证</p>
+<ul>
+<li>windwos系统hosts文件路径为：C:\Windows\System32\drivers\etc<br>如果遇到权限问题，可将hosts文件先复制出来修改后再覆盖原来的即可。</li>
+<li>Linux和mac的hosts文件路径为：/etc/hosts , 如有权限问题。可以用 sudo vim /etc/hosts</li>
+</ul>
+<p>添加一条解析记录：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0.0.0.0	account.jetbrains.com</span><br></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/pycharm-activation/#more" rel="contents">
