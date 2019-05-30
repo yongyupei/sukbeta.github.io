@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="nginx," />
 
 
 
@@ -81,16 +81,20 @@
 
 
 
-<meta name="description" content="一步一步往前走！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="舒克贝塔">
-<meta property="og:url" content="https://sukbeta.github.io/archives/2018/11/index.html">
+<meta name="description" content="nginx日志输出json格式  nginx 默认输出acces日志格式是message格式。现在都做日志统一分析ELK了，message格式就不是很适用了。 所以输出json格式对于后期分析就很友好了。 其他就不说了，直接上配置了 修改 nginx.conf 配置文件， 注释掉之前 log_format 重新写一个 json格式的log_format 1234567891011121314151">
+<meta name="keywords" content="nginx">
+<meta property="og:type" content="article">
+<meta property="og:title" content="nginx日志输出json格式">
+<meta property="og:url" content="https://sukbeta.github.io/nginx-access-json/index.html">
 <meta property="og:site_name" content="舒克贝塔">
-<meta property="og:description" content="一步一步往前走！">
+<meta property="og:description" content="nginx日志输出json格式  nginx 默认输出acces日志格式是message格式。现在都做日志统一分析ELK了，message格式就不是很适用了。 所以输出json格式对于后期分析就很友好了。 其他就不说了，直接上配置了 修改 nginx.conf 配置文件， 注释掉之前 log_format 重新写一个 json格式的log_format 1234567891011121314151">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://s2.ax1x.com/2019/05/30/VM9IhV.md.jpg">
+<meta property="og:updated_time" content="2019-05-30T06:15:15.533Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="舒克贝塔">
-<meta name="twitter:description" content="一步一步往前走！">
+<meta name="twitter:title" content="nginx日志输出json格式">
+<meta name="twitter:description" content="nginx日志输出json格式  nginx 默认输出acces日志格式是message格式。现在都做日志统一分析ELK了，message格式就不是很适用了。 所以输出json格式对于后期分析就很友好了。 其他就不说了，直接上配置了 修改 nginx.conf 配置文件， 注释掉之前 log_format 重新写一个 json格式的log_format 1234567891011121314151">
+<meta name="twitter:image" content="https://s2.ax1x.com/2019/05/30/VM9IhV.md.jpg">
 
 
 
@@ -120,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://sukbeta.github.io/archives/2018/11/"/>
+  <link rel="canonical" href="https://sukbeta.github.io/nginx-access-json/"/>
 
 
 
 
 
-  <title>归档 | 舒克贝塔</title>
+  <title>nginx日志输出json格式 | 舒克贝塔</title>
   
 
 
@@ -155,7 +159,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -313,221 +317,252 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://sukbeta.github.io/nginx-access-json/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="北极企鹅">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="舒克贝塔">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
-         
+          <h1 class="post-title" itemprop="name headline">nginx日志输出json格式</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-30T14:09:05+08:00">
+                2019-05-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        好! 目前共计 53 篇日志。 继续努力。
-      </span>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/nginx/" itemprop="url" rel="index">
+                    <span itemprop="name">nginx</span>
+                  </a>
+                </span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
-          </div>
-        
-        
 
-        
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/nginx-access-json/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="nginx-access-json/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/awk-echo-SingleQuoteMark-DoubleQuotationMarks/" itemprop="url">
-              
-                <span itemprop="name">awk输出单引号或双引号</span>
-              
-            </a>
-        
-      </h2>
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i> 游览
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-11-29T15:12:58+08:00"
-              content="2018-11-29" >
-          11-29
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+          
 
+        </div>
+      </header>
+    
 
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/nginx-installed-sticky/" itemprop="url">
-              
-                <span itemprop="name">nginx-1.10.1添加sticky模块实现基于cookie的负载均衡</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-11-29T14:45:23+08:00"
-              content="2018-11-29" >
-          11-29
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/marathon-constraints-configure/" itemprop="url">
-              
-                <span itemprop="name">marathon 约束 constraints 限制</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-11-28T19:15:14+08:00"
-              content="2018-11-28" >
-          11-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
+      
+        <h1 id="nginx日志输出json格式"><a href="#nginx日志输出json格式" class="headerlink" title="nginx日志输出json格式"></a>nginx日志输出json格式</h1><center><br><img style="width:1400px;height:300px" src="https://s2.ax1x.com/2019/05/30/VM9IhV.md.jpg" align="center"><br></center>
 
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/docker-ulimit-configure/" itemprop="url">
-              
-                <span itemprop="name">docker ulimit 配置</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-11-21T16:47:35+08:00"
-              content="2018-11-21" >
-          11-21
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+<p>nginx 默认输出acces日志格式是message格式。现在都做日志统一分析ELK了，message格式就不是很适用了。 所以输出json格式对于后期分析就很友好了。</p>
+<p>其他就不说了，直接上配置了</p>
+<p>修改 nginx.conf 配置文件， 注释掉之前 log_format 重新写一个 json格式的log_format</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">#log_format  main  &apos;$hostname $server_name $remote_addr - $remote_user [$time_local] &quot;$request&quot; &apos;</span><br><span class="line"> #                 &apos;$status $body_bytes_sent &quot;$http_referer&quot; &apos;</span><br><span class="line"> #                 &apos;&quot;$http_user_agent&quot; &quot;$http_x_forwarded_for&quot; &quot;$upstream_addr&quot; &apos;</span><br><span class="line"> #                 &apos;&quot;$upstream_response_time&quot; &quot;$request_time&quot; &quot;$http_cookie&quot;&apos;;</span><br><span class="line"></span><br><span class="line">log_format main   &apos;&#123;&quot;@timestamp&quot;:&quot;$time_iso8601&quot;,&apos;</span><br><span class="line">                    &apos;&quot;@source&quot;:&quot;$server_addr&quot;,&apos;</span><br><span class="line">                    &apos;&quot;hostname&quot;:&quot;$hostname&quot;,&apos;</span><br><span class="line">                    &apos;&quot;remote_user&quot;:&quot;$remote_user&quot;,&apos;</span><br><span class="line">                    &apos;&quot;ip&quot;:&quot;$http_x_forwarded_for&quot;,&apos;</span><br><span class="line">                    &apos;&quot;client&quot;:&quot;$remote_addr&quot;,&apos;</span><br><span class="line">                    &apos;&quot;request_method&quot;:&quot;$request_method&quot;,&apos;</span><br><span class="line">                    &apos;&quot;scheme&quot;:&quot;$scheme&quot;,&apos;</span><br><span class="line">                    &apos;&quot;domain&quot;:&quot;$server_name&quot;,&apos;</span><br><span class="line">                    &apos;&quot;referer&quot;:&quot;$http_referer&quot;,&apos;</span><br><span class="line">                    &apos;&quot;request&quot;:&quot;$request_uri&quot;,&apos;</span><br><span class="line">                    &apos;&quot;requesturl&quot;:&quot;$request&quot;,&apos;</span><br><span class="line">                    &apos;&quot;args&quot;:&quot;$args&quot;,&apos;</span><br><span class="line">                    &apos;&quot;size&quot;:$body_bytes_sent,&apos;</span><br><span class="line">                    &apos;&quot;status&quot;: $status,&apos;</span><br><span class="line">                    &apos;&quot;responsetime&quot;:$request_time,&apos;</span><br><span class="line">                    &apos;&quot;upstreamtime&quot;:&quot;$upstream_response_time&quot;,&apos;</span><br><span class="line">                    &apos;&quot;upstreamaddr&quot;:&quot;$upstream_addr&quot;,&apos;</span><br><span class="line">                    &apos;&quot;http_user_agent&quot;:&quot;$http_user_agent&quot;,&apos;</span><br><span class="line">                    &apos;&quot;http_cookie&quot;:&quot;$http_cookie&quot;,&apos;</span><br><span class="line">                    &apos;&quot;https&quot;:&quot;$https&quot;&apos;</span><br><span class="line">                    &apos;&#125;&apos;;</span><br><span class="line"></span><br><span class="line">access_log  /var/log/nginx/access.log  main;</span><br></pre></td></tr></table></figure>
+<p>重新加载nginx，这样日志就是json格式了</p>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/ES-Solve-memory-lock/" itemprop="url">
-              
-                <span itemprop="name">Elasticsearch 解决 memory_lock 问题</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-11-21T15:29:10+08:00"
-              content="2018-11-21" >
-          11-21
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>感谢您的支持！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechat.png" alt="北极企鹅 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="北极企鹅 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/nginx/" rel="tag"># nginx</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/nginx-access-split/" rel="next" title="直接在nginx配置文件中配置切分日志">
+                <i class="fa fa-chevron-left"></i> 直接在nginx配置文件中配置切分日志
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+	<!-- google adsense -->
+	<!-- google adsense auto -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-7874588734245173",
+    enable_page_level_ads: true
+  });
+</script>
+
+	<div align="center">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- sukbeta-1 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:570px;height:250px"
+     data-ad-client="ca-pub-7874588734245173"
+     data-ad-slot="5382403634"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+	<!-- google adsense -->
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+<!-- google adsense auto -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-7874588734245173",
+    enable_page_level_ads: true
+  });
+</script>
 
 
           </div>
@@ -535,6 +570,34 @@
 
 
           
+
+<!-- google adsenen -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- head -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8243248314488866"
+     data-ad-slot="1571553111"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- google adsenen -->
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -555,8 +618,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -670,6 +742,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#nginx日志输出json格式"><span class="nav-number">1.</span> <span class="nav-text">nginx日志输出json格式</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -828,6 +916,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -845,6 +937,18 @@
       <script id="dsq-count-scr" src="https://.disqus.com/count.js" async></script>
     
 
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://sukbeta.github.io/nginx-access-json/';
+          this.page.identifier = 'nginx-access-json/';
+          this.page.title = 'nginx日志输出json格式';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
     
 
   
@@ -882,6 +986,30 @@
 
     
 
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname, 
+            owner: 'sukbeta',
+            repo: 'gitment-comments',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: '128aa2ae44f139e456d673ee6cefce8e98f8c8aa',
+            
+                client_id: '503ac6ca90fc540c37a4'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
     
 
 
@@ -923,6 +1051,30 @@
 
     
 
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname, 
+            owner: 'sukbeta',
+            repo: 'gitment-comments',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: '128aa2ae44f139e456d673ee6cefce8e98f8c8aa',
+            
+                client_id: '503ac6ca90fc540c37a4'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
     
 
 
