@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="舒克贝塔">
 <meta property="og:description" content="marathon-lb配置marathon-lb get imagesMarathon-lb既是一个服务发现工具，也是负载均衡工具，它集成了haproxy，自动获取各个app的信息，为每一组app生成haproxy配置，通过servicePort或者web虚拟主机提供服务。 要使用marathonn-lb，每组app必须设置HAPROXY_GROUP标签。 Marathon-lb运行时绑定在各组a">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-16T10:12:51.523Z">
+<meta property="og:updated_time" content="2019-05-30T08:38:59.772Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="marathon-lb配置及nginx负载">
 <meta name="twitter:description" content="marathon-lb配置marathon-lb get imagesMarathon-lb既是一个服务发现工具，也是负载均衡工具，它集成了haproxy，自动获取各个app的信息，为每一组app生成haproxy配置，通过servicePort或者web虚拟主机提供服务。 要使用marathonn-lb，每组app必须设置HAPROXY_GROUP标签。 Marathon-lb运行时绑定在各组a">
@@ -440,6 +440,7 @@
 <p>例如：marathon-lb部署在slave5，test-app 部署在slave1，test-app 的servicePort是10004，那么可以在slave5的 10004端口访问到test-app提供的服务。</p>
 <p>由于servicePort 非80、443端口（80、443端口已被marathon-lb中的 haproxy独占），对于web服务来说不太方便，可以使用 haproxy虚拟主机解决这个问题：</p>
 <p>在提供web服务的app配置里增加HAPROXY_{n}_VHOST（WEB虚拟主机）标签，marathon-lb会自动把这组app的WEB集群服务发布在marathon-lb所在节点的80和443端口上，用户设置DNS后通过虚拟主机名来访问。</p>
+<a id="more"></a>
 <h3 id="官方下载镜像"><a href="#官方下载镜像" class="headerlink" title="官方下载镜像"></a>官方下载镜像</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">images url :</span><br><span class="line">https://store.docker.com/community/images/mesosphere/marathon-lb</span><br><span class="line"></span><br><span class="line">docker pull mesosphere/marathon-lb</span><br><span class="line"></span><br><span class="line">github url:</span><br><span class="line">https://github.com/mesosphere/marathon-lb</span><br></pre></td></tr></table></figure>
 <h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><p>docker</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --privileged -e PORTS=9090 --net=host docker.io/mesosphere/marathon-lb sse -m http://marathon1_ip:8080 -m http://marathon2_ip:8080 -m http://master3_ip:8080  --group external</span><br></pre></td></tr></table></figure>

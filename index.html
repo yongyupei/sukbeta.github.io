@@ -594,7 +594,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://static-ali.ihansen.org/app/upload/2019-04-14/17587f43-0b52-4f09-a9cc-9733f6980ba3.jpg!o" rel="gallery_cjwaeltef002x9ipznpqlwur7"
+                 href="https://static-ali.ihansen.org/app/upload/2019-04-14/17587f43-0b52-4f09-a9cc-9733f6980ba3.jpg!o" rel="gallery_cjwaesrwt0033c1pzdtxurieu"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://static-ali.ihansen.org/app/upload/2019-04-14/17587f43-0b52-4f09-a9cc-9733f6980ba3.jpg!o" itemprop="contentUrl"/>
               </a>
@@ -1420,12 +1420,9 @@
 
       
         
-          
-          hive 创建一个简单外联表hdfs 创建目录首先需要在hdfs上创建一个目录，用于存放hive表得数据。
-1hdfs dfs -mkdir /tmp/yarn-count-application
-hive 创建表这时候可以再hive上创建外联表了。 
-123456789101112131415161718192021222324252627282930313233create external table op_count_yarn(dt string,num int)ROW FORMAT DELIMITED FIELDS TERMINATED BY &apos;\t&apos; location &apos;/tmp/yarn-count-application&apos;;orcreate external table op_yarn_job(jobid string,jobuser string,queue string,submittime string,starttime string,finishtime string,elapsedtime bigint,totalma
-          ...
+          <h1 id="hive-创建一个简单外联表"><a href="#hive-创建一个简单外联表" class="headerlink" title="hive 创建一个简单外联表"></a>hive 创建一个简单外联表</h1><h4 id="hdfs-创建目录"><a href="#hdfs-创建目录" class="headerlink" title="hdfs 创建目录"></a>hdfs 创建目录</h4><p>首先需要在hdfs上创建一个目录，用于存放hive表得数据。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hdfs dfs -mkdir /tmp/yarn-count-application</span><br></pre></td></tr></table></figure>
+<h4 id="hive-创建表"><a href="#hive-创建表" class="headerlink" title="hive 创建表"></a>hive 创建表</h4><p>这时候可以再hive上创建外联表了。 </p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/hive-external-table/#more" rel="contents">
@@ -1582,30 +1579,15 @@ hive 创建表这时候可以再hive上创建外联表了。
 
       
         
-          
-          curl方式执行shell脚本时传参数有时候shell脚本可以放在http页面上，不用download，可以直接执行。
-通常我们可以用curl的方式执行http页面上的shell脚本。 一般方式是：
-1curl http://sukbeta.github.io/web/shell.sh | bash
-这样脚本就可以再本地机器上执行了。 
-但是需要传入参数的脚本。我们可以用下面的方式传入shell参数
-
--s方式
-
-1curl -s http://sukbeta.github.io/web/shell.sh | bash -s arg1 arg2
-
-&lt; 方式
-
-1bash &lt;(curl -s http://sukbeta.github.io/web/shell.sh) arg1 arg2
-
-注意 &lt;( 之间不要有空格！！！
-
-
-若参数中带有”-“，则可使用长选项”–”解决
-
-1curl -s http://sukbeta.github.io/web/shell.sh | bash -s -- arg1 arg2
-
-若参数为”-p arg -d arg”,则可使用以下命令
-          ...
+          <h2 id="curl方式执行shell脚本时传参数"><a href="#curl方式执行shell脚本时传参数" class="headerlink" title="curl方式执行shell脚本时传参数"></a>curl方式执行shell脚本时传参数</h2><p>有时候shell脚本可以放在http页面上，不用download，可以直接执行。</p>
+<p>通常我们可以用curl的方式执行http页面上的shell脚本。 一般方式是：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl http://sukbeta.github.io/web/shell.sh | bash</span><br></pre></td></tr></table></figure>
+<p>这样脚本就可以再本地机器上执行了。 </p>
+<p>但是需要传入参数的脚本。我们可以用下面的方式传入shell参数</p>
+<ul>
+<li>-s方式</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -s http://sukbeta.github.io/web/shell.sh | bash -s arg1 arg2</span><br></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/curl-shell-args/#more" rel="contents">
@@ -1762,14 +1744,11 @@ hive 创建表这时候可以再hive上创建外联表了。
 
       
         
-          
-          hadoop修改文件副本数Hadoop上默认一个人间的副本数是3，这个也是可以再配置文件中&lt;dfs.replication&gt;参数修改的。
-这里我们说一下，上传一个文件的时候更改文件的副本数。让他不用默认的副本数。
-上传文件命令上传文件，副本数为1
-1hadoop dfs -D dfs.replication=1 -put 123.lzo /temp/123.lzo
-查看文件的副本数查看整的dfs上的文件副本数
-123456789101112131415161718$ hadoop fsck -locations....Status: HEALTHY Total size:    86463643890 B (Total open files size: 415 B) Total dirs:    93533 Total files:   200704 Total symlinks:                0 (Files currently being written: 6) Total blocks (validated):      199798 (avg. b
-          ...
+          <h2 id="hadoop修改文件副本数"><a href="#hadoop修改文件副本数" class="headerlink" title="hadoop修改文件副本数"></a>hadoop修改文件副本数</h2><p>Hadoop上默认一个人间的副本数是3，这个也是可以再配置文件中&lt;dfs.replication&gt;参数修改的。</p>
+<p>这里我们说一下，上传一个文件的时候更改文件的副本数。让他不用默认的副本数。</p>
+<h4 id="上传文件"><a href="#上传文件" class="headerlink" title="上传文件"></a>上传文件</h4><p>命令上传文件，副本数为1</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hadoop dfs -D dfs.replication=1 -put 123.lzo /temp/123.lzo</span><br></pre></td></tr></table></figure>
+<h4 id="查看文件的副本数"><a href="#查看文件的副本数" class="headerlink" title="查看文件的副本数"></a>查看文件的副本数</h4><p>查看整的dfs上的文件副本数</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/hadoop-set-replication/#more" rel="contents">

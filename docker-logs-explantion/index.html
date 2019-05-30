@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="舒克贝塔">
 <meta property="og:description" content="查看docker容器日志通过docker logs命令可以查看容器的日志。 docker logs 日志说明当我们输入docker logs的时候会转化为Docker Client向Docker Daemon发起请求,Docker Daemon 在运行容器时会去创建一个协程(goroutine)，绑定了整个容器内所有进程的标准输出文件描述符。因此容器内应用的所有只要是标准输出日志，都会被 goro">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-26T02:53:40.265Z">
+<meta property="og:updated_time" content="2019-05-30T08:40:58.825Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="查看docker容器日志">
 <meta name="twitter:description" content="查看docker容器日志通过docker logs命令可以查看容器的日志。 docker logs 日志说明当我们输入docker logs的时候会转化为Docker Client向Docker Daemon发起请求,Docker Daemon 在运行容器时会去创建一个协程(goroutine)，绑定了整个容器内所有进程的标准输出文件描述符。因此容器内应用的所有只要是标准输出日志，都会被 goro">
@@ -438,6 +438,7 @@
 <h4 id="docker-logs-日志说明"><a href="#docker-logs-日志说明" class="headerlink" title="docker logs 日志说明"></a>docker logs 日志说明</h4><p>当我们输入docker logs的时候会转化为Docker Client向Docker Daemon发起请求,Docker Daemon 在运行容器时会去创建一个协程(goroutine)，绑定了整个容器内所有进程的标准输出文件描述符。因此容器内应用的所有只要是标准输出日志，都会被 goroutine 接收，Docker Daemon会根据容器id和日志类型读取日志内容，最终会输出到用户终端上并且通过json格式存放在/var/lib/docker/containers目录下。</p>
 <p>docker logs是跟随容器而产生的，如果删除了某个容器，相应的日志文件也会随着被删除</p>
 <h4 id="命令说明"><a href="#命令说明" class="headerlink" title="命令说明"></a>命令说明</h4><p>命令格式</p>
+<a id="more"></a>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ docker logs [OPTIONS] CONTAINER</span><br><span class="line">  Options:</span><br><span class="line">        --details        显示更多的信息</span><br><span class="line">    -f, --follow         跟踪实时日志</span><br><span class="line">        --since string   显示自某个timestamp之后的日志，或相对时间，如42m（即42分钟）</span><br><span class="line">        --tail string    从日志末尾显示多少行日志， 默认是all</span><br><span class="line">    -t, --timestamps     显示时间戳</span><br><span class="line">        --until string   显示自某个timestamp之前的日志，或相对时间，如42m（即42分钟）</span><br></pre></td></tr></table></figure>
 <p>For Example :</p>
 <ul>
