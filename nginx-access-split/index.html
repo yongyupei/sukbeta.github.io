@@ -81,19 +81,19 @@
 
 
 
-<meta name="description" content="最近我们nginx上来容器，日志实时传走，但是本地还需要留一份另作他用，这样用原来logrotate或cronolog方式切分日志就很麻烦了， 我就开始再nginx配置文件中想办法。 发现可以利用 $time_iso8601 变量来切分日志， 它就是每条日志得时间戳，取它的年、月、日、小时做变量，生成带时间戳得日志文件。就可以每小时、每天输出到不同文件里了。  请注意，不可能在error_lo">
+<meta name="description" content="最近我们nginx上来容器，日志实时传走，但是本地还需要留一份另作他用，这样用原来logrotate或cronolog方式切分日志就很麻烦了， 我就开始再nginx配置文件中想办法。 发现可以利用 $time_iso8601 变量来切分日志， 它就是每条日志的时间戳，取它的年、月、日、小时做变量，生成带时间戳得日志文件。就可以每小时、每天输出到不同文件里了。  请注意，不可能在error_log指">
 <meta name="keywords" content="nginx">
 <meta property="og:type" content="article">
 <meta property="og:title" content="直接在nginx配置文件中配置切分日志">
 <meta property="og:url" content="https://sukbeta.github.io/nginx-access-split/index.html">
 <meta property="og:site_name" content="舒克贝塔">
-<meta property="og:description" content="最近我们nginx上来容器，日志实时传走，但是本地还需要留一份另作他用，这样用原来logrotate或cronolog方式切分日志就很麻烦了， 我就开始再nginx配置文件中想办法。 发现可以利用 $time_iso8601 变量来切分日志， 它就是每条日志得时间戳，取它的年、月、日、小时做变量，生成带时间戳得日志文件。就可以每小时、每天输出到不同文件里了。  请注意，不可能在error_lo">
+<meta property="og:description" content="最近我们nginx上来容器，日志实时传走，但是本地还需要留一份另作他用，这样用原来logrotate或cronolog方式切分日志就很麻烦了， 我就开始再nginx配置文件中想办法。 发现可以利用 $time_iso8601 变量来切分日志， 它就是每条日志的时间戳，取它的年、月、日、小时做变量，生成带时间戳得日志文件。就可以每小时、每天输出到不同文件里了。  请注意，不可能在error_log指">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://static-ali.ihansen.org/app/upload/2019-04-14/17587f43-0b52-4f09-a9cc-9733f6980ba3.jpg!o">
-<meta property="og:updated_time" content="2019-05-30T06:22:38.552Z">
+<meta property="og:updated_time" content="2019-05-30T07:59:57.440Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="直接在nginx配置文件中配置切分日志">
-<meta name="twitter:description" content="最近我们nginx上来容器，日志实时传走，但是本地还需要留一份另作他用，这样用原来logrotate或cronolog方式切分日志就很麻烦了， 我就开始再nginx配置文件中想办法。 发现可以利用 $time_iso8601 变量来切分日志， 它就是每条日志得时间戳，取它的年、月、日、小时做变量，生成带时间戳得日志文件。就可以每小时、每天输出到不同文件里了。  请注意，不可能在error_lo">
+<meta name="twitter:description" content="最近我们nginx上来容器，日志实时传走，但是本地还需要留一份另作他用，这样用原来logrotate或cronolog方式切分日志就很麻烦了， 我就开始再nginx配置文件中想办法。 发现可以利用 $time_iso8601 变量来切分日志， 它就是每条日志的时间戳，取它的年、月、日、小时做变量，生成带时间戳得日志文件。就可以每小时、每天输出到不同文件里了。  请注意，不可能在error_log指">
 <meta name="twitter:image" content="https://static-ali.ihansen.org/app/upload/2019-04-14/17587f43-0b52-4f09-a9cc-9733f6980ba3.jpg!o">
 
 
@@ -434,12 +434,26 @@
 
       
       
+        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+          
+          
+            <div class="post-gallery-row">
+              <a class="post-gallery-img fancybox"
+                 href="https://static-ali.ihansen.org/app/upload/2019-04-14/17587f43-0b52-4f09-a9cc-9733f6980ba3.jpg!o" rel="gallery_cjwad7wj20031wxpz1hp30pzn"
+                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+                <img src="https://static-ali.ihansen.org/app/upload/2019-04-14/17587f43-0b52-4f09-a9cc-9733f6980ba3.jpg!o" itemprop="contentUrl"/>
+              </a>
+            
+          
+
+          
+          </div>
+        </div>
+      
 
       
-        <center><br><img style="width:1400px;height:300px" src="https://static-ali.ihansen.org/app/upload/2019-04-14/17587f43-0b52-4f09-a9cc-9733f6980ba3.jpg!o" align="center"><br></center>
-
-<p>最近我们nginx上来容器，日志实时传走，但是本地还需要留一份另作他用，这样用原来logrotate或cronolog方式切分日志就很麻烦了， 我就开始再nginx配置文件中想办法。</p>
-<p>发现可以利用 $time_iso8601 变量来切分日志， 它就是每条日志得时间戳，取它的年、月、日、小时做变量，生成带时间戳得日志文件。就可以每小时、每天输出到不同文件里了。</p>
+        <p>最近我们nginx上来容器，日志实时传走，但是本地还需要留一份另作他用，这样用原来logrotate或cronolog方式切分日志就很麻烦了， 我就开始再nginx配置文件中想办法。</p>
+<p>发现可以利用 $time_iso8601 变量来切分日志， 它就是每条日志的时间戳，取它的年、月、日、小时做变量，生成带时间戳得日志文件。就可以每小时、每天输出到不同文件里了。</p>
 <ul>
 <li>请注意，不可能在error_log指令中嵌入变量，因为如果无法写入文件，则无法记录任何潜在错误。  这种方法只适用于access得日志</li>
 </ul>
