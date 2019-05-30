@@ -91,7 +91,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://s2.ax1x.com/2019/05/10/E2fvJ1.md.jpg">
 <meta property="og:image" content="https://sukbeta.github.io/images/rsync-yum-list.jpeg">
-<meta property="og:updated_time" content="2019-05-10T03:06:20.282Z">
+<meta property="og:updated_time" content="2019-05-30T08:18:32.396Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="rsync、wget本地拉取yum源">
 <meta name="twitter:description" content="rsync、wget本地拉取yum源  我们本地搭建yum源的时候，需要从官网拉取所有rrpm包到本地。再创建repo。这时候我们需要批量下载的方法。 有的镜像源提供了rsync接口，我们可以用rsync同步。没有的话我们可以用wget下载。 centos 官网提供了所有的镜像地址 list，https://www.centos.org/download/mirrors/可以上着上选择可以用的镜像">
@@ -443,6 +443,7 @@
 <p>centos 官网提供了所有的镜像地址 list，<a href="https://www.centos.org/download/mirrors/" target="_blank" rel="noopener">https://www.centos.org/download/mirrors/</a><br>可以上着上选择可以用的镜像地址</p>
 <p>后面有rsync的地址的镜像源，我们就可以使用rsync</p>
 <h4 id="rsync-方法"><a href="#rsync-方法" class="headerlink" title="rsync 方法"></a>rsync 方法</h4><p>现在说一下rsync。 rsync同步还是比较简单的。 找到提供rsync接口的镜像源。之后再找到你要的系统相应的版本。</p>
+<a id="more"></a>
 <p><img src="/images/rsync-yum-list.jpeg" alt="rsync-list"></p>
 <p>同步到本地命令：</p>
 <p>只同步os下的rpm包</p>

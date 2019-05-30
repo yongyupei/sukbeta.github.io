@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="舒克贝塔">
 <meta property="og:description" content="hadoop上命令行查看lzo、gz、bz文件HDFS上的文件可能是压缩的，所以用cat不能直接查看。hadoop上默认支持lzo、gz、bz2、snappy压缩格式。 我们用命令行查看HDFS上压缩文件，也是可以的。 lzo文件 查看 HDFS 上 lzo 文件的命令  12345hadoop fs -cat /Data/Logs/2018-08-22/2018-08-22_log.lzo |">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-25T07:22:03.456Z">
+<meta property="og:updated_time" content="2019-05-30T08:32:33.025Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hadoop上命令行查看lzo、gz、bz文件">
 <meta name="twitter:description" content="hadoop上命令行查看lzo、gz、bz文件HDFS上的文件可能是压缩的，所以用cat不能直接查看。hadoop上默认支持lzo、gz、bz2、snappy压缩格式。 我们用命令行查看HDFS上压缩文件，也是可以的。 lzo文件 查看 HDFS 上 lzo 文件的命令  12345hadoop fs -cat /Data/Logs/2018-08-22/2018-08-22_log.lzo |">
@@ -443,6 +443,7 @@
 <h4 id="gzip-文件"><a href="#gzip-文件" class="headerlink" title="gzip 文件"></a>gzip 文件</h4><ul>
 <li>查看 HDFS 上 gzip 文件的命令</li>
 </ul>
+<a id="more"></a>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hadoop fs -cat /shining/temp.txt.gz | gzip -d </span><br><span class="line"></span><br><span class="line">或</span><br><span class="line"></span><br><span class="line">hadoop fs -cat /shining/temp.txt.gz | zcat</span><br></pre></td></tr></table></figure>
 <h4 id="bz2-文件"><a href="#bz2-文件" class="headerlink" title="bz2 文件"></a>bz2 文件</h4><ul>
 <li>查看 HDFS 上 bz2 文件的命令</li>

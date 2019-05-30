@@ -594,7 +594,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://static-ali.ihansen.org/app/upload/2019-04-14/17587f43-0b52-4f09-a9cc-9733f6980ba3.jpg!o" rel="gallery_cjwadsmne003730pz694kgur1"
+                 href="https://static-ali.ihansen.org/app/upload/2019-04-14/17587f43-0b52-4f09-a9cc-9733f6980ba3.jpg!o" rel="gallery_cjwaeiack003c8ppzf3pco1mc"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://static-ali.ihansen.org/app/upload/2019-04-14/17587f43-0b52-4f09-a9cc-9733f6980ba3.jpg!o" itemprop="contentUrl"/>
               </a>
@@ -937,16 +937,12 @@
 
       
         
-          
-          marathon 强制删除任务
+          <center><br><img style="width:1400px;height:200px" src="https://s2.ax1x.com/2019/05/16/EHaYcV.md.png" align="center"><br></center>
 
-Marathon上的任务可能会因为其他原因，卡在那，不能被删除掉， 一直在deployment。这时候我们需要强制删除掉。
-强制杀掉 deployment删除deployment上的任务，需要知道deployment上的id
-1234marathonAddr=&quot;http://192.168.0.11:8080&quot;;deployment_id=&quot;14eed224-6f75-41fs-8339-ce6a758sdfr32&quot;;apiPath=&quot;/v2/deployments/$&#123;deployment_id&#125;&quot;curl -X DELETE $&#123;marathonAddr&#125;$&#123;apiPath&#125;?force=true
-这样就可以再命令行上删除deployment上的任务了， 
-强制杀掉 app task需要知道task的id
-12345marathonAddr=&quot;http://192.168.0.11:8080&quot;&quot;;ap
-          ...
+<p>Marathon上的任务可能会因为其他原因，卡在那，不能被删除掉， 一直在deployment。这时候我们需要强制删除掉。</p>
+<h4 id="强制杀掉-deployment"><a href="#强制杀掉-deployment" class="headerlink" title="强制杀掉 deployment"></a>强制杀掉 deployment</h4><p>删除deployment上的任务，需要知道deployment上的id</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">marathonAddr=&quot;http://192.168.0.11:8080&quot;;</span><br><span class="line">deployment_id=&quot;14eed224-6f75-41fs-8339-ce6a758sdfr32&quot;;</span><br><span class="line">apiPath=&quot;/v2/deployments/$&#123;deployment_id&#125;&quot;</span><br><span class="line">curl -X DELETE $&#123;marathonAddr&#125;$&#123;apiPath&#125;?force=true</span><br></pre></td></tr></table></figure>
+<p>这样就可以再命令行上删除deployment上的任务了， </p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/marathon-delete-app/#more" rel="contents">
@@ -1103,20 +1099,12 @@ Marathon上的任务可能会因为其他原因，卡在那，不能被删除掉
 
       
         
-          
-          rsync、wget本地拉取yum源
+          <h1 id="rsync、wget本地拉取yum源"><a href="#rsync、wget本地拉取yum源" class="headerlink" title="rsync、wget本地拉取yum源"></a>rsync、wget本地拉取yum源</h1><center><br><img style="width:1400px;height:200px" src="https://s2.ax1x.com/2019/05/10/E2fvJ1.md.jpg" align="center"><br></center>
 
-我们本地搭建yum源的时候，需要从官网拉取所有rrpm包到本地。再创建repo。这时候我们需要批量下载的方法。 有的镜像源提供了rsync接口，我们可以用rsync同步。没有的话我们可以用wget下载。
-centos 官网提供了所有的镜像地址 list，https://www.centos.org/download/mirrors/可以上着上选择可以用的镜像地址
-后面有rsync的地址的镜像源，我们就可以使用rsync
-rsync 方法现在说一下rsync。 rsync同步还是比较简单的。 找到提供rsync接口的镜像源。之后再找到你要的系统相应的版本。
-
-同步到本地命令：
-只同步os下的rpm包
-1rsync -zvaP  rsync://repos-jnb.psychz.net/Centos/7.5.1804/os/x86_64/Packages/  /home/7.5/os/packages
-同步所有的rpm（包括os、update、extras,isos等）
-1rsync -zvaP rsync://repos-jnb.psychz.ne
-          ...
+<p>我们本地搭建yum源的时候，需要从官网拉取所有rrpm包到本地。再创建repo。这时候我们需要批量下载的方法。 有的镜像源提供了rsync接口，我们可以用rsync同步。没有的话我们可以用wget下载。</p>
+<p>centos 官网提供了所有的镜像地址 list，<a href="https://www.centos.org/download/mirrors/" target="_blank" rel="noopener">https://www.centos.org/download/mirrors/</a><br>可以上着上选择可以用的镜像地址</p>
+<p>后面有rsync的地址的镜像源，我们就可以使用rsync</p>
+<h4 id="rsync-方法"><a href="#rsync-方法" class="headerlink" title="rsync 方法"></a>rsync 方法</h4><p>现在说一下rsync。 rsync同步还是比较简单的。 找到提供rsync接口的镜像源。之后再找到你要的系统相应的版本。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/rsync-wget-yum-rpm/#more" rel="contents">
@@ -1273,12 +1261,9 @@ rsync 方法现在说一下rsync。 rsync同步还是比较简单的。 找到�
 
       
         
-          
-          Hadoop日志按天分割和开启审计日志日志按天分割hadoop 各个组件默认日志是大小分割的，到一定大小就分割出 .1  .2  .3  .4这样的文件，这样我们在查找问题的时候不是好定位你要的那天日志在哪个文件中。要是一天一个文件，按照日志的话就很好定位了。
-在这里介绍一下hadoop按天切分日志的方法。
-方法一 修改变量hbase123hbase-env.sh添加：export HBASE_ROOT_LOGGER=INFO,DRFA
-hdfs12345hadoop-env.sh修改：export HADOOP_ROOT_LOGGER=INFO,DRFAexport HADOOP_NAMENODE_OPTS=&quot;-Dhadoop.security.logger=$&#123;HADOOP_SECURITY_LOGGER:-INFO,DRFAS&#125; -Dhdfs.audit.logger=$&#123;HDFS_AUDIT_LOGGER:-INFO,DRFAAUDIT&#125; $HADOOP_NAMENODE_OPTS&quot;export HADOOP_DATA
-          ...
+          <h1 id="Hadoop日志按天分割和开启审计日志"><a href="#Hadoop日志按天分割和开启审计日志" class="headerlink" title="Hadoop日志按天分割和开启审计日志"></a>Hadoop日志按天分割和开启审计日志</h1><h2 id="日志按天分割"><a href="#日志按天分割" class="headerlink" title="日志按天分割"></a>日志按天分割</h2><p>hadoop 各个组件默认日志是大小分割的，到一定大小就分割出 .1  .2  .3  .4这样的文件，这样我们在查找问题的时候不是好定位你要的那天日志在哪个文件中。要是一天一个文件，按照日志的话就很好定位了。</p>
+<p>在这里介绍一下hadoop按天切分日志的方法。</p>
+<h3 id="方法一-修改变量"><a href="#方法一-修改变量" class="headerlink" title="方法一 修改变量"></a>方法一 修改变量</h3><h5 id="hbase"><a href="#hbase" class="headerlink" title="hbase"></a>hbase</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hbase-env.sh</span><br><span class="line">添加：</span><br><span class="line">export HBASE_ROOT_LOGGER=INFO,DRFA</span><br></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/hadoop-log-segmentation/#more" rel="contents">
@@ -1941,24 +1926,14 @@ hive 创建表这时候可以再hive上创建外联表了。
 
       
         
-          
-          hadoop设置目录配额-setSpaceQuota在多人共用HDFS的环境下，配置设置非常重要。特别是在Hadoop处理大量资料的环境，如果没有配额管理，很容易把所有的空间用完造成别人无法存取。Hdfs的配额设定是针对目标而不是针对账号，所有在管理上最好让每个账号仅操作某一个目录，然后对目录设置配置。
-设定方法有两种：
-
-Name Quotas：设置某一个目录下文件总数
-Space Quotas：设置某一个目录下可使用空间大小
-
-Hadoop可以通过该命令可以来限定某个hdfs目录的大小：
-设置配额设置100G的目录配额，
-1hadoop dfsadmin -setSpaceQuota 100g /user/shining
-设置为3m的目录配额，默认单位是字节
-1hadoop dfsadmin -setSpaceQuota 3000000 /temp/shining
-
- 这里统计空间的时候会将备份数也考虑在里面，因为集群设置了备份数为3，所以hadoop dfsadmin -setSpaceQuota也要讲备份数考虑进去，
-
-
- 在core-site.xml里面设置 dfs.bloc
-          ...
+          <h2 id="hadoop设置目录配额-setSpaceQuota"><a href="#hadoop设置目录配额-setSpaceQuota" class="headerlink" title="hadoop设置目录配额-setSpaceQuota"></a>hadoop设置目录配额-setSpaceQuota</h2><p>在多人共用HDFS的环境下，配置设置非常重要。特别是在Hadoop处理大量资料的环境，如果没有配额管理，很容易把所有的空间用完造成别人无法存取。Hdfs的配额设定是针对目标而不是针对账号，所有在管理上最好让每个账号仅操作某一个目录，然后对目录设置配置。</p>
+<p>设定方法有两种：</p>
+<ul>
+<li>Name Quotas：设置某一个目录下文件总数</li>
+<li>Space Quotas：设置某一个目录下可使用空间大小</li>
+</ul>
+<p>Hadoop可以通过该命令可以来限定某个hdfs目录的大小：</p>
+<h5 id="设置配额"><a href="#设置配额" class="headerlink" title="设置配额"></a>设置配额</h5><p>设置100G的目录配额，</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/hadoop-set-quota/#more" rel="contents">

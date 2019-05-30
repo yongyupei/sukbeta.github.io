@@ -1589,20 +1589,16 @@ vlan 号
 
       
         
-          
-          logstash out file to HDFS  logstash 直接把文件内容写入 hdfs 中， 并支持 hdfs 压缩格式。  logstash 需要安装第三方插件，webhdfs插件，通过hdfs的web接口写入。  即 http://namenode00:50070/webhdfs/v1/  接口  
-安装  可以在官网找到相应的版本， 我们用的是2.3.1，下载地址：  
-https://www.elastic.co/downloads/past-releases  
-  webhdfs插件地址  
-github地址：
+          <h2 id="logstash-out-file-to-HDFS"><a href="#logstash-out-file-to-HDFS" class="headerlink" title="logstash out file to HDFS"></a>logstash out file to HDFS</h2><p>  logstash 直接把文件内容写入 hdfs 中， 并支持 hdfs 压缩格式。<br>  logstash 需要安装第三方插件，webhdfs插件，通过hdfs的web接口写入。<br>  即 <a href="http://namenode00:50070/webhdfs/v1/" target="_blank" rel="noopener">http://namenode00:50070/webhdfs/v1/</a>  接口  </p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>  可以在官网找到相应的版本， 我们用的是2.3.1，下载地址：  </p>
+<pre><code>https://www.elastic.co/downloads/past-releases  
+</code></pre><p>  webhdfs插件地址  </p>
+<pre><code>github地址：
   git clone  https://github.com/heqin5136/logstash-output-webhdfs-discontinued.git
 
 官网地址及使用说明：
   https://www.elastic.co/guide/en/logstash/current/plugins-outputs-webhdfs.html
-插件安装方式：
-logstash 安装在 /home/mtime/logstash-2.3.1
-git c
-          ...
+</code></pre>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/logstash-out-file-to-HDFS/#more" rel="contents">
