@@ -81,19 +81,19 @@
 
 
 
-<meta name="description" content="直接在nginx配置文件中配置切分日志  最近我们nginx上来容器，日志实时传走，但是本地还需要留一份另作他用，这样用原来logrotate或cronolog方式切分日志就很麻烦了， 我就开始再nginx配置文件中想办法。 发现可以利用 $time_iso8601 变量来切分日志， 它就是每条日志得时间戳，取它的年、月、日、小时做变量，生成带时间戳得日志文件。就可以每小时、每天输出到不同文件里了">
+<meta name="description" content="最近我们nginx上来容器，日志实时传走，但是本地还需要留一份另作他用，这样用原来logrotate或cronolog方式切分日志就很麻烦了， 我就开始再nginx配置文件中想办法。 发现可以利用 $time_iso8601 变量来切分日志， 它就是每条日志得时间戳，取它的年、月、日、小时做变量，生成带时间戳得日志文件。就可以每小时、每天输出到不同文件里了。  请注意，不可能在error_lo">
 <meta name="keywords" content="nginx">
 <meta property="og:type" content="article">
 <meta property="og:title" content="直接在nginx配置文件中配置切分日志">
 <meta property="og:url" content="https://sukbeta.github.io/nginx-access-split/index.html">
 <meta property="og:site_name" content="舒克贝塔">
-<meta property="og:description" content="直接在nginx配置文件中配置切分日志  最近我们nginx上来容器，日志实时传走，但是本地还需要留一份另作他用，这样用原来logrotate或cronolog方式切分日志就很麻烦了， 我就开始再nginx配置文件中想办法。 发现可以利用 $time_iso8601 变量来切分日志， 它就是每条日志得时间戳，取它的年、月、日、小时做变量，生成带时间戳得日志文件。就可以每小时、每天输出到不同文件里了">
+<meta property="og:description" content="最近我们nginx上来容器，日志实时传走，但是本地还需要留一份另作他用，这样用原来logrotate或cronolog方式切分日志就很麻烦了， 我就开始再nginx配置文件中想办法。 发现可以利用 $time_iso8601 变量来切分日志， 它就是每条日志得时间戳，取它的年、月、日、小时做变量，生成带时间戳得日志文件。就可以每小时、每天输出到不同文件里了。  请注意，不可能在error_lo">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://static-ali.ihansen.org/app/upload/2019-04-14/17587f43-0b52-4f09-a9cc-9733f6980ba3.jpg!o">
-<meta property="og:updated_time" content="2019-05-30T05:48:24.736Z">
+<meta property="og:updated_time" content="2019-05-30T06:22:38.552Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="直接在nginx配置文件中配置切分日志">
-<meta name="twitter:description" content="直接在nginx配置文件中配置切分日志  最近我们nginx上来容器，日志实时传走，但是本地还需要留一份另作他用，这样用原来logrotate或cronolog方式切分日志就很麻烦了， 我就开始再nginx配置文件中想办法。 发现可以利用 $time_iso8601 变量来切分日志， 它就是每条日志得时间戳，取它的年、月、日、小时做变量，生成带时间戳得日志文件。就可以每小时、每天输出到不同文件里了">
+<meta name="twitter:description" content="最近我们nginx上来容器，日志实时传走，但是本地还需要留一份另作他用，这样用原来logrotate或cronolog方式切分日志就很麻烦了， 我就开始再nginx配置文件中想办法。 发现可以利用 $time_iso8601 变量来切分日志， 它就是每条日志得时间戳，取它的年、月、日、小时做变量，生成带时间戳得日志文件。就可以每小时、每天输出到不同文件里了。  请注意，不可能在error_lo">
 <meta name="twitter:image" content="https://static-ali.ihansen.org/app/upload/2019-04-14/17587f43-0b52-4f09-a9cc-9733f6980ba3.jpg!o">
 
 
@@ -436,7 +436,7 @@
       
 
       
-        <h1 id="直接在nginx配置文件中配置切分日志"><a href="#直接在nginx配置文件中配置切分日志" class="headerlink" title="直接在nginx配置文件中配置切分日志"></a>直接在nginx配置文件中配置切分日志</h1><center><br><img style="width:1400px;height:300px" src="https://static-ali.ihansen.org/app/upload/2019-04-14/17587f43-0b52-4f09-a9cc-9733f6980ba3.jpg!o" align="center"><br></center>
+        <center><br><img style="width:1400px;height:300px" src="https://static-ali.ihansen.org/app/upload/2019-04-14/17587f43-0b52-4f09-a9cc-9733f6980ba3.jpg!o" align="center"><br></center>
 
 <p>最近我们nginx上来容器，日志实时传走，但是本地还需要留一份另作他用，这样用原来logrotate或cronolog方式切分日志就很麻烦了， 我就开始再nginx配置文件中想办法。</p>
 <p>发现可以利用 $time_iso8601 变量来切分日志， 它就是每条日志得时间戳，取它的年、月、日、小时做变量，生成带时间戳得日志文件。就可以每小时、每天输出到不同文件里了。</p>
@@ -775,7 +775,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#直接在nginx配置文件中配置切分日志"><span class="nav-number">1.</span> <span class="nav-text">直接在nginx配置文件中配置切分日志</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#time-iso8601-时间格式"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">time_iso8601 时间格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置方法"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">配置方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#缺点"><span class="nav-number">1.0.0.3.</span> <span class="nav-text">缺点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#例子"><span class="nav-number">1.0.0.4.</span> <span class="nav-text">例子</span></a></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#time-iso8601-时间格式"><span class="nav-number">1.</span> <span class="nav-text">time_iso8601 时间格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置方法"><span class="nav-number">2.</span> <span class="nav-text">配置方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#缺点"><span class="nav-number">3.</span> <span class="nav-text">缺点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#例子"><span class="nav-number">4.</span> <span class="nav-text">例子</span></a></li></ol></div>
             
 
           </div>
