@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://sukbeta.github.io/nginx-access-split/</loc>
+    
+    <lastmod>2019-05-30T05:48:11.561Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://sukbeta.github.io/web/</loc>
     
     <lastmod>2019-05-17T05:08:03.532Z</lastmod>
@@ -254,14 +261,14 @@
   </url>
   
   <url>
-    <loc>https://sukbeta.github.io/nginx-installed-sticky/</loc>
+    <loc>https://sukbeta.github.io/cgroup-limit-process-resources/</loc>
     
     <lastmod>2018-12-03T07:30:14.467Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://sukbeta.github.io/cgroup-limit-process-resources/</loc>
+    <loc>https://sukbeta.github.io/nginx-installed-sticky/</loc>
     
     <lastmod>2018-12-03T07:30:14.467Z</lastmod>
     
