@@ -96,7 +96,7 @@
 
 
 
-  <meta name="keywords" content="shell,linux," />
+  <meta name="keywords" content="linux,shell," />
 
 
 
@@ -108,7 +108,7 @@
 
 
 <meta name="description" content="rsync、wget本地拉取yum源  我们本地搭建yum源的时候，需要从官网拉取所有rrpm包到本地。再创建repo。这时候我们需要批量下载的方法。 有的镜像源提供了rsync接口，我们可以用rsync同步。没有的话我们可以用wget下载。 centos 官网提供了所有的镜像地址 list，https://www.centos.org/download/mirrors/可以上着上选择可以用的镜像">
-<meta name="keywords" content="shell,linux">
+<meta name="keywords" content="linux,shell">
 <meta property="og:type" content="article">
 <meta property="og:title" content="rsync、wget本地拉取yum源">
 <meta property="og:url" content="https://sukbeta.github.io/rsync-wget-yum-rpm/index.html">
@@ -429,8 +429,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/rsync-wget-yum-rpm/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="rsync-wget-yum-rpm/" itemprop="commentCount"></span>
+                  <span class="post-comments-count gitment-comments-count" data-xid="/rsync-wget-yum-rpm/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -526,9 +525,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/shell/" rel="tag"># shell</a>
-          
             <a href="/tags/linux/" rel="tag"># linux</a>
+          
+            <a href="/tags/shell/" rel="tag"># shell</a>
           
         </div>
       
@@ -630,12 +629,9 @@
 
   
     <div class="comments" id="comments">
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-      </div>
+      
+        <div id="gitment-container"></div>
+      
     </div>
 
   
@@ -973,26 +969,6 @@
 
   
 
-
-  
-
-    
-      <script id="dsq-count-scr" src="https://.disqus.com/count.js" async></script>
-    
-
-    
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'https://sukbeta.github.io/rsync-wget-yum-rpm/';
-          this.page.identifier = 'rsync-wget-yum-rpm/';
-          this.page.title = 'rsync、wget本地拉取yum源';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
-    
 
   
 
