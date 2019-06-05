@@ -783,16 +783,29 @@ hive 中文注释为乱码，
 
       
       
+        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+          
+          
+            <div class="post-gallery-row">
+              <a class="post-gallery-img fancybox"
+                 href="https://w.wallhaven.cc/full/ox/wallhaven-oxlxvp.jpg" rel="gallery_cjwinzjyd001i8gpzksoyw9z5"
+                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+                <img src="https://w.wallhaven.cc/full/ox/wallhaven-oxlxvp.jpg" itemprop="contentUrl"/>
+              </a>
+            
+          
+
+          
+          </div>
+        </div>
+      
 
       
         
-          
-          hive增加自动合并小文件配置以及在map阶段将多个小文件合并成一个计算。可以提高资源的利用率。
-比如由于小文件原先需要启动10个map，现在只需要启动2个map。
-hadoop  hive 环境： hadoop2.6+hive1.2.1    lzo压缩
-hive-site.xml 配置
-123456789101112131415161718192021222324252627282930313233343536&lt;property&gt;     &lt;name&gt;hive.merge.mapfiles&lt;/name&gt;     &lt;value&gt;true&lt;/value&gt;&lt;/property&gt;&lt;property&gt;     &lt;name&gt;hive.merge.mapredfiles&lt;/name&gt;     &lt;value&gt;true&lt;/value&gt;&lt;/property&gt;&lt;property&gt;     &lt;name&gt;hive.merge.smallfil
-          ...
+          <p>hive增加自动合并小文件配置以及在map阶段将多个小文件合并成一个计算。可以提高资源的利用率。</p>
+<p>比如由于小文件原先需要启动10个map，现在只需要启动2个map。</p>
+<p>hadoop  hive 环境： hadoop2.6+hive1.2.1    lzo压缩</p>
+<p>hive-site.xml 配置</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/hive-merge-small-files/#more" rel="contents">

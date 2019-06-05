@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://sukbeta.github.io/web/</loc>
+    
+    <lastmod>2019-06-05T04:36:47.512Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sukbeta.github.io/hive-merge-small-files/</loc>
+    
+    <lastmod>2019-06-05T04:34:25.777Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sukbeta.github.io/nginx-conf-explain/</loc>
+    
+    <lastmod>2019-06-05T04:33:19.999Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://sukbeta.github.io/marathon-delete-app/</loc>
     
     <lastmod>2019-06-05T04:16:43.603Z</lastmod>
@@ -19,20 +40,6 @@
     <loc>https://sukbeta.github.io/nginx-access-split/</loc>
     
     <lastmod>2019-06-05T04:09:49.032Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://sukbeta.github.io/web/</loc>
-    
-    <lastmod>2019-06-05T03:52:25.859Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://sukbeta.github.io/nginx-conf-explain/</loc>
-    
-    <lastmod>2019-06-05T02:47:10.418Z</lastmod>
     
   </url>
   
@@ -180,13 +187,6 @@
     <loc>https://sukbeta.github.io/marathon-EventLog-to-ES/</loc>
     
     <lastmod>2019-01-14T09:16:12.291Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://sukbeta.github.io/hive-merge-small-files/</loc>
-    
-    <lastmod>2019-01-10T10:49:51.051Z</lastmod>
     
   </url>
   
