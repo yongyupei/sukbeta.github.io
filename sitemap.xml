@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://sukbeta.github.io/nginx-access-split/</loc>
+    
+    <lastmod>2019-06-05T08:14:30.809Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://sukbeta.github.io/hive-custom-variables/</loc>
     
     <lastmod>2019-06-05T08:08:32.715Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>https://sukbeta.github.io/curl-shell-args/</loc>
     
     <lastmod>2019-06-05T07:59:31.673Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://sukbeta.github.io/nginx-access-split/</loc>
-    
-    <lastmod>2019-06-05T07:59:05.140Z</lastmod>
     
   </url>
   
