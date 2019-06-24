@@ -96,7 +96,7 @@
 
 
 
-  <meta name="keywords" content="hadoop,linux," />
+  <meta name="keywords" content="hadoop,yarn," />
 
 
 
@@ -107,18 +107,20 @@
 
 
 
-<meta name="description" content="cgroup限制nodemanager、regionserver的资源用系统自带的cgroup服务来限制nodemanager、regionserver的cpu使用率。   安装cgroup服务，1234567##  centos 7.1 系统安装 cgroupchattr -i /etc/passwd /etc/shadow /etc/group /etc/gshadowyum install">
-<meta name="keywords" content="hadoop,linux">
+<meta name="description" content="hadoop 版本为：apache 2.7.2这几天在搭建的时候遇到yarn无法启动。报错信息： 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263642019-06-18 16:34:08,362 WARN org">
+<meta name="keywords" content="hadoop,yarn">
 <meta property="og:type" content="article">
-<meta property="og:title" content="cgroup限制nodemanager、regionserver的资源">
-<meta property="og:url" content="https://sukbeta.github.io/cgroup-limit-nm-reg/index.html">
+<meta property="og:title" content="zookeeper delete yarn rmstore">
+<meta property="og:url" content="https://sukbeta.github.io/zookeeper-delete-yarn-rmstore/index.html">
 <meta property="og:site_name" content="舒克贝塔">
-<meta property="og:description" content="cgroup限制nodemanager、regionserver的资源用系统自带的cgroup服务来限制nodemanager、regionserver的cpu使用率。   安装cgroup服务，1234567##  centos 7.1 系统安装 cgroupchattr -i /etc/passwd /etc/shadow /etc/group /etc/gshadowyum install">
+<meta property="og:description" content="hadoop 版本为：apache 2.7.2这几天在搭建的时候遇到yarn无法启动。报错信息： 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263642019-06-18 16:34:08,362 WARN org">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-24T06:33:06.000Z">
+<meta property="og:image" content="https://file.moetu.org/images/2019/06/13/9bbc284bgy1g3y78rwghlj20rs0ijtbi4468324b1624aa1c.jpg">
+<meta property="og:updated_time" content="2019-06-24T07:51:39.031Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="cgroup限制nodemanager、regionserver的资源">
-<meta name="twitter:description" content="cgroup限制nodemanager、regionserver的资源用系统自带的cgroup服务来限制nodemanager、regionserver的cpu使用率。   安装cgroup服务，1234567##  centos 7.1 系统安装 cgroupchattr -i /etc/passwd /etc/shadow /etc/group /etc/gshadowyum install">
+<meta name="twitter:title" content="zookeeper delete yarn rmstore">
+<meta name="twitter:description" content="hadoop 版本为：apache 2.7.2这几天在搭建的时候遇到yarn无法启动。报错信息： 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263642019-06-18 16:34:08,362 WARN org">
+<meta name="twitter:image" content="https://file.moetu.org/images/2019/06/13/9bbc284bgy1g3y78rwghlj20rs0ijtbi4468324b1624aa1c.jpg">
 
 
 
@@ -148,13 +150,13 @@
 
 
 
-  <link rel="canonical" href="https://sukbeta.github.io/cgroup-limit-nm-reg/"/>
+  <link rel="canonical" href="https://sukbeta.github.io/zookeeper-delete-yarn-rmstore/"/>
 
 
 
 
 
-  <title>cgroup限制nodemanager、regionserver的资源 | 舒克贝塔</title>
+  <title>zookeeper delete yarn rmstore | 舒克贝塔</title>
   
 
 
@@ -355,7 +357,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://sukbeta.github.io/cgroup-limit-nm-reg/">
+    <link itemprop="mainEntityOfPage" href="https://sukbeta.github.io/zookeeper-delete-yarn-rmstore/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="北极企鹅">
@@ -372,7 +374,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">cgroup限制nodemanager、regionserver的资源</h1>
+          <h1 class="post-title" itemprop="name headline">zookeeper delete yarn rmstore</h1>
         
 
         <div class="post-meta">
@@ -384,8 +386,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-24T14:30:57+08:00">
-                2018-12-24
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-24T15:46:28+08:00">
+                2019-06-24
               </time>
             
 
@@ -425,8 +427,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/cgroup-limit-nm-reg/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count gitment-comments-count" data-xid="/cgroup-limit-nm-reg/" itemprop="commentsCount"></span>
+                <a href="/zookeeper-delete-yarn-rmstore/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/zookeeper-delete-yarn-rmstore/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -457,15 +459,38 @@
 
       
       
+        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+          
+          
+            <div class="post-gallery-row">
+              <a class="post-gallery-img fancybox"
+                 href="https://file.moetu.org/images/2019/06/13/9bbc284bgy1g3y78rwghlj20rs0ijtbi4468324b1624aa1c.jpg" rel="gallery_cjxa31o1d007ip2pzgom8ldj2"
+                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+                <img src="https://file.moetu.org/images/2019/06/13/9bbc284bgy1g3y78rwghlj20rs0ijtbi4468324b1624aa1c.jpg" itemprop="contentUrl"/>
+              </a>
+            
+          
+
+          
+          </div>
+        </div>
+      
 
       
-        <h1 id="cgroup限制nodemanager、regionserver的资源"><a href="#cgroup限制nodemanager、regionserver的资源" class="headerlink" title="cgroup限制nodemanager、regionserver的资源"></a>cgroup限制nodemanager、regionserver的资源</h1><p>用系统自带的cgroup服务来限制nodemanager、regionserver的cpu使用率。  </p>
-<h5 id="安装cgroup服务，"><a href="#安装cgroup服务，" class="headerlink" title="安装cgroup服务，"></a>安装cgroup服务，</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">##  centos 7.1 系统安装 cgroup</span><br><span class="line">chattr -i /etc/passwd /etc/shadow /etc/group /etc/gshadow</span><br><span class="line">yum install -y libcgroup libcgroup-tools</span><br><span class="line"></span><br><span class="line">## centos 6 系统安装 cgroup</span><br><span class="line">chattr -i /etc/passwd /etc/shadow /etc/group /etc/gshadow</span><br><span class="line">yum install -y libcgroup</span><br></pre></td></tr></table></figure>
-<h5 id="编辑cgroup配置文件"><a href="#编辑cgroup配置文件" class="headerlink" title="编辑cgroup配置文件"></a>编辑cgroup配置文件</h5><p>cpu 32盒 最大使用 90% ，<br>yarn 32 <em> 0.9 </em> 100000 = 2880000 ，<br>hbase 600000  6盒cpu 600 * 1000</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/cgconfig.conf</span><br><span class="line">group yarn &#123;</span><br><span class="line">   perm &#123;</span><br><span class="line">    task &#123;</span><br><span class="line">        uid = hadoop;</span><br><span class="line">        gid = hadoop;</span><br><span class="line">    &#125;</span><br><span class="line">    admin &#123;</span><br><span class="line">       uid = hadoop;</span><br><span class="line">       gid = hadoop;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">   cpu &#123;</span><br><span class="line">          cpu.cfs_period_us= 100000;</span><br><span class="line">          cpu.cfs_quota_us= 2880000;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br><span class="line">group yarn/hbase &#123;</span><br><span class="line">   perm &#123;</span><br><span class="line">    task &#123;</span><br><span class="line">        uid = hadoop;</span><br><span class="line">        gid = hadoop;</span><br><span class="line">    &#125;</span><br><span class="line">    admin &#123;</span><br><span class="line">       uid = hadoop;</span><br><span class="line">       gid = hadoop;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">   cpu &#123;</span><br><span class="line">          cpu.cfs_period_us= 100000;</span><br><span class="line">          cpu.cfs_quota_us=  600000;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="启动cgroup服务"><a href="#启动cgroup服务" class="headerlink" title="启动cgroup服务"></a>启动cgroup服务</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart cgconfig.service</span><br><span class="line">systemctl enable cgconfig.service</span><br></pre></td></tr></table></figure>
-<h5 id="重新启动-nodemanager-和-regionserver-服务"><a href="#重新启动-nodemanager-和-regionserver-服务" class="headerlink" title="重新启动 nodemanager 和 regionserver 服务"></a>重新启动 nodemanager 和 regionserver 服务</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">su - hadoop</span><br><span class="line"></span><br><span class="line">yarn-daemon.sh stop nodemanager</span><br><span class="line">cgexec -g cpu:yarn yarn-daemon.sh start nodemanager</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">hbase-daemon.sh stop regionserver</span><br><span class="line">cgexec -g cpu:yarn/hbase hbase-daemon.sh start regionserver</span><br></pre></td></tr></table></figure>
-<h5 id="检查-服务"><a href="#检查-服务" class="headerlink" title="检查 服务"></a>检查 服务</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd /sys/fs/cgroup/cpu/yarn</span><br><span class="line">cat tasks | grep &quot;nodemanager PID&quot;</span><br><span class="line"></span><br><span class="line">cd /sys/fs/cgroup/cpu/yarn/hbase</span><br><span class="line">cat tasks | grep &quot;regsionserver PID&quot;</span><br></pre></td></tr></table></figure>
+        <p>hadoop 版本为：apache 2.7.2<br>这几天在搭建的时候遇到yarn无法启动。报错信息：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line">2019-06-18 16:34:08,362 WARN org.apache.hadoop.metrics2.impl.MetricsSystemImpl: ResourceManager metrics system already initialized!</span><br><span class="line">2019-06-18 16:34:08,362 INFO org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.yarn.server.resourcemanager.RMAppManagerEventType for class org.apache.hadoop.yarn.server.resourcemanager.RMAppManager</span><br><span class="line">2019-06-18 16:34:08,362 INFO org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.yarn.server.resourcemanager.amlauncher.AMLauncherEventType for class org.apache.hadoop.yarn.server.resourcemanager.amlauncher.ApplicationMasterLauncher</span><br><span class="line">2019-06-18 16:34:08,362 WARN org.apache.hadoop.metrics2.util.MBeans: Error creating MBean object name: Hadoop:service=ResourceManager,name=RMNMInfo</span><br><span class="line">org.apache.hadoop.metrics2.MetricsException: org.apache.hadoop.metrics2.MetricsException: Hadoop:service=ResourceManager,name=RMNMInfo already exists!</span><br><span class="line">        at org.apache.hadoop.metrics2.lib.DefaultMetricsSystem.newObjectName(DefaultMetricsSystem.java:122)</span><br><span class="line">        at org.apache.hadoop.metrics2.lib.DefaultMetricsSystem.newMBeanName(DefaultMetricsSystem.java:102)</span><br><span class="line">        at org.apache.hadoop.metrics2.util.MBeans.getMBeanName(MBeans.java:92)</span><br><span class="line">        at org.apache.hadoop.metrics2.util.MBeans.register(MBeans.java:55)</span><br><span class="line">        at org.apache.hadoop.yarn.server.resourcemanager.RMNMInfo.&lt;init&gt;(RMNMInfo.java:59)</span><br><span class="line">        at org.apache.hadoop.yarn.server.resourcemanager.ResourceManager$RMActiveServices.serviceInit(ResourceManager.java:549)</span><br><span class="line">        at org.apache.hadoop.service.AbstractService.init(AbstractService.java:163)</span><br><span class="line">        at org.apache.hadoop.yarn.server.resourcemanager.ResourceManager.createAndInitActiveServices(ResourceManager.java:954)</span><br><span class="line">        at org.apache.hadoop.yarn.server.resourcemanager.ResourceManager.reinitialize(ResourceManager.java:984)</span><br><span class="line">        at org.apache.hadoop.yarn.server.resourcemanager.ResourceManager$1.run(ResourceManager.java:1008)</span><br><span class="line">        at org.apache.hadoop.yarn.server.resourcemanager.ResourceManager$1.run(ResourceManager.java:1001)</span><br><span class="line">        at java.security.AccessController.doPrivileged(Native Method)</span><br><span class="line">        at javax.security.auth.Subject.doAs(Subject.java:422)</span><br><span class="line">        at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1657)</span><br><span class="line">        at org.apache.hadoop.yarn.server.resourcemanager.ResourceManager.transitionToActive(ResourceManager.java:1001)</span><br><span class="line">        at org.apache.hadoop.yarn.server.resourcemanager.AdminService.transitionToActive(AdminService.java:303)</span><br><span class="line">        at org.apache.hadoop.yarn.server.resourcemanager.EmbeddedElectorService.becomeActive(EmbeddedElectorService.java:126)</span><br><span class="line">        at org.apache.hadoop.ha.ActiveStandbyElector.becomeActive(ActiveStandbyElector.java:813)</span><br><span class="line">        at org.apache.hadoop.ha.ActiveStandbyElector.processResult(ActiveStandbyElector.java:418)</span><br><span class="line">        at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:599)</span><br><span class="line">        at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)</span><br><span class="line">Caused by: org.apache.hadoop.metrics2.MetricsException: Hadoop:service=ResourceManager,name=RMNMInfo already exists!</span><br><span class="line">        at org.apache.hadoop.metrics2.lib.DefaultMetricsSystem.newObjectName(DefaultMetricsSystem.java:118)</span><br><span class="line">        ... 20 more</span><br><span class="line">2019-06-18 16:34:08,363 WARN org.apache.hadoop.metrics2.util.MBeans: Failed to register MBean &quot;null&quot;</span><br><span class="line">javax.management.RuntimeOperationsException: Exception occurred trying to register the MBean</span><br><span class="line">        at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerDynamicMBean(DefaultMBeanServerInterceptor.java:951)</span><br><span class="line">        at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerObject(DefaultMBeanServerInterceptor.java:900)</span><br><span class="line">        at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerMBean(DefaultMBeanServerInterceptor.java:324)</span><br><span class="line">        at com.sun.jmx.mbeanserver.JmxMBeanServer.registerMBean(JmxMBeanServer.java:522)</span><br><span class="line">        at org.apache.hadoop.metrics2.util.MBeans.register(MBeans.java:57)</span><br><span class="line">        at org.apache.hadoop.yarn.server.resourcemanager.RMNMInfo.&lt;init&gt;(RMNMInfo.java:59)</span><br><span class="line">        at org.apache.hadoop.yarn.server.resourcemanager.ResourceManager$RMActiveServices.serviceInit(ResourceManager.java:549)</span><br><span class="line">        at org.apache.hadoop.service.AbstractService.init(AbstractService.java:163)</span><br><span class="line">        at org.apache.hadoop.yarn.server.resourcemanager.ResourceManager.createAndInitActiveServices(ResourceManager.java:954)</span><br><span class="line">        at org.apache.hadoop.yarn.server.resourcemanager.ResourceManager.reinitialize(ResourceManager.java:984)</span><br><span class="line">        at org.apache.hadoop.yarn.server.resourcemanager.ResourceManager$1.run(ResourceManager.java:1008)</span><br><span class="line">        at org.apache.hadoop.yarn.server.resourcemanager.ResourceManager$1.run(ResourceManager.java:1001)</span><br><span class="line">        at java.security.AccessController.doPrivileged(Native Method)</span><br><span class="line">        at javax.security.auth.Subject.doAs(Subject.java:422)</span><br><span class="line">        at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1657)</span><br><span class="line">        at org.apache.hadoop.yarn.server.resourcemanager.ResourceManager.transitionToActive(ResourceManager.java:1001)</span><br><span class="line">        at org.apache.hadoop.yarn.server.resourcemanager.AdminService.transitionToActive(AdminService.java:303)</span><br><span class="line">        at org.apache.hadoop.yarn.server.resourcemanager.EmbeddedElectorService.becomeActive(EmbeddedElectorService.java:126)</span><br><span class="line">        at org.apache.hadoop.ha.ActiveStandbyElector.becomeActive(ActiveStandbyElector.java:813)</span><br><span class="line">        at org.apache.hadoop.ha.ActiveStandbyElector.processResult(ActiveStandbyElector.java:418)</span><br><span class="line">        at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:599)</span><br><span class="line">        at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)</span><br><span class="line">Caused by: java.lang.IllegalArgumentException: No object name specified</span><br><span class="line">        at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerDynamicMBean(DefaultMBeanServerInterceptor.java:949)</span><br><span class="line">        ... 21 more</span><br><span class="line">2019-06-18 16:34:08,363 INFO org.apache.hadoop.yarn.server.resourcemanager.RMNMInfo: Registered RMNMInfo MBean</span><br><span class="line">2019-06-18 16:34:08,363 INFO org.apache.hadoop.util.HostsFileReader: Refreshing hosts (include/exclude) list</span><br><span class="line">2019-06-18 16:34:08,364 INFO org.apache.hadoop.service.AbstractService: Service org.apache.hadoop.yarn.server.resourcemanager.NodesListManager failed in state INITED; cause: org.apache.hadoop.metrics2.MetricsException: Metrics source ClusterMetrics already exists!</span><br><span class="line">org.apache.hadoop.metrics2.MetricsException: Metrics source ClusterMetrics already exists!</span><br><span class="line">        at org.apache.hadoop.metrics2.lib.DefaultMetricsSystem.newSourceName(DefaultMetricsSystem.java:135)</span><br><span class="line">        at org.apache.hadoop.metrics2.lib.DefaultMetricsSystem.sourceName(DefaultMetricsSystem.java:112)</span><br><span class="line">        at org.apache.hadoop.metrics2.impl.MetricsSystemImpl.register(MetricsSystemImpl.java:229)</span><br><span class="line">        at org.apache.hadoop.yarn.server.resourcemanager.ClusterMetrics.registerMetrics(ClusterMetrics.java:74)</span><br></pre></td></tr></table></figure>
+<p>或</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">2019-06-16 21:07:39,030 WARN org.apache.hadoop.yarn.server.resourcemanager.RMAuditLogger: USER=yarn OPERATION=transitionToActive TARGET=RMHAProtocolService RESULT=FAILURE DESCRIPTION=Exception transitioning to active PERMISSIONS=Users [yarn] and members of the groups [&lt;users&gt;] are allowed</span><br><span class="line">2019-06-16 21:07:39,030 WARN org.apache.hadoop.ha.ActiveStandbyElector: Exception handling the winning of election</span><br><span class="line">org.apache.hadoop.ha.ServiceFailedException: RM could not transition to Active</span><br><span class="line">  at org.apache.hadoop.yarn.server.resourcemanager.EmbeddedElectorService.becomeActive(EmbeddedElectorService.java:124)</span><br><span class="line">  at org.apache.hadoop.ha.ActiveStandbyElector.becomeActive(ActiveStandbyElector.java:812)</span><br><span class="line">  at org.apache.hadoop.ha.ActiveStandbyElector.processResult(ActiveStandbyElector.java:417)</span><br><span class="line">  at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:599)</span><br><span class="line">  at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)</span><br><span class="line">Caused by: org.apache.hadoop.ha.ServiceFailedException: Error when transitioning to Active mode</span><br><span class="line">  at org.apache.hadoop.yarn.server.resourcemanager.AdminService.transitionToActive(AdminService.java:304)</span><br><span class="line">  at org.apache.hadoop.yarn.server.resourcemanager.EmbeddedElectorService.becomeActive(EmbeddedElectorService.java:122)</span><br><span class="line">  ... 4 more</span><br><span class="line">Caused by: org.apache.hadoop.service.ServiceStateException: org.apache.hadoop.yarn.server.resourcemanager.recovery.StoreFencedException: RMStateStore has been fenced</span><br><span class="line">  at org.apache.hadoop.service.ServiceStateException.convert(ServiceStateException.java:59)</span><br><span class="line">  at org.apache.hadoop.service.AbstractService.start(AbstractService.java:204)</span><br><span class="line">  at org.apache.hadoop.yarn.server.resourcemanager.ResourceManager$RMActiveServices.serviceStart(ResourceManager.java:577)</span><br><span class="line">  at org.apache.hadoop.service.Abstr</span><br></pre></td></tr></table></figure>
+<p>解决办法：</p>
+<p>我们需要删除yarn在ZK上的 rmstore 信息， 之后重启yarn，就可以了。 </p>
+<p>但是在删除zk上 rmstore 信息的时候， 遇到了问题， yarn在注册时候的时候自己添加上ACL。所以我们直接删除是不行的。</p>
+<p>但我们可以可以重新设置一个ACL，就可以了， 如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cd $ZOOKEEPER_HOME/bin</span><br><span class="line">./zkCli.sh   # 连接hadoop配置的zk，如果是客户端需添加 -server IP：port</span><br><span class="line">[zk: localhost:2181(CONNECTED) 0] ls /</span><br><span class="line">[zookeeper, hadoop-ha, hbase, rmstore]</span><br><span class="line">[zk: localhost:2181(CONNECTED) 1] rmr /rmstore</span><br><span class="line">Authentication is not valid : /rmstore/ZKRMStateRoot/RMVersionNode</span><br></pre></td></tr></table></figure>
+<p>我们可以看一下这个目录的ACL</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[zk: localhost:2181(CONNECTED) 2] getAcl /rmstore/ZKRMStateRoot</span><br><span class="line">&apos;world,&apos;anyone</span><br><span class="line">: rwa</span><br><span class="line">&apos;digest,&apos;shining-namenode01.host.com:yelhKlz39YVCV9p4NTModoBq9fw=</span><br><span class="line">: cd</span><br></pre></td></tr></table></figure>
+<p>我们重新设置ACL，并删除目录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">[zk: localhost:2181(CONNECTED) 3] setAcl /rmstore/ZKRMStateRoot world:anyone:rwcda</span><br><span class="line">cZxid = 0x10000001b</span><br><span class="line">ctime = Mon May 27 14:58:45 CST 2019</span><br><span class="line">mZxid = 0x10000001b</span><br><span class="line">mtime = Mon May 27 14:58:45 CST 2019</span><br><span class="line">pZxid = 0x10016efd3</span><br><span class="line">cversion = 380191</span><br><span class="line">dataVersion = 0</span><br><span class="line">aclVersion = 5</span><br><span class="line">ephemeralOwner = 0x0</span><br><span class="line">dataLength = 0</span><br><span class="line">numChildren = 5</span><br><span class="line">[zk: localhost:2181(CONNECTED) 4] getAcl /rmstore/ZKRMStateRoot                   </span><br><span class="line">&apos;world,&apos;anyone</span><br><span class="line">: cdrwa</span><br><span class="line">[zk: localhost:2181(CONNECTED) 6] rmr /rmstore/ZKRMStateRoot</span><br><span class="line">[zk: localhost:2181(CONNECTED) 7] ls /</span><br><span class="line">[zookeeper, hadoop-ha, hbase, rmstore]</span><br><span class="line">[zk: localhost:2181(CONNECTED) 8] rmr /rmstore</span><br><span class="line">[zk: localhost:2181(CONNECTED) 9] ls /</span><br><span class="line">[zookeeper, hadoop-ha, hbase]</span><br></pre></td></tr></table></figure>
+<p>之后重新启动yarn，让yarn重新在zk上注册就可以了。</p>
 
       
     </div>
@@ -514,7 +539,7 @@
           
             <a href="/tags/hadoop/" rel="tag"># hadoop</a>
           
-            <a href="/tags/linux/" rel="tag"># linux</a>
+            <a href="/tags/yarn/" rel="tag"># yarn</a>
           
         </div>
       
@@ -527,8 +552,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/hive-meta-ha/" rel="next" title="hive metastore ha 配置">
-                <i class="fa fa-chevron-left"></i> hive metastore ha 配置
+              <a href="/es-free-license/" rel="next" title="Elasticsearch申请免费license">
+                <i class="fa fa-chevron-left"></i> Elasticsearch申请免费license
               </a>
             
           </div>
@@ -536,10 +561,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/hadoop-Cannot-obtain-block-length-for-LocatedBlock/" rel="prev" title="hadoop Cannot obtain block length for LocatedBlock 解决">
-                hadoop Cannot obtain block length for LocatedBlock 解决 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -644,17 +665,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -768,22 +780,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#cgroup限制nodemanager、regionserver的资源"><span class="nav-number">1.</span> <span class="nav-text">cgroup限制nodemanager、regionserver的资源</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#安装cgroup服务，"><span class="nav-number">1.0.0.0.1.</span> <span class="nav-text">安装cgroup服务，</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#编辑cgroup配置文件"><span class="nav-number">1.0.0.0.2.</span> <span class="nav-text">编辑cgroup配置文件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#启动cgroup服务"><span class="nav-number">1.0.0.0.3.</span> <span class="nav-text">启动cgroup服务</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#重新启动-nodemanager-和-regionserver-服务"><span class="nav-number">1.0.0.0.4.</span> <span class="nav-text">重新启动 nodemanager 和 regionserver 服务</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#检查-服务"><span class="nav-number">1.0.0.0.5.</span> <span class="nav-text">检查 服务</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
