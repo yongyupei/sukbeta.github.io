@@ -3,6 +3,29 @@
   
     
     <entry>
+      <title>marathon-lb配置多个matahon地址</title>
+      <link href="/lb-confiure-many-marathon/"/>
+      <url>/lb-confiure-many-marathon/</url>
+      <content type="html"><![CDATA[<p>marathon 在集群中，marathon可以部署多个节点。</p><p>-m 参数是指定marathon地址的，后面跟上marathon地址就可以了， 当你有多个marathon地址的时候，用“空格”隔开就可以了。</p><p>marathon json文件中是这样写的。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&quot;args&quot;: [</span><br><span class="line">  &quot;sse&quot;,</span><br><span class="line">  &quot;-m&quot;,</span><br><span class="line">  &quot;http://192.168.55.5:8080&quot;,</span><br><span class="line">  &quot;http://192.168.55.6:8080&quot;,</span><br><span class="line">  &quot;http://192.168.55.7:8080&quot;,</span><br><span class="line">  &quot;--group&quot;,</span><br><span class="line">  &quot;lb-name&quot;</span><br><span class="line">],</span><br></pre></td></tr></table></figure><p>这样配置完之后，当一个marathon有问题之后，可以在lb的日志中看在节点不能连接，但是会在其他节点上取到marathon数据的。</p>]]></content>
+      
+      <categories>
+          
+          <category> marathon </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> marathon </tag>
+            
+            <tag> lb </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>zookeeper delete yarn rmstore</title>
       <link href="/zookeeper-delete-yarn-rmstore/"/>
       <url>/zookeeper-delete-yarn-rmstore/</url>
