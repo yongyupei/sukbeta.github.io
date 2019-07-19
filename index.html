@@ -647,17 +647,10 @@
 
       
         
-          
-          lb上添加多证书并实现泛解析代理域名 之 marathon-lb上添加多个证书marathon-lb代理https域名， 需要将证书当道lb上。nginx不需要开启443端口，nginx需要配置 vhost  才能访问。
-vhost 需要再nginx发布的时候通过标签形式发布的，但是一个nginx上可能多个域名，不是很灵活，（当你的服务全部都在mesos集群中的话，不用nginx，直接用LB+服务 方式，就可以在每个服务发布的时候声明vhosts。），之后我们研究了nginx发布的时候发布泛域名来解决这个问题。连接 ： nginx实现marathon-lb的vhosts泛域名代理
-marathon-lb 和 nginx 域名都是通过 vhost 虚拟主机方式访问。这样nginx才能拿到 x_forwarded_for 客户端的IP地址。LB才会通过HTTP方式代理，否则会走TCP代理。
-marahton-lb 可以加载多个证书，用“，”逗号隔开
-
-
-* 证书需要pem格式，就是 crt 和 key 按顺序放在一起就可以了。 
-
-我没有把证书放到容器里面， 而是用的marathon ur
-          ...
+          <h2 id="lb上添加多证书并实现泛解析代理域名-之-marathon-lb上添加多个证书"><a href="#lb上添加多证书并实现泛解析代理域名-之-marathon-lb上添加多个证书" class="headerlink" title="lb上添加多证书并实现泛解析代理域名 之 marathon-lb上添加多个证书"></a>lb上添加多证书并实现泛解析代理域名 之 marathon-lb上添加多个证书</h2><p>marathon-lb代理https域名， 需要将证书当道lb上。nginx不需要开启443端口，nginx需要配置 vhost  才能访问。</p>
+<p>vhost 需要再nginx发布的时候通过标签形式发布的，但是一个nginx上可能多个域名，不是很灵活，（当你的服务全部都在mesos集群中的话，不用nginx，直接用LB+服务 方式，就可以在每个服务发布的时候声明vhosts。），之后我们研究了nginx发布的时候发布泛域名来解决这个问题。连接 ： <a href="https://sukbeta.github.io/lb-https-certs-1/">nginx实现marathon-lb的vhosts泛域名代理</a></p>
+<p>marathon-lb 和 nginx 域名都是通过 vhost 虚拟主机方式访问。这样nginx才能拿到 x_forwarded_for 客户端的IP地址。LB才会通过HTTP方式代理，否则会走TCP代理。</p>
+<p>marahton-lb 可以加载多个证书，用“，”逗号隔开</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/lb-https-certs-2/#more" rel="contents">
