@@ -354,6 +354,345 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://sukbeta.github.io/marathon-constraints-configure/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="北极企鹅">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="舒克贝塔">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/marathon-constraints-configure/" itemprop="url">marathon 约束 constraints 限制</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-28T19:15:14+08:00">
+                2018-11-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/marathon/" itemprop="url" rel="index">
+                    <span itemprop="name">marathon</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/marathon-constraints-configure/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/marathon-constraints-configure/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          marathon 约束 Constraints 限制Constraints控制在何处运行的应用程序，可以根据constraints属性，控制容器可以在哪个Agent节点上运行。
+（往上看来好多文档写的都很类似，我就写一些不一样的吧。）
+mesos agent 自定义 constraints 属性rpm 安装的 mesos 可以在 /etc/mesos-slave/attributes 下定义这台agent。
+1echo &quot;project:ppp1;IDC:BJ;oam:ops1&quot; &gt; /etc/mesos-slave/attributes
+重启mesos-slave服务即可，
+1systemctl start mesos-slave
+这样这台Agent就有利3个属性。
+分别是：
+
+project:ppp1
+IDC:BJ
+oam:ops1
+
+另外其他的Agent机器耶可以有相同的属性，这样就可以变成一组。（容器可以固定在相同属性的Agent机器上）
+源码安装，值需要加上 –attributes 参数即可，
+1/home/mesos/mesos-slave/sbi
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/marathon-constraints-configure/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://sukbeta.github.io/docker-ulimit-configure/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="北极企鹅">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="舒克贝塔">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/docker-ulimit-configure/" itemprop="url">docker ulimit 配置</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-21T16:47:35+08:00">
+                2018-11-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/docker/" itemprop="url" rel="index">
+                    <span itemprop="name">docker</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/docker-ulimit-configure/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/docker-ulimit-configure/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          docker ulimit 配置docker  设置 ulimit 方法
+一：通过docker run –ulimit 参数设置这个容器的 ulimit 值如1docker run --ulimit nofile=1024:1024 --rm debian sh -c &quot;ulimit -n&quot;
+官网说明：https://docs.docker.com/engine/reference/commandline/run/#set-ulimits-in-container—ulimit 
+二： 修改 docker 服务的 默认设置vim /usr/lib/systemd/system/docker.service
+1234[Service]LimitNOFILE=1048576LimitNPROC=1048576LimitCORE=infinity
+systemctl daemon-reloadsystemctl restart docker
+文档： https://blog.csdn.net/signmem/article/details/51365006
+
+注释 设置为
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/docker-ulimit-configure/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://sukbeta.github.io/ES-Solve-memory-lock/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1583,7 +1922,7 @@ Fix “Could not Open” Error (and Add Default RSA/DSA identities)By default, w
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://i.ibb.co/WGThqPB/Cc-ETP4g-FBTU.jpg" rel="gallery_cjy8j88h00079qrpz3tqk63xa"
+                 href="https://i.ibb.co/WGThqPB/Cc-ETP4g-FBTU.jpg" rel="gallery_cjy9q32y8007t95pzsdsj9112"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://i.ibb.co/WGThqPB/Cc-ETP4g-FBTU.jpg" itemprop="contentUrl"/>
               </a>
@@ -1607,355 +1946,6 @@ vim /etc/cgconfig.co
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/cgroup-limit-process-resources/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://sukbeta.github.io/kafka-Modify-Partitions-and-ReplicationFactor/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="北极企鹅">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="舒克贝塔">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/kafka-Modify-Partitions-and-ReplicationFactor/" itemprop="url">kafka修改分区、副本数、副本迁移</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-19T15:13:07+08:00">
-                2018-06-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/kafka/" itemprop="url" rel="index">
-                    <span itemprop="name">kafka</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/kafka-Modify-Partitions-and-ReplicationFactor/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/kafka-Modify-Partitions-and-ReplicationFactor/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          kafka修改分区和副本数查看现在副本分配情况123456../bin/kafka-topics.sh --zookeeper 127.0.0.1:2181 --describe  --topic test1Topic:test1       PartitionCount:3        ReplicationFactor:2     Configs:        Topic: test1      Partition: 0    Leader: 2       Replicas: 2,4   Isr: 2,4        Topic: test1      Partition: 1    Leader: 3       Replicas: 3,5   Isr: 3,5        Topic: test1      Partition: 2    Leader: 4       Replicas: 4,1   Isr: 4,1
-topic 分区扩容1./kafka-topics.sh --zookeeper 127.0.0.1:2181 -alter --partitions
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/kafka-Modify-Partitions-and-ReplicationFactor/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://sukbeta.github.io/docker-build-MacVlanNetwork/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="北极企鹅">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="舒克贝塔">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/docker-build-MacVlanNetwork/" itemprop="url">docker搭建macvlan网络</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-14T10:57:34+08:00">
-                2018-06-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/docker/" itemprop="url" rel="index">
-                    <span itemprop="name">docker</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/docker-build-MacVlanNetwork/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/docker-build-MacVlanNetwork/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          docker 搭建macvlan 网络  简单说，macvlan就是在宿主的网卡设置多个vlan信息，根据走的网卡不同，并带有不行的vlan标记。  
-交换机需要支持macvlan需要交换机上有几个设置：  
-
-连接宿主的交换机接口需要改为 Trunk 模式。（这样才能多vlan通过这个口通讯）
-交换机上添加macvlan设置的相应vlan信息。
-三层交换机上设置各个vlan的网关地址。并实现vlan间互联。
-
-安装环境介绍  
-
-
-
-宿主机IP
-宿主机vlan
-macvlan IP
-vlan 号
-
-
-
-
-192.168.53.11
-233
-172.20.30.x
-30
-
-
-192.168.53.12
-233
-172.20.19.x
-19
-
-
-
-实时生效安装1234567891011121314151617yum install -y epel-releaseyum install -y vconfig加载模块哦modprobe 8021qlsmod |grep -i 8021q网卡开启混合模式ip link set em1 promisc on使用vconfig命令配置vlan vc
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/docker-build-MacVlanNetwork/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -2043,7 +2033,7 @@ vlan 号
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">57</span>
+                  <span class="site-state-item-count">59</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2065,7 +2055,7 @@ vlan 号
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">29</span>
+                  <span class="site-state-item-count">28</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
