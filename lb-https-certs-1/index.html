@@ -116,7 +116,7 @@
 <meta property="og:description" content="marathon-lb上添加多证书并实现泛解析代理域名 之 nginx实现marathon-lb的vhosts泛域名代理marathon-lb代理https域名， 需要将证书当道lb上。nginx不需要开启443端口，nginx需要配置 vhost  才能访问。 marathon添加证书连接： marathon-lb上添加多个证书 域名都是通过 vhost 虚拟主机方式访问。这样nginx才能拿到">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://i.ibb.co/rpmbxJN/k-Ptrg4-Z6j-Z0.jpg">
-<meta property="og:updated_time" content="2019-07-19T06:33:16.660Z">
+<meta property="og:updated_time" content="2019-07-19T06:36:49.925Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="marathon-lb上添加多证书并实现泛解析代理域名-1">
 <meta name="twitter:description" content="marathon-lb上添加多证书并实现泛解析代理域名 之 nginx实现marathon-lb的vhosts泛域名代理marathon-lb代理https域名， 需要将证书当道lb上。nginx不需要开启443端口，nginx需要配置 vhost  才能访问。 marathon添加证书连接： marathon-lb上添加多个证书 域名都是通过 vhost 虚拟主机方式访问。这样nginx才能拿到">
@@ -491,8 +491,12 @@
 <p>这个是配置https的泛解析，会在LB的配置的vhosts域名前面加“.”点， “end .{hostname} ”  那个点。</p>
 <h3 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h3><p>可以查看LB的配置</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"> curl 192.168.53.200:9090/_haproxy_getconfig </span><br><span class="line"></span><br><span class="line">......</span><br><span class="line">frontend marathon_http_in</span><br><span class="line">  bind *:80</span><br><span class="line">  mode http</span><br><span class="line">  acl host_shiningtest1_com_lb-nginx_nginx-shining-test1 hdr(host) -m end .shiningtest1.com</span><br><span class="line">  acl host_shiningtest1_com_lb-nginx_nginx-shining-test1 hdr(host) -m end .shiningtest2.com</span><br><span class="line">  use_backend lb-nginx_nginx-shining-test1_10111 if host_shiningtest1_com_lb-nginx_nginx-shining-test1</span><br><span class="line"></span><br><span class="line">......</span><br><span class="line"></span><br><span class="line">frontend marathon_https_in</span><br><span class="line">  bind *:443 ssl crt /mnt/mesos/sandbox/shiningtest1.com.pem crt /mnt/mesos/sandbox/shiningtest2.com.pem</span><br><span class="line">  mode http</span><br><span class="line">  use_backend lb-nginx_nginx-shining-test1_10111  if &#123; ssl_fc_sni -m end .shiningtest1.com &#125;</span><br><span class="line">  use_backend lb-nginx_nginx-shining-test1_10111 if &#123; ssl_fc_sni -m end .shiningtest2.com &#125;</span><br><span class="line">.......</span><br></pre></td></tr></table></figure>
-<p>可以看到 http 的 use_backend  是marathon上ngionx的id</p>
-<p>https 的end 后面的二级域名前面都添加了 “.” </p>
+<ul>
+<li><p>可以看到 http 的 use_backend  是marathon上nginx的id</p>
+</li>
+<li><p>https 的end 后面的二级域名前面都添加了 “.” </p>
+</li>
+</ul>
 <p>这样 shiningtest1.com 和 shiningtest2.com 所有的域名都会转发到nginx上了。</p>
 <p>相关参考文档：<a href="https://docs.mesosphere.com/services/marathon-lb/1.13/mlb-configuration/" target="_blank" rel="noopener">https://docs.mesosphere.com/services/marathon-lb/1.13/mlb-configuration/</a></p>
 
