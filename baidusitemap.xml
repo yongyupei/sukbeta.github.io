@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://sukbeta.github.io/web/</loc>
+    <lastmod>2019-07-24T06:01:30.998Z</lastmod>
+  </url>  <url>
     <loc>https://sukbeta.github.io/lb-https-certs-2/</loc>
     <lastmod>2019-07-19T06:40:42.081Z</lastmod>
   </url>  <url>
@@ -9,9 +12,6 @@
   </url>  <url>
     <loc>https://sukbeta.github.io/lb-confiure-many-marathon/</loc>
     <lastmod>2019-07-19T06:21:21.166Z</lastmod>
-  </url>  <url>
-    <loc>https://sukbeta.github.io/web/</loc>
-    <lastmod>2019-07-08T03:45:43.950Z</lastmod>
   </url>  <url>
     <loc>https://sukbeta.github.io/install-apache-hadoop/</loc>
     <lastmod>2019-07-02T04:42:56.020Z</lastmod>
