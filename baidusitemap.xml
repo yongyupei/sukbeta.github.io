@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://sukbeta.github.io/kafka-console-groups/</loc>
+    <lastmod>2019-07-24T08:06:08.005Z</lastmod>
+  </url>  <url>
     <loc>https://sukbeta.github.io/web/</loc>
     <lastmod>2019-07-24T06:01:30.998Z</lastmod>
   </url>  <url>
@@ -87,9 +90,6 @@
   </url>  <url>
     <loc>https://sukbeta.github.io/elasticsearch-elasticdump/</loc>
     <lastmod>2019-03-22T03:03:41.914Z</lastmod>
-  </url>  <url>
-    <loc>https://sukbeta.github.io/kafka-console-groups/</loc>
-    <lastmod>2019-03-01T11:10:12.255Z</lastmod>
   </url>  <url>
     <loc>https://sukbeta.github.io/pycham-pip-no-attr/</loc>
     <lastmod>2019-02-15T09:37:40.948Z</lastmod>

@@ -622,7 +622,7 @@ npm 安装 elasticdump先下载安装npm
           kafka 在 0.9 版本之后，kafka的消费者组和offset信息就不存zookeeper了。
 0.9 之前版本查看所有消费组：12345678./kafka-consumer-groups.sh --zookeeper 127.0.0.1:2181 --listerro-info-groupconsole-consumer-64036console-consumer-98298logstash-newconsole-consumer-89310console-consumer-48800
 新版本 0.9 版本之后查看所有消费组1234kafka-consumer-groups.sh --new-consumer --bootstrap-server localhost:9092 --list test-infonginxlog
-显示某个消费组的消费详情（仅支持offset存储在zookeeper上的）1bin/kafka-run-class.sh kafka.tools.ConsumerOffsetChecker --zkconnect localhost:2181 --gro
+显示某个消费组的消费详情（仅支持offset存储在zookeeper上的）1bin/kafka-run-class.sh kafka.tools.ConsumerOffsetChecker --zookeeper localhost:2181 --gro
           ...
           <!--noindex-->
           <div class="post-button text-center">
