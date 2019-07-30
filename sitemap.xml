@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://sukbeta.github.io/pycharm-activation/</loc>
+    
+    <lastmod>2019-07-30T06:42:58.422Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://sukbeta.github.io/mesos-configure-arg/</loc>
     
     <lastmod>2019-07-30T06:31:44.523Z</lastmod>
@@ -131,13 +138,6 @@
     <loc>https://sukbeta.github.io/rsync-wget-yum-rpm/</loc>
     
     <lastmod>2019-06-05T02:42:52.411Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://sukbeta.github.io/pycharm-activation/</loc>
-    
-    <lastmod>2019-06-05T02:41:44.218Z</lastmod>
     
   </url>
   
