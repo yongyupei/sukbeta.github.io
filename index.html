@@ -354,6 +354,180 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://sukbeta.github.io/nginx-deny-ip/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="北极企鹅">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="舒克贝塔">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/nginx-deny-ip/" itemprop="url">nginx通过x_forwarded_for实现黑白名单访问策略</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-01T19:01:51+08:00">
+                2019-08-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/nginx/" itemprop="url" rel="index">
+                    <span itemprop="name">nginx</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/nginx-deny-ip/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/nginx-deny-ip/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+          
+          
+            <div class="post-gallery-row">
+              <a class="post-gallery-img fancybox"
+                 href="https://i.ibb.co/3NQtxBt/9bbc284bly1g4wuwpcisej20ds06k74k.jp" rel="gallery_cjyskmvhh003mogpzyoo4u0zu"
+                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+                <img src="https://i.ibb.co/3NQtxBt/9bbc284bly1g4wuwpcisej20ds06k74k.jp" itemprop="contentUrl"/>
+              </a>
+            
+          
+
+          
+          </div>
+        </div>
+      
+
+      
+        
+          <p>nginx通过防护墙、F5设备过来之后，remote_addr 的地址是防护墙、F5的地址， 客户端真是的IP地址是在 x_forwarded_for中的， 这样这样 nginx 默认的 deny 和 allow 就不能用了。</p>
+<p>我们需要在每个域名中判断一个 x_forwarded_for 钟是否有我们要拒绝的IP地址，如果有就返回403，不在往后代理。</p>
+<p>我们定义一个map 拒绝的IP地址列表。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/nginx-deny-ip/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://sukbeta.github.io/mesos-configure-arg/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -458,7 +632,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://file.moetu.org/images/2019/07/19/wallhaven-g82533efbc5c04b31233c5.md.jpg" rel="gallery_cjyob4hjl008a89pz7hxl910t"
+                 href="https://file.moetu.org/images/2019/07/19/wallhaven-g82533efbc5c04b31233c5.md.jpg" rel="gallery_cjyskmvpa008eogpzkk42i42t"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://file.moetu.org/images/2019/07/19/wallhaven-g82533efbc5c04b31233c5.md.jpg" itemprop="contentUrl"/>
               </a>
@@ -472,8 +646,7 @@
 
       
         
-          <p>##Master 和 Slave 的配置选项（转）</p>
-<p>可以通过运行 mesos-master –help 或者 mesos-slave –help 可以查看相关的可用选项。每个选项可以通过以下两种方式设置</p>
+          <h2 id="Master-和-Slave-的配置选项（转）"><a href="#Master-和-Slave-的配置选项（转）" class="headerlink" title="Master 和 Slave 的配置选项（转）"></a>Master 和 Slave 的配置选项（转）</h2><p>可以通过运行 mesos-master –help 或者 mesos-slave –help 可以查看相关的可用选项。每个选项可以通过以下两种方式设置</p>
 <ul>
 <li>执行命令的时候使用 –-option_name=value 来传递配置选项。value 既可以是数值，也可以指定包含参数的文件 (–opthon_name=file://文件路径)。 该路径既可以是绝对路径，也可以是相对当前工作目录的相对路径。</li>
 <li>通过设定环境变量 MESOSOPTION_NAME (变量名都以 MESOS 开头)<br>执行时会先读取环境变量，然后才看命令行参数</li>
@@ -635,7 +808,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://i.ibb.co/rpmbxJN/k-Ptrg4-Z6j-Z0.jpg" rel="gallery_cjyob4hbf002d89pz55hhlrll"
+                 href="https://i.ibb.co/rpmbxJN/k-Ptrg4-Z6j-Z0.jpg" rel="gallery_cjyskmvgx002dogpzcipswvxa"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://i.ibb.co/rpmbxJN/k-Ptrg4-Z6j-Z0.jpg" itemprop="contentUrl"/>
               </a>
@@ -810,7 +983,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://i.ibb.co/59fLH8Z/6106a4f0ly1g4vsr1tpw4j20j90edh56.jpg" rel="gallery_cjyob4hbg002e89pzv2jnmchh"
+                 href="https://i.ibb.co/59fLH8Z/6106a4f0ly1g4vsr1tpw4j20j90edh56.jpg" rel="gallery_cjyskmvgy002gogpzttk8w3wb"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://i.ibb.co/59fLH8Z/6106a4f0ly1g4vsr1tpw4j20j90edh56.jpg" itemprop="contentUrl"/>
               </a>
@@ -985,7 +1158,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://i.ibb.co/VtpwHb1/QQ20190712-0.jpg" rel="gallery_cjyob4hbd002989pzvmx6sbs1"
+                 href="https://i.ibb.co/VtpwHb1/QQ20190712-0.jpg" rel="gallery_cjyskmvgv002aogpz3j5xswkt"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://i.ibb.co/VtpwHb1/QQ20190712-0.jpg" itemprop="contentUrl"/>
               </a>
@@ -1159,7 +1332,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://file.moetu.org/images/2019/06/13/9bbc284bgy1g3y78rwghlj20rs0ijtbi4468324b1624aa1c.jpg" rel="gallery_cjyob4hhf007z89pzljrez93d"
+                 href="https://file.moetu.org/images/2019/06/13/9bbc284bgy1g3y78rwghlj20rs0ijtbi4468324b1624aa1c.jpg" rel="gallery_cjyskmvmz0083ogpzoyg356gt"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://file.moetu.org/images/2019/06/13/9bbc284bgy1g3y78rwghlj20rs0ijtbi4468324b1624aa1c.jpg" itemprop="contentUrl"/>
               </a>
@@ -1331,7 +1504,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://file.moetu.org/images/2019/06/13/9bbc284bgy1g3y78rruwvj20rs0dwjsz588e69e84e014b9d.jpg" rel="gallery_cjyob4har000k89pzkw64t2ad"
+                 href="https://file.moetu.org/images/2019/06/13/9bbc284bgy1g3y78rruwvj20rs0dwjsz588e69e84e014b9d.jpg" rel="gallery_cjyskmvga000pogpzqurp4c8d"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://file.moetu.org/images/2019/06/13/9bbc284bgy1g3y78rruwvj20rs0dwjsz588e69e84e014b9d.jpg" itemprop="contentUrl"/>
               </a>
@@ -1508,7 +1681,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://file.moetu.org/images/2019/06/14/WechatIMG67111_111e1ab06564cc63e.jpg" rel="gallery_cjyob4hc9004b89pzd9l8e8sp"
+                 href="https://file.moetu.org/images/2019/06/14/WechatIMG67111_111e1ab06564cc63e.jpg" rel="gallery_cjyskmvhs0049ogpz9dph0cfd"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://file.moetu.org/images/2019/06/14/WechatIMG67111_111e1ab06564cc63e.jpg" itemprop="contentUrl"/>
               </a>
@@ -1845,7 +2018,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://i.ibb.co/XjDhZF9/WX20190506-104814-2x.png" rel="gallery_cjyob4hby003m89pzny3nxqtl"
+                 href="https://i.ibb.co/XjDhZF9/WX20190506-104814-2x.png" rel="gallery_cjyskmvhk003rogpzw12uws18"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://i.ibb.co/XjDhZF9/WX20190506-104814-2x.png" itemprop="contentUrl"/>
               </a>
@@ -1906,176 +2079,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://sukbeta.github.io/pycharm-activation/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="北极企鹅">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="舒克贝塔">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/pycharm-activation/" itemprop="url">pycharm2019最新激活方式（转）</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-17T12:51:02+08:00">
-                2019-05-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/python/" itemprop="url" rel="index">
-                    <span itemprop="name">python</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/pycharm-activation/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/pycharm-activation/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <center><br><img style="width:900px;height:300px" src="https://w.wallhaven.cc/full/83/wallhaven-83kyz1.jpg" align="center"><br></center>
-
-<p>pyCharm2019最新激活码，win, linux, mac 都可使用，亲测可用。激活步骤如下：</p>
-<h4 id="添加-hosts-解析"><a href="#添加-hosts-解析" class="headerlink" title="添加 hosts 解析"></a>添加 hosts 解析</h4><p>添加下面一行到hosts文件，目的是屏蔽掉Pycharm对激活码的验证</p>
-<ul>
-<li>windwos系统hosts文件路径为：C:\Windows\System32\drivers\etc<br>如果遇到权限问题，可将hosts文件先复制出来修改后再覆盖原来的即可。</li>
-<li>Linux和mac的hosts文件路径为：/etc/hosts , 如有权限问题。可以用 sudo vim /etc/hosts</li>
-</ul>
-<p>添加一条解析记录：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0.0.0.0	account.jetbrains.com</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/pycharm-activation/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -2121,7 +2129,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">60</span>
+                  <span class="site-state-item-count">61</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

@@ -107,19 +107,19 @@
 
 
 
-<meta name="description" content="##Master 和 Slave 的配置选项（转） 可以通过运行 mesos-master –help 或者 mesos-slave –help 可以查看相关的可用选项。每个选项可以通过以下两种方式设置  执行命令的时候使用 –-option_name=value 来传递配置选项。value 既可以是数值，也可以指定包含参数的文件 (–opthon_name=file://文件路径)。 该路径既可">
+<meta name="description" content="Master 和 Slave 的配置选项（转）可以通过运行 mesos-master –help 或者 mesos-slave –help 可以查看相关的可用选项。每个选项可以通过以下两种方式设置  执行命令的时候使用 –-option_name=value 来传递配置选项。value 既可以是数值，也可以指定包含参数的文件 (–opthon_name=file://文件路径)。 该路径既可以是绝">
 <meta name="keywords" content="mesos">
 <meta property="og:type" content="article">
 <meta property="og:title" content="mesos master和slave的配置参数说明">
 <meta property="og:url" content="https://sukbeta.github.io/mesos-configure-arg/index.html">
 <meta property="og:site_name" content="舒克贝塔">
-<meta property="og:description" content="##Master 和 Slave 的配置选项（转） 可以通过运行 mesos-master –help 或者 mesos-slave –help 可以查看相关的可用选项。每个选项可以通过以下两种方式设置  执行命令的时候使用 –-option_name=value 来传递配置选项。value 既可以是数值，也可以指定包含参数的文件 (–opthon_name=file://文件路径)。 该路径既可">
+<meta property="og:description" content="Master 和 Slave 的配置选项（转）可以通过运行 mesos-master –help 或者 mesos-slave –help 可以查看相关的可用选项。每个选项可以通过以下两种方式设置  执行命令的时候使用 –-option_name=value 来传递配置选项。value 既可以是数值，也可以指定包含参数的文件 (–opthon_name=file://文件路径)。 该路径既可以是绝">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://file.moetu.org/images/2019/07/19/wallhaven-g82533efbc5c04b31233c5.md.jpg">
-<meta property="og:updated_time" content="2019-07-30T06:31:44.523Z">
+<meta property="og:updated_time" content="2019-08-01T09:38:41.708Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mesos master和slave的配置参数说明">
-<meta name="twitter:description" content="##Master 和 Slave 的配置选项（转） 可以通过运行 mesos-master –help 或者 mesos-slave –help 可以查看相关的可用选项。每个选项可以通过以下两种方式设置  执行命令的时候使用 –-option_name=value 来传递配置选项。value 既可以是数值，也可以指定包含参数的文件 (–opthon_name=file://文件路径)。 该路径既可">
+<meta name="twitter:description" content="Master 和 Slave 的配置选项（转）可以通过运行 mesos-master –help 或者 mesos-slave –help 可以查看相关的可用选项。每个选项可以通过以下两种方式设置  执行命令的时候使用 –-option_name=value 来传递配置选项。value 既可以是数值，也可以指定包含参数的文件 (–opthon_name=file://文件路径)。 该路径既可以是绝">
 <meta name="twitter:image" content="https://file.moetu.org/images/2019/07/19/wallhaven-g82533efbc5c04b31233c5.md.jpg">
 
 
@@ -464,7 +464,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://file.moetu.org/images/2019/07/19/wallhaven-g82533efbc5c04b31233c5.md.jpg" rel="gallery_cjyob4hjl008a89pz7hxl910t"
+                 href="https://file.moetu.org/images/2019/07/19/wallhaven-g82533efbc5c04b31233c5.md.jpg" rel="gallery_cjyskmvpa008eogpzkk42i42t"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://file.moetu.org/images/2019/07/19/wallhaven-g82533efbc5c04b31233c5.md.jpg" itemprop="contentUrl"/>
               </a>
@@ -477,15 +477,13 @@
       
 
       
-        <p>##Master 和 Slave 的配置选项（转）</p>
-<p>可以通过运行 mesos-master –help 或者 mesos-slave –help 可以查看相关的可用选项。每个选项可以通过以下两种方式设置</p>
+        <h2 id="Master-和-Slave-的配置选项（转）"><a href="#Master-和-Slave-的配置选项（转）" class="headerlink" title="Master 和 Slave 的配置选项（转）"></a>Master 和 Slave 的配置选项（转）</h2><p>可以通过运行 mesos-master –help 或者 mesos-slave –help 可以查看相关的可用选项。每个选项可以通过以下两种方式设置</p>
 <ul>
 <li>执行命令的时候使用 –-option_name=value 来传递配置选项。value 既可以是数值，也可以指定包含参数的文件 (–opthon_name=file://文件路径)。 该路径既可以是绝对路径，也可以是相对当前工作目录的相对路径。</li>
 <li>通过设定环境变量 MESOSOPTION_NAME (变量名都以 MESOS 开头)<br>执行时会先读取环境变量，然后才看命令行参数</li>
 </ul>
 <a id="more"></a>
-<p>##下列选项 都被 master 和 slave 所支持：</p>
-<table>
+<h2 id="下列选项-都被-master-和-slave-所支持："><a href="#下列选项-都被-master-和-slave-所支持：" class="headerlink" title="下列选项 都被 master 和 slave 所支持："></a>下列选项 都被 master 和 slave 所支持：</h2><table>
 <thead>
 <tr>
 <th></th>
@@ -1341,6 +1339,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/nginx-deny-ip/" rel="prev" title="nginx通过x_forwarded_for实现黑白名单访问策略">
+                nginx通过x_forwarded_for实现黑白名单访问策略 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -1469,7 +1471,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">60</span>
+                  <span class="site-state-item-count">61</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1578,7 +1580,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Master-配置选项"><span class="nav-number">1.</span> <span class="nav-text">Master 配置选项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Slave-选项"><span class="nav-number">2.</span> <span class="nav-text">Slave 选项</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Master-和-Slave-的配置选项（转）"><span class="nav-number">1.</span> <span class="nav-text">Master 和 Slave 的配置选项（转）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下列选项-都被-master-和-slave-所支持："><span class="nav-number">2.</span> <span class="nav-text">下列选项 都被 master 和 slave 所支持：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Master-配置选项"><span class="nav-number">2.1.</span> <span class="nav-text">Master 配置选项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Slave-选项"><span class="nav-number">2.2.</span> <span class="nav-text">Slave 选项</span></a></li></ol></li></ol></div>
             
 
           </div>
