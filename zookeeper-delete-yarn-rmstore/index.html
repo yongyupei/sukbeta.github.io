@@ -116,7 +116,7 @@
 <meta property="og:description" content="hadoop 版本为：apache 2.7.2这几天在搭建的时候遇到yarn无法启动。报错信息：">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://file.moetu.org/images/2019/06/13/9bbc284bgy1g3y78rwghlj20rs0ijtbi4468324b1624aa1c.jpg">
-<meta property="og:updated_time" content="2019-06-24T07:54:44.114Z">
+<meta property="og:updated_time" content="2019-08-19T06:24:14.486Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="zookeeper delete yarn rmstore">
 <meta name="twitter:description" content="hadoop 版本为：apache 2.7.2这几天在搭建的时候遇到yarn无法启动。报错信息：">
@@ -492,6 +492,7 @@
 <p>我们重新设置ACL，并删除目录</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">[zk: localhost:2181(CONNECTED) 3] setAcl /rmstore/ZKRMStateRoot world:anyone:rwcda</span><br><span class="line">cZxid = 0x10000001b</span><br><span class="line">ctime = Mon May 27 14:58:45 CST 2019</span><br><span class="line">mZxid = 0x10000001b</span><br><span class="line">mtime = Mon May 27 14:58:45 CST 2019</span><br><span class="line">pZxid = 0x10016efd3</span><br><span class="line">cversion = 380191</span><br><span class="line">dataVersion = 0</span><br><span class="line">aclVersion = 5</span><br><span class="line">ephemeralOwner = 0x0</span><br><span class="line">dataLength = 0</span><br><span class="line">numChildren = 5</span><br><span class="line">[zk: localhost:2181(CONNECTED) 4] getAcl /rmstore/ZKRMStateRoot                   </span><br><span class="line">&apos;world,&apos;anyone</span><br><span class="line">: cdrwa</span><br><span class="line">[zk: localhost:2181(CONNECTED) 6] rmr /rmstore/ZKRMStateRoot</span><br><span class="line">[zk: localhost:2181(CONNECTED) 7] ls /</span><br><span class="line">[zookeeper, hadoop-ha, hbase, rmstore]</span><br><span class="line">[zk: localhost:2181(CONNECTED) 8] rmr /rmstore</span><br><span class="line">[zk: localhost:2181(CONNECTED) 9] ls /</span><br><span class="line">[zookeeper, hadoop-ha, hbase]</span><br></pre></td></tr></table></figure>
 <p>之后重新启动yarn，让yarn重新在zk上注册就可以了。</p>
+<p>相关文章链接：<br><a href="https://jxy.me/2015/05/02/hadoop-resourcemanager-recovery/" target="_blank" rel="noopener">https://jxy.me/2015/05/02/hadoop-resourcemanager-recovery/</a><br><a href="https://my.oschina.net/dabird/blog/3023781" target="_blank" rel="noopener">https://my.oschina.net/dabird/blog/3023781</a></p>
 
       
     </div>

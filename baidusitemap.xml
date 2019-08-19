@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://sukbeta.github.io/zookeeper-delete-yarn-rmstore/</loc>
+    <lastmod>2019-08-19T06:24:14.486Z</lastmod>
+  </url>  <url>
     <loc>https://sukbeta.github.io/nginx-deny-ip/</loc>
     <lastmod>2019-08-01T11:04:59.346Z</lastmod>
   </url>  <url>
@@ -30,9 +33,6 @@
   </url>  <url>
     <loc>https://sukbeta.github.io/hadoop-command/</loc>
     <lastmod>2019-06-26T02:15:20.248Z</lastmod>
-  </url>  <url>
-    <loc>https://sukbeta.github.io/zookeeper-delete-yarn-rmstore/</loc>
-    <lastmod>2019-06-24T07:54:44.114Z</lastmod>
   </url>  <url>
     <loc>https://sukbeta.github.io/shell-comment/</loc>
     <lastmod>2019-06-14T04:03:00.202Z</lastmod>
