@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://sukbeta.github.io/web/</loc>
+    
+    <lastmod>2019-10-15T03:08:29.301Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://sukbeta.github.io/zookeeper-delete-yarn-rmstore/</loc>
     
     <lastmod>2019-08-19T06:24:14.486Z</lastmod>
@@ -33,13 +40,6 @@
     <loc>https://sukbeta.github.io/kafka-console-groups/</loc>
     
     <lastmod>2019-07-24T08:06:08.005Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://sukbeta.github.io/web/</loc>
-    
-    <lastmod>2019-07-24T06:01:30.998Z</lastmod>
     
   </url>
   
