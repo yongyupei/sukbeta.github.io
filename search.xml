@@ -787,9 +787,9 @@
       
         <tags>
             
-            <tag> ssh </tag>
-            
             <tag> shell </tag>
+            
+            <tag> ssh </tag>
             
         </tags>
       
