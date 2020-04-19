@@ -458,7 +458,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://file.moetu.org/images/2020/04/19/QQ20200316-00c42d9a583d3dd22.jpg" rel="gallery_ck96x5aiq0052c5pzpztmxfed"
+                 href="https://file.moetu.org/images/2020/04/19/QQ20200316-00c42d9a583d3dd22.jpg" rel="gallery_ck96x6w5n0052f5pz7wwhb6a8"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://file.moetu.org/images/2020/04/19/QQ20200316-00c42d9a583d3dd22.jpg" itemprop="contentUrl"/>
               </a>
@@ -472,17 +472,12 @@
 
       
         
-          
-          hbase regionserver 下线，做数据迁移。 这个方法可以在线上平滑迁移。   
-hbase 版本： 1.2.4
-####n首先 关闭 hbase 的 balance 
-1hbase(main)&gt; balance_switch false
-将新的regionserver节点上线1hbase-daemon.sh start regionserver
-之后就可以迁移数据了。到新的region server上执行 下面命令。使用hbase自带的rb脚本，在hbase bin目录下面unload：转移rs上的region；load：将所有region转移到此rs  
-1hbase org.jruby.Main $&#123;HBASE_HOME&#125;/bin/region_mover.rb unload  regionserver00.hostname.com
-
-在需要迁移到的机器上执行， 如要将regionserver00.hostname.com上的数据迁移到regionserver03.hostname.com机器上， 那么就在regionserver03.hos
-          ...
+          <p>hbase regionserver 下线，做数据迁移。 这个方法可以在线上平滑迁移。   </p>
+<p>hbase 版本： 1.2.4</p>
+<p>####n首先 关闭 hbase 的 balance </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hbase(main)&gt; balance_switch false</span><br></pre></td></tr></table></figure>
+<h4 id="将新的regionserver节点上线"><a href="#将新的regionserver节点上线" class="headerlink" title="将新的regionserver节点上线"></a>将新的regionserver节点上线</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hbase-daemon.sh start regionserver</span><br></pre></td></tr></table></figure>
+<h4 id="之后就可以迁移数据了。"><a href="#之后就可以迁移数据了。" class="headerlink" title="之后就可以迁移数据了。"></a>之后就可以迁移数据了。</h4><p>到新的region server上执行 下面命令。<br>使用hbase自带的rb脚本，在hbase bin目录下面<br>unload：转移rs上的region；load：将所有region转移到此rs<br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/region-data-migration/#more" rel="contents">
@@ -640,7 +635,7 @@ hbase 版本： 1.2.4
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://file.moetu.org/images/2020/04/19/5e12ff524e478d597d6d18f4eff92.jpg" rel="gallery_ck96x5agr000lc5pzqhb292u0"
+                 href="https://file.moetu.org/images/2020/04/19/5e12ff524e478d597d6d18f4eff92.jpg" rel="gallery_ck96x6w3s000qf5pzncmsecqa"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://file.moetu.org/images/2020/04/19/5e12ff524e478d597d6d18f4eff92.jpg" itemprop="contentUrl"/>
               </a>
@@ -815,7 +810,7 @@ hbase 版本： 1.2.4
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://i.ibb.co/MG1SG3Z/qq-Wqrn-d-OJQ.jpg" rel="gallery_ck96x5aiy005jc5pzvhk2xxb4"
+                 href="https://i.ibb.co/MG1SG3Z/qq-Wqrn-d-OJQ.jpg" rel="gallery_ck96x6w5y005jf5pzl3v8xidg"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://i.ibb.co/MG1SG3Z/qq-Wqrn-d-OJQ.jpg" itemprop="contentUrl"/>
               </a>
@@ -992,7 +987,7 @@ hbase 版本： 1.2.4
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://i.ibb.co/3NQtxBt/9bbc284bly1g4wuwpcisej20ds06k74k.jpg" rel="gallery_ck96x5aig004kc5pzjxbo3yjb"
+                 href="https://i.ibb.co/3NQtxBt/9bbc284bly1g4wuwpcisej20ds06k74k.jpg" rel="gallery_ck96x6w5e004hf5pzh9jaohvn"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://i.ibb.co/3NQtxBt/9bbc284bly1g4wuwpcisej20ds06k74k.jpg" itemprop="contentUrl"/>
               </a>
@@ -1166,7 +1161,7 @@ hbase 版本： 1.2.4
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://file.moetu.org/images/2019/07/19/wallhaven-g82533efbc5c04b31233c5.md.jpg" rel="gallery_ck96x5ai6003yc5pza0bley6b"
+                 href="https://file.moetu.org/images/2019/07/19/wallhaven-g82533efbc5c04b31233c5.md.jpg" rel="gallery_ck96x6w55003yf5pz23pmd4wg"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://file.moetu.org/images/2019/07/19/wallhaven-g82533efbc5c04b31233c5.md.jpg" itemprop="contentUrl"/>
               </a>
@@ -1342,7 +1337,7 @@ hbase 版本： 1.2.4
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://i.ibb.co/rpmbxJN/k-Ptrg4-Z6j-Z0.jpg" rel="gallery_ck96x5ahn002tc5pzc6h6v6tu"
+                 href="https://i.ibb.co/rpmbxJN/k-Ptrg4-Z6j-Z0.jpg" rel="gallery_ck96x6w4n002vf5pzgcxpv1b5"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://i.ibb.co/rpmbxJN/k-Ptrg4-Z6j-Z0.jpg" itemprop="contentUrl"/>
               </a>
@@ -1517,7 +1512,7 @@ hbase 版本： 1.2.4
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://i.ibb.co/59fLH8Z/6106a4f0ly1g4vsr1tpw4j20j90edh56.jpg" rel="gallery_ck96x5ahp002zc5pzu3tfo8tn"
+                 href="https://i.ibb.co/59fLH8Z/6106a4f0ly1g4vsr1tpw4j20j90edh56.jpg" rel="gallery_ck96x6w4o002yf5pzq3can5s6"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://i.ibb.co/59fLH8Z/6106a4f0ly1g4vsr1tpw4j20j90edh56.jpg" itemprop="contentUrl"/>
               </a>
@@ -1692,7 +1687,7 @@ hbase 版本： 1.2.4
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://i.ibb.co/VtpwHb1/QQ20190712-0.jpg" rel="gallery_ck96x5aho002wc5pzizdjm929"
+                 href="https://i.ibb.co/VtpwHb1/QQ20190712-0.jpg" rel="gallery_ck96x6w4m002sf5pzdvr303ui"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://i.ibb.co/VtpwHb1/QQ20190712-0.jpg" itemprop="contentUrl"/>
               </a>
@@ -1866,7 +1861,7 @@ hbase 版本： 1.2.4
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://file.moetu.org/images/2019/06/13/9bbc284bgy1g3y78rwghlj20rs0ijtbi4468324b1624aa1c.jpg" rel="gallery_ck96x5aj3005vc5pz9r2jits7"
+                 href="https://file.moetu.org/images/2019/06/13/9bbc284bgy1g3y78rwghlj20rs0ijtbi4468324b1624aa1c.jpg" rel="gallery_ck96x6w62005vf5pzu4q8byym"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://file.moetu.org/images/2019/06/13/9bbc284bgy1g3y78rwghlj20rs0ijtbi4468324b1624aa1c.jpg" itemprop="contentUrl"/>
               </a>
@@ -2038,7 +2033,7 @@ hbase 版本： 1.2.4
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://file.moetu.org/images/2019/06/13/9bbc284bgy1g3y78rruwvj20rs0dwjsz588e69e84e014b9d.jpg" rel="gallery_ck96x5agv000wc5pzf1gmpvv5"
+                 href="https://file.moetu.org/images/2019/06/13/9bbc284bgy1g3y78rruwvj20rs0dwjsz588e69e84e014b9d.jpg" rel="gallery_ck96x6w3u000vf5pzwew2ee4v"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://file.moetu.org/images/2019/06/13/9bbc284bgy1g3y78rruwvj20rs0dwjsz588e69e84e014b9d.jpg" itemprop="contentUrl"/>
               </a>

@@ -6,7 +6,7 @@
       <title>hbase在线平滑迁移region数据</title>
       <link href="/region-data-migration/"/>
       <url>/region-data-migration/</url>
-      <content type="html"><![CDATA[<p>hbase regionserver 下线，做数据迁移。 这个方法可以在线上平滑迁移。   </p><p>hbase 版本： 1.2.4</p><p>####n首先 关闭 hbase 的 balance </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hbase(main)&gt; balance_switch false</span><br></pre></td></tr></table></figure><h4 id="将新的regionserver节点上线"><a href="#将新的regionserver节点上线" class="headerlink" title="将新的regionserver节点上线"></a>将新的regionserver节点上线</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hbase-daemon.sh start regionserver</span><br></pre></td></tr></table></figure><h4 id="之后就可以迁移数据了。"><a href="#之后就可以迁移数据了。" class="headerlink" title="之后就可以迁移数据了。"></a>之后就可以迁移数据了。</h4><p>到新的region server上执行 下面命令。<br>使用hbase自带的rb脚本，在hbase bin目录下面<br>unload：转移rs上的region；load：将所有region转移到此rs  </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hbase org.jruby.Main $&#123;HBASE_HOME&#125;/bin/region_mover.rb unload  regionserver00.hostname.com</span><br></pre></td></tr></table></figure><ul><li>在需要迁移到的机器上执行， 如要将regionserver00.hostname.com上的数据迁移到regionserver03.hostname.com机器上， 那么就在regionserver03.hostname.com机器上执行命令，hostname写regionserver00.hostname.com  </li></ul><p>等待任务完成。</p><h4 id="之后就可以把数据迁移走的节点下线了"><a href="#之后就可以把数据迁移走的节点下线了" class="headerlink" title="之后就可以把数据迁移走的节点下线了"></a>之后就可以把数据迁移走的节点下线了</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hbase-daemon.sh stop regionserver</span><br></pre></td></tr></table></figure><h4 id="最后在开启hbase的balance"><a href="#最后在开启hbase的balance" class="headerlink" title="最后在开启hbase的balance"></a>最后在开启hbase的balance</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hbase(main)&gt; balance_switch true</span><br></pre></td></tr></table></figure><p>这样就完成了数据迁移。 之后需要的就是更新同步hbase 配置文件中的regionservers 文件。</p>]]></content>
+      <content type="html"><![CDATA[<p>hbase regionserver 下线，做数据迁移。 这个方法可以在线上平滑迁移。   </p><p>hbase 版本： 1.2.4</p><p>####n首先 关闭 hbase 的 balance </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hbase(main)&gt; balance_switch false</span><br></pre></td></tr></table></figure><h4 id="将新的regionserver节点上线"><a href="#将新的regionserver节点上线" class="headerlink" title="将新的regionserver节点上线"></a>将新的regionserver节点上线</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hbase-daemon.sh start regionserver</span><br></pre></td></tr></table></figure><h4 id="之后就可以迁移数据了。"><a href="#之后就可以迁移数据了。" class="headerlink" title="之后就可以迁移数据了。"></a>之后就可以迁移数据了。</h4><p>到新的region server上执行 下面命令。<br>使用hbase自带的rb脚本，在hbase bin目录下面<br>unload：转移rs上的region；load：将所有region转移到此rs<br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hbase org.jruby.Main $&#123;HBASE_HOME&#125;/bin/region_mover.rb unload  regionserver00.hostname.com</span><br></pre></td></tr></table></figure></p><ul><li>在需要迁移到的机器上执行， 如要将regionserver00.hostname.com上的数据迁移到regionserver03.hostname.com机器上， 那么就在regionserver03.hostname.com机器上执行命令，hostname写regionserver00.hostname.com  </li></ul><p>等待任务完成。</p><h4 id="之后就可以把数据迁移走的节点下线了"><a href="#之后就可以把数据迁移走的节点下线了" class="headerlink" title="之后就可以把数据迁移走的节点下线了"></a>之后就可以把数据迁移走的节点下线了</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hbase-daemon.sh stop regionserver</span><br></pre></td></tr></table></figure><h4 id="最后在开启hbase的balance"><a href="#最后在开启hbase的balance" class="headerlink" title="最后在开启hbase的balance"></a>最后在开启hbase的balance</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hbase(main)&gt; balance_switch true</span><br></pre></td></tr></table></figure><p>这样就完成了数据迁移。 之后需要的就是更新同步hbase 配置文件中的regionservers 文件。</p>]]></content>
       
       <categories>
           
@@ -166,9 +166,9 @@
       
         <tags>
             
-            <tag> marathon-lb </tag>
-            
             <tag> marathon </tag>
+            
+            <tag> marathon-lb </tag>
             
         </tags>
       
@@ -741,9 +741,9 @@
       
         <tags>
             
-            <tag> marathon-lb </tag>
-            
             <tag> marathon </tag>
+            
+            <tag> marathon-lb </tag>
             
         </tags>
       
@@ -1355,9 +1355,9 @@
       
         <tags>
             
-            <tag> marathon-lb </tag>
-            
             <tag> marathon </tag>
+            
+            <tag> marathon-lb </tag>
             
         </tags>
       
