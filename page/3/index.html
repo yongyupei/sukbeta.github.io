@@ -354,6 +354,165 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://sukbeta.github.io/docker-logs-explantion/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="北极企鹅">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="舒克贝塔">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/docker-logs-explantion/" itemprop="url">查看docker容器日志</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-26T10:52:31+08:00">
+                2019-03-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/docker/" itemprop="url" rel="index">
+                    <span itemprop="name">docker</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/docker-logs-explantion/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/docker-logs-explantion/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="查看docker容器日志"><a href="#查看docker容器日志" class="headerlink" title="查看docker容器日志"></a>查看docker容器日志</h2><p>通过docker logs命令可以查看容器的日志。</p>
+<h4 id="docker-logs-日志说明"><a href="#docker-logs-日志说明" class="headerlink" title="docker logs 日志说明"></a>docker logs 日志说明</h4><p>当我们输入docker logs的时候会转化为Docker Client向Docker Daemon发起请求,Docker Daemon 在运行容器时会去创建一个协程(goroutine)，绑定了整个容器内所有进程的标准输出文件描述符。因此容器内应用的所有只要是标准输出日志，都会被 goroutine 接收，Docker Daemon会根据容器id和日志类型读取日志内容，最终会输出到用户终端上并且通过json格式存放在/var/lib/docker/containers目录下。</p>
+<p>docker logs是跟随容器而产生的，如果删除了某个容器，相应的日志文件也会随着被删除</p>
+<h4 id="命令说明"><a href="#命令说明" class="headerlink" title="命令说明"></a>命令说明</h4><p>命令格式</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/docker-logs-explantion/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://sukbeta.github.io/hadoop-lzo-gz-bz2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -622,7 +781,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://w.wallhaven.cc/full/r2/wallhaven-r2oqwq.jpg" rel="gallery_ck86pz5wc0051eipzh84tc2uo"
+                 href="https://w.wallhaven.cc/full/r2/wallhaven-r2oqwq.jpg" rel="gallery_ck96spjy50058m2pzhsx90prv"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://w.wallhaven.cc/full/r2/wallhaven-r2oqwq.jpg" itemprop="contentUrl"/>
               </a>
@@ -1795,7 +1954,7 @@ npm 安装 elasticdump先下载安装npm
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://w.wallhaven.cc/full/2e/wallhaven-2edpgg.jpg" rel="gallery_ck86pz5vv003weipz7elpport"
+                 href="https://w.wallhaven.cc/full/2e/wallhaven-2edpgg.jpg" rel="gallery_ck96spjxq004dm2pzpnyk8dlx"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://w.wallhaven.cc/full/2e/wallhaven-2edpgg.jpg" itemprop="contentUrl"/>
               </a>
@@ -1813,168 +1972,6 @@ npm 安装 elasticdump先下载安装npm
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/nginx-conf-explain/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://sukbeta.github.io/kafka-auto-loadblance-leader/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="北极企鹅">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="舒克贝塔">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/kafka-auto-loadblance-leader/" itemprop="url">kafka对topic leader 进行自动负载均衡</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-22T16:02:36+08:00">
-                2019-01-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/kafka/" itemprop="url" rel="index">
-                    <span itemprop="name">kafka</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/kafka-auto-loadblance-leader/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/kafka-auto-loadblance-leader/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          在创建一个topic时，kafka尽量将partition均分在所有的brokers上，并且将replicas也j均分在不同的broker上。
-每个partitiion的所有replicas叫做”assigned replicas”，”assigned replicas”中的第一个replicas叫”preferred replica”，刚创建的topic一般”preferred replica”是leader。leader replica负责所有的读写。
-但随着时间推移，broker可能会停机，会导致leader迁移，导致机群的负载不均衡。我们期望对topic的leader进行重新负载均衡，让partition选择”preferred replica”做为leader。
-查看topic详情
-123456789./kafka-topics.sh --zookeeper 127.0.0.1:2181 --describe  --topic logdata-esTopic:logdata-es        PartitionCount:6        ReplicationFactor
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/kafka-auto-loadblance-leader/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -2062,7 +2059,7 @@ npm 安装 elasticdump先下载安装npm
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">62</span>
+                  <span class="site-state-item-count">63</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

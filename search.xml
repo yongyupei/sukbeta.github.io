@@ -3,6 +3,27 @@
   
     
     <entry>
+      <title>docker启动容器的时候携带&quot;--restart=always&quot;参数后如何删除容器</title>
+      <link href="/docker-restart-always/"/>
+      <url>/docker-restart-always/</url>
+      <content type="html"><![CDATA[<p>当容器启动的时候添加了 “–restart=always” 参数，那样容器有问题会一直重启， docker服务重启之后，这个容器也会自动起来。</p><p>这样的启动方式适合与一些监控程序，跟着机器一起启动，出问题也会自动重启。</p><p>例如：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --restart=always nginx:latest</span><br></pre></td></tr></table></figure><p>如果这个时候我们不要这个容器了， 应该怎么停止呢？</p><p>我们需要更新 restart 的状态。</p><p>例如：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker update --restart=no nginx:latest</span><br></pre></td></tr></table></figure><p>这样之后， 这个容器就不会在自动启动了。 </p>]]></content>
+      
+      <categories>
+          
+          <category> docker </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> docker </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>tls Cipher 算法和名字对应表</title>
       <link href="/tls-ciphers-list/"/>
       <url>/tls-ciphers-list/</url>
@@ -124,9 +145,9 @@
       
         <tags>
             
-            <tag> marathon-lb </tag>
-            
             <tag> marathon </tag>
+            
+            <tag> marathon-lb </tag>
             
         </tags>
       
@@ -296,9 +317,9 @@
       
         <tags>
             
-            <tag> shell </tag>
-            
             <tag> linux </tag>
+            
+            <tag> shell </tag>
             
         </tags>
       
@@ -699,9 +720,9 @@
       
         <tags>
             
-            <tag> marathon-lb </tag>
-            
             <tag> marathon </tag>
+            
+            <tag> marathon-lb </tag>
             
         </tags>
       
@@ -1313,9 +1334,9 @@
       
         <tags>
             
-            <tag> marathon-lb </tag>
-            
             <tag> marathon </tag>
+            
+            <tag> marathon-lb </tag>
             
         </tags>
       
