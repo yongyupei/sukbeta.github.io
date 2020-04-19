@@ -115,7 +115,7 @@
 <meta property="og:site_name" content="舒克贝塔">
 <meta property="og:description" content="docker 搭建macvlan 网络  简单说，macvlan就是在宿主的网卡设置多个vlan信息，根据走的网卡不同，并带有不行的vlan标记。   交换机需要支持macvlan需要交换机上有几个设置：    连接宿主的交换机接口需要改为 Trunk 模式。（这样才能多vlan通过这个口通讯） 交换机上添加macvlan设置的相应vlan信息。 三层交换机上设置各个vlan的网关地址。并实现vl">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-03T07:30:14.458Z">
+<meta property="og:updated_time" content="2020-04-19T08:51:26.101Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="docker搭建macvlan网络">
 <meta name="twitter:description" content="docker 搭建macvlan 网络  简单说，macvlan就是在宿主的网卡设置多个vlan信息，根据走的网卡不同，并带有不行的vlan标记。   交换机需要支持macvlan需要交换机上有几个设置：    连接宿主的交换机接口需要改为 Trunk 模式。（这样才能多vlan通过这个口通讯） 交换机上添加macvlan设置的相应vlan信息。 三层交换机上设置各个vlan的网关地址。并实现vl">
@@ -466,31 +466,7 @@
 <li>交换机上添加macvlan设置的相应vlan信息。</li>
 <li>三层交换机上设置各个vlan的网关地址。并实现vlan间互联。</li>
 </ul>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>环境介绍  </p>
-<table>
-<thead>
-<tr>
-<th>宿主机IP</th>
-<th>宿主机vlan</th>
-<th>macvlan IP</th>
-<th>vlan 号</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>192.168.53.11</td>
-<td>233</td>
-<td>172.20.30.x</td>
-<td>30</td>
-</tr>
-<tr>
-<td>192.168.53.12</td>
-<td>233</td>
-<td>172.20.19.x</td>
-<td>19</td>
-</tr>
-</tbody>
-</table>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>环境介绍<br><a id="more"></a><br>宿主机IP|宿主机vlan|macvlan IP| vlan 号<br>—|—|—|—<br>192.168.53.11|233|172.20.30.x|30<br>192.168.53.12|233|172.20.19.x|19</p>
 <h4 id="实时生效安装"><a href="#实时生效安装" class="headerlink" title="实时生效安装"></a>实时生效安装</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">yum install -y epel-release</span><br><span class="line">yum install -y vconfig</span><br><span class="line">加载模块哦</span><br><span class="line">modprobe 8021q</span><br><span class="line">lsmod |grep -i 8021q</span><br><span class="line">网卡开启混合模式</span><br><span class="line">ip link set em1 promisc on</span><br><span class="line">使用vconfig命令配置vlan </span><br><span class="line">vconfig add em1 233 </span><br><span class="line">vconfig add em1 30   # 另外一台设置  vconfig add em1 19</span><br><span class="line">在em1接口上配置两个VLAN </span><br><span class="line">vconfig set_flag em1.233 1 1 </span><br><span class="line">vconfig set_flag em1.30 1 1   # 另外一台 vconfig set_flag em1.19 1 1</span><br><span class="line"></span><br><span class="line">ifconfig em1 0.0.0.0 </span><br><span class="line">ifconfig em1.233 192.168.53.11 netmask 255.255.255.0 up </span><br><span class="line">ifconfig em1.30 172.20.30.2 netmask 255.255.255.0 up</span><br></pre></td></tr></table></figure>
 <p>这样一个临时配置就可以了， 配置docker的网络就可以，docker配置网络的命令后面一起发吧，  </p>
 <p>上面属于临时配置，机器重启配置就没有了，不适合生产。</p>
@@ -722,7 +698,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">63</span>
+                  <span class="site-state-item-count">64</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -744,7 +720,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">29</span>
+                  <span class="site-state-item-count">30</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

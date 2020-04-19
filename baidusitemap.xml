@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://sukbeta.github.io/region-data-migration/</loc>
+    <lastmod>2020-04-19T10:26:47.662Z</lastmod>
+  </url>  <url>
     <loc>https://sukbeta.github.io/docker-restart-always/</loc>
-    <lastmod>2020-04-19T08:43:49.965Z</lastmod>
+    <lastmod>2020-04-19T09:28:19.106Z</lastmod>
+  </url>  <url>
+    <loc>https://sukbeta.github.io/docker-build-MacVlanNetwork/</loc>
+    <lastmod>2020-04-19T08:51:26.101Z</lastmod>
   </url>  <url>
     <loc>https://sukbeta.github.io/web/</loc>
     <lastmod>2020-03-25T02:38:27.659Z</lastmod>
@@ -151,10 +157,10 @@
     <loc>https://sukbeta.github.io/nginx-installed-sticky/</loc>
     <lastmod>2018-12-03T07:30:14.467Z</lastmod>
   </url>  <url>
-    <loc>https://sukbeta.github.io/parted-partition/</loc>
+    <loc>https://sukbeta.github.io/source-install-mesos/</loc>
     <lastmod>2018-12-03T07:30:14.466Z</lastmod>
   </url>  <url>
-    <loc>https://sukbeta.github.io/source-install-mesos/</loc>
+    <loc>https://sukbeta.github.io/parted-partition/</loc>
     <lastmod>2018-12-03T07:30:14.466Z</lastmod>
   </url>  <url>
     <loc>https://sukbeta.github.io/marathon-DockerRegistry-user/</loc>
@@ -177,9 +183,6 @@
   </url>  <url>
     <loc>https://sukbeta.github.io/linux-Delete-garbled-files/</loc>
     <lastmod>2018-12-03T07:30:14.459Z</lastmod>
-  </url>  <url>
-    <loc>https://sukbeta.github.io/docker-build-MacVlanNetwork/</loc>
-    <lastmod>2018-12-03T07:30:14.458Z</lastmod>
   </url>  <url>
     <loc>https://sukbeta.github.io/docker-ulimit-configure/</loc>
     <lastmod>2018-12-03T07:30:14.458Z</lastmod>

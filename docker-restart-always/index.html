@@ -107,20 +107,20 @@
 
 
 
-<meta name="description" content="当容器启动的时候添加了 “–restart=always” 参数，那样容器有问题会一直重启， docker服务重启之后，这个容器也会自动起来。 这样的启动方式适合与一些监控程序，跟着机器一起启动，出问题也会自动重启。 例如： 1docker run -d --restart=always nginx:latest 如果这个时候我们不要这个容器了， 应该怎么停止呢？ 我们需要更新 restart 的">
+<meta name="description" content="当容器启动的时候添加了 “–restart=always” 参数，那样容器有问题会一直重启， docker服务重启之后，这个容器也会自动起来。 这样的启动方式适合与一些监控程序，跟着机器一起启动，出问题也会自动重启。 例如： 1docker run -d --restart=always nginx:latest">
 <meta name="keywords" content="docker">
 <meta property="og:type" content="article">
 <meta property="og:title" content="docker启动容器的时候携带&quot;--restart=always&quot;参数后如何删除容器">
 <meta property="og:url" content="https://sukbeta.github.io/docker-restart-always/index.html">
 <meta property="og:site_name" content="舒克贝塔">
-<meta property="og:description" content="当容器启动的时候添加了 “–restart=always” 参数，那样容器有问题会一直重启， docker服务重启之后，这个容器也会自动起来。 这样的启动方式适合与一些监控程序，跟着机器一起启动，出问题也会自动重启。 例如： 1docker run -d --restart=always nginx:latest 如果这个时候我们不要这个容器了， 应该怎么停止呢？ 我们需要更新 restart 的">
+<meta property="og:description" content="当容器启动的时候添加了 “–restart=always” 参数，那样容器有问题会一直重启， docker服务重启之后，这个容器也会自动起来。 这样的启动方式适合与一些监控程序，跟着机器一起启动，出问题也会自动重启。 例如： 1docker run -d --restart=always nginx:latest">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://file.moetu.org/images/2019/07/19/6106a4f0ly1g4vsr1tpw4j20j90edh5648cce2a214cffa94.md.jpg">
-<meta property="og:updated_time" content="2020-04-19T08:43:49.965Z">
+<meta property="og:image" content="https://file.moetu.org/images/2020/04/19/5e12ff524e478d597d6d18f4eff92.jpg">
+<meta property="og:updated_time" content="2020-04-19T09:28:19.106Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="docker启动容器的时候携带&quot;--restart=always&quot;参数后如何删除容器">
-<meta name="twitter:description" content="当容器启动的时候添加了 “–restart=always” 参数，那样容器有问题会一直重启， docker服务重启之后，这个容器也会自动起来。 这样的启动方式适合与一些监控程序，跟着机器一起启动，出问题也会自动重启。 例如： 1docker run -d --restart=always nginx:latest 如果这个时候我们不要这个容器了， 应该怎么停止呢？ 我们需要更新 restart 的">
-<meta name="twitter:image" content="https://file.moetu.org/images/2019/07/19/6106a4f0ly1g4vsr1tpw4j20j90edh5648cce2a214cffa94.md.jpg">
+<meta name="twitter:description" content="当容器启动的时候添加了 “–restart=always” 参数，那样容器有问题会一直重启， docker服务重启之后，这个容器也会自动起来。 这样的启动方式适合与一些监控程序，跟着机器一起启动，出问题也会自动重启。 例如： 1docker run -d --restart=always nginx:latest">
+<meta name="twitter:image" content="https://file.moetu.org/images/2020/04/19/5e12ff524e478d597d6d18f4eff92.jpg">
 
 
 
@@ -464,9 +464,9 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="https://file.moetu.org/images/2019/07/19/6106a4f0ly1g4vsr1tpw4j20j90edh5648cce2a214cffa94.md.jpg" rel="gallery_ck96t097a000lwapzk1ufewm4"
+                 href="https://file.moetu.org/images/2020/04/19/5e12ff524e478d597d6d18f4eff92.jpg" rel="gallery_ck96wplit000by8pzd8c1j8oj"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="https://file.moetu.org/images/2019/07/19/6106a4f0ly1g4vsr1tpw4j20j90edh5648cce2a214cffa94.md.jpg" itemprop="contentUrl"/>
+                <img src="https://file.moetu.org/images/2020/04/19/5e12ff524e478d597d6d18f4eff92.jpg" itemprop="contentUrl"/>
               </a>
             
           
@@ -481,6 +481,7 @@
 <p>这样的启动方式适合与一些监控程序，跟着机器一起启动，出问题也会自动重启。</p>
 <p>例如：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --restart=always nginx:latest</span><br></pre></td></tr></table></figure>
+<a id="more"></a> 
 <p>如果这个时候我们不要这个容器了， 应该怎么停止呢？</p>
 <p>我们需要更新 restart 的状态。</p>
 <p>例如：</p>
@@ -554,6 +555,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/region-data-migration/" rel="prev" title="hbase在线平滑迁移region数据">
+                hbase在线平滑迁移region数据 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -674,7 +679,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">63</span>
+                  <span class="site-state-item-count">64</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -696,7 +701,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">29</span>
+                  <span class="site-state-item-count">30</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
